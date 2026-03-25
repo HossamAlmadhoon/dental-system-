@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>كلية طب الأسنان — نظام رعاية المرضى</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --coral:#D4725A; --coral2:#B85A42; --coral-bg:#FBF0ED;
+  --mint:#3DAA8F;  --mint-bg:#EAF6F3;
+  --gold:#C9A84C;  --gold-bg:#FAF4E1;
+  --navy:#0F1F35;  --navy2:#1C3150;
+  --white:#FFFFFF; --off:#F7F4F0;
+  --g100:#F0ECE7;  --g200:#DDD5CB;
+  --g400:#9E8E80;  --g600:#5C4A3A; --g800:#2A1F17;
+  --blue:#6B8DD6;  --blue-bg:#EEF2FB;
+  --purple:#8B5CF6;
+  --font:'Tajawal',sans-serif;
+  --radius:14px;
+  --shadow:0 4px 20px rgba(15,31,53,.10);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--font); background:var(--off); color:var(--g800); overflow-x:hidden; direction:rtl; }
+a { text-decoration:none; color:inherit; cursor:pointer; }
+button { font-family:var(--font); cursor:pointer; }
+input, select, textarea { font-family:var(--font); direction:rtl; }
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-thumb { background:var(--g200); border-radius:3px; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes floatY { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.4; } }
+@keyframes spin { to { transform:rotate(360deg); } }
+.anim-up { animation:fadeUp .4s ease both; }
+.anim-in { animation:fadeIn .25s ease both; }
+
+/* ── PAGES ── */
+#page-public { display:block; }
+#page-login  { display:none; min-height:100vh; background:var(--navy); align-items:center; justify-content:center; padding:20px; }
+#page-dash   { display:none; }
+
+/* ── NAV ── */
+#top-nav {
+  position:fixed; top:0; right:0; left:0; z-index:900;
+  background:rgba(15,31,53,.93); backdrop-filter:blur(14px);
+  height:68px; display:flex; align-items:center; padding:0 48px;
+  border-bottom:1px solid rgba(255,255,255,.07); transition:background .3s;
+}
+.nav-logo { display:flex; align-items:center; gap:10px; margin-left:auto; }
+.nav-logo-icon { width:36px; height:36px; border-radius:10px; background:var(--coral); display:flex; align-items:center; justify-content:center; font-size:18px; }
+.nav-logo h1 { font-size:15px; color:#fff; font-weight:800; }
+.nav-logo p { font-size:9px; color:rgba(255,255,255,.45); letter-spacing:.3px; }
+.nav-links { display:flex; gap:24px; }
+.nav-lnk { color:rgba(255,255,255,.65); font-size:14px; font-weight:500; border:none; background:none; padding:4px 0; transition:color .2s; }
+.nav-lnk:hover { color:#fff; }
+.nav-btn { padding:8px 20px; border-radius:9px; font-size:13px; font-weight:700; border:none; margin-right:12px; transition:all .2s; }
+.nav-btn-outline { background:transparent; border:1.5px solid rgba(255,255,255,.28); color:#fff; }
+.nav-btn-outline:hover { border-color:var(--coral); color:var(--coral); }
+.nav-btn-solid { background:var(--coral); color:#fff; }
+.nav-btn-solid:hover { background:var(--coral2); transform:translateY(-1px); }
+
+/* ── HERO ── */
+#hero { min-height:100vh; background:var(--navy); display:flex; align-items:center; padding-top:68px; position:relative; overflow:hidden; }
+.hero-blob { position:absolute; border-radius:50%; opacity:.07; pointer-events:none; }
+.hero-blob-1 { width:550px; height:550px; background:var(--coral); top:-180px; left:-80px; }
+.hero-blob-2 { width:350px; height:350px; background:var(--mint); bottom:-80px; right:-60px; }
+.hero-blob-3 { width:180px; height:180px; background:var(--gold); top:45%; left:35%; animation:floatY 6s ease-in-out infinite; opacity:.08; }
+.hero-inner { max-width:1240px; margin:0 auto; padding:80px 48px; display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
+.hero-badge { display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(212,114,90,.35); border-radius:30px; padding:5px 14px; margin-bottom:26px; background:rgba(212,114,90,.12); }
+.hero-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--coral); animation:pulse 2s infinite; }
+.hero-badge span { font-size:12px; color:var(--coral); font-weight:700; }
+.hero-title { font-size:52px; color:#fff; line-height:1.25; margin-bottom:22px; font-weight:900; }
+.hero-title em { color:var(--coral); font-style:normal; }
+.hero-desc { color:rgba(255,255,255,.58); font-size:16px; line-height:2; margin-bottom:36px; max-width:480px; }
+.hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+.hero-btn { padding:13px 30px; border-radius:11px; font-size:14px; font-weight:700; border:none; transition:all .25s; }
+.hero-btn-primary { background:var(--coral); color:#fff; box-shadow:0 6px 24px rgba(212,114,90,.35); }
+.hero-btn-primary:hover { background:var(--coral2); transform:translateY(-2px); }
+.hero-btn-ghost { background:transparent; border:1.5px solid rgba(255,255,255,.28); color:#fff; }
+.hero-btn-ghost:hover { border-color:rgba(255,255,255,.6); }
+.hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.09); border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.09); margin-top:44px; }
+.hero-stat { padding:18px; background:rgba(255,255,255,.04); text-align:center; }
+.hero-stat-n { font-size:30px; color:var(--coral); font-weight:900; }
+.hero-stat-l { font-size:11px; color:rgba(255,255,255,.42); margin-top:2px; }
+.hero-right { position:relative; }
+.hero-card { background:rgba(255,255,255,.07); backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.11); border-radius:18px; padding:24px; animation:floatY 7s ease-in-out infinite; }
+.hero-float { position:absolute; background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.13); border-radius:12px; padding:14px 18px; }
+.hero-float-1 { bottom:-28px; right:-28px; animation:floatY 5s ease-in-out infinite; }
+.hero-float-2 { top:16px; left:-16px; animation:floatY 8s ease-in-out infinite .4s; }
+
+/* ── STATS BAR ── */
+#stats-bar { background:var(--coral); padding:26px 48px; }
+.stats-bar-grid { max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.stats-bar-item { text-align:center; color:#fff; }
+.stats-bar-n { font-size:36px; font-weight:900; }
+.stats-bar-l { font-size:12px; opacity:.78; margin-top:2px; }
+
+/* ── SECTION ── */
+.pub-section { padding:90px 48px; max-width:1240px; margin:0 auto; }
+.section-tag { display:inline-flex; align-items:center; gap:6px; background:var(--coral-bg); border-radius:20px; padding:5px 14px; margin-bottom:14px; }
+.section-tag span { font-size:11px; font-weight:700; color:var(--coral); }
+.section-title { font-size:38px; color:var(--navy); line-height:1.3; font-weight:900; margin-bottom:12px; }
+.section-sub { color:var(--g400); font-size:15px; line-height:1.9; max-width:520px; }
+
+/* ── NEWS ── */
+#news-bg { background:#fff; }
+.news-grid { display:grid; grid-template-columns:1.5fr 1fr; gap:28px; margin-top:44px; }
+.news-featured { border-radius:18px; overflow:hidden; background:var(--navy); cursor:pointer; transition:transform .2s; }
+.news-featured:hover { transform:translateY(-3px); }
+.news-featured-img { width:100%; height:240px; background:linear-gradient(135deg,var(--navy2),var(--coral2)); display:flex; align-items:center; justify-content:center; font-size:56px; opacity:.45; }
+.news-featured-body { padding:24px; }
+.news-featured-title { font-size:20px; color:#fff; font-weight:800; margin-bottom:8px; line-height:1.5; }
+.news-featured-meta { color:rgba(255,255,255,.45); font-size:12px; }
+.news-list { display:flex; flex-direction:column; gap:12px; }
+.news-item { background:var(--off); border-radius:13px; padding:16px; cursor:pointer; border:1px solid var(--g100); transition:all .2s; }
+.news-item:hover { background:#fff; box-shadow:var(--shadow); transform:translateX(-4px); }
+.news-item-title { font-size:14px; color:var(--navy); font-weight:700; line-height:1.5; margin-bottom:5px; }
+.news-item-meta { color:var(--g400); font-size:11px; }
+.news-cat { display:inline-block; padding:2px 9px; border-radius:10px; font-size:10px; font-weight:700; margin-bottom:8px; }
+.cat-Announcement,.cat-إعلان { background:var(--coral-bg); color:var(--coral); }
+.cat-Event,.cat-فعالية { background:var(--mint-bg); color:var(--mint); }
+.cat-Research,.cat-بحث { background:var(--gold-bg); color:var(--gold); }
+
+/* ── DEPTS ── */
+#depts-bg { background:var(--off); }
+.depts-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:44px; }
+.dept-card { background:#fff; border-radius:18px; padding:26px; border:1px solid var(--g200); cursor:pointer; transition:all .3s; }
+.dept-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+.dept-icon { width:50px; height:50px; border-radius:13px; display:flex; align-items:center; justify-content:center; font-size:23px; margin-bottom:14px; }
+.dept-name { font-size:15px; color:var(--navy); font-weight:800; margin-bottom:7px; }
+.dept-desc { color:var(--g400); font-size:13px; line-height:1.7; }
+.dept-link { font-size:12px; font-weight:700; margin-top:14px; display:block; }
+
+/* ── REGISTER ── */
+#reg-bg { background:var(--navy); position:relative; overflow:hidden; }
+#reg-bg::before { content:''; position:absolute; top:-120px; left:-120px; width:480px; height:480px; border-radius:50%; background:var(--coral); opacity:.05; }
+.reg-inner { max-width:1240px; margin:0 auto; padding:90px 48px; display:grid; grid-template-columns:1fr 1.1fr; gap:72px; align-items:center; }
+.reg-left h2 { font-size:40px; color:#fff; font-weight:900; line-height:1.3; margin-bottom:16px; }
+.reg-left p { color:rgba(255,255,255,.58); font-size:15px; line-height:2; margin-bottom:30px; }
+.reg-steps { display:flex; flex-direction:column; gap:16px; }
+.reg-step { display:flex; align-items:flex-start; gap:13px; }
+.reg-step-num { width:30px; height:30px; border-radius:50%; background:rgba(212,114,90,.18); border:1.5px solid var(--coral); display:flex; align-items:center; justify-content:center; color:var(--coral); font-weight:900; font-size:13px; flex-shrink:0; }
+.reg-step-h { color:#fff; font-weight:700; font-size:14px; margin-bottom:2px; }
+.reg-step-p { color:rgba(255,255,255,.46); font-size:12px; }
+.reg-form { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.11); border-radius:18px; padding:32px; }
+.reg-form h3 { font-size:20px; color:#fff; font-weight:800; margin-bottom:22px; }
+.reg-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.reg-group { margin-bottom:12px; }
+.reg-group label { display:block; font-size:11px; font-weight:700; color:rgba(255,255,255,.46); margin-bottom:4px; }
+.reg-input { width:100%; padding:10px 13px; border-radius:9px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:#fff; font-size:14px; outline:none; transition:border .2s; font-family:var(--font); text-align:right; }
+.reg-input::placeholder { color:rgba(255,255,255,.22); }
+.reg-input:focus { border-color:var(--coral); }
+.reg-input option { background:var(--navy2); color:#fff; }
+.reg-submit { width:100%; padding:12px; border-radius:10px; border:none; background:var(--coral); color:#fff; font-weight:800; font-size:15px; margin-top:8px; box-shadow:0 6px 20px rgba(212,114,90,.3); transition:all .25s; font-family:var(--font); }
+.reg-submit:hover { background:var(--coral2); transform:translateY(-1px); }
+.reg-success { display:none; background:rgba(61,170,143,.15); border:1px solid rgba(61,170,143,.28); border-radius:10px; padding:14px; text-align:center; color:#5DCBAF; font-weight:700; font-size:13px; margin-bottom:14px; }
+
+/* ── FOOTER ── */
+#footer-bg { background:var(--g800); padding:56px 48px 32px; }
+.footer-grid { max-width:1240px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:44px; margin-bottom:36px; }
+.footer-brand h2 { font-size:17px; color:#fff; margin-bottom:10px; font-weight:800; }
+.footer-brand p { color:rgba(255,255,255,.38); font-size:13px; line-height:1.9; max-width:260px; }
+.footer-col h4 { font-size:12px; font-weight:700; color:rgba(255,255,255,.38); margin-bottom:14px; }
+.footer-col a { display:block; color:rgba(255,255,255,.56); font-size:13px; margin-bottom:9px; transition:color .2s; }
+.footer-col a:hover { color:#fff; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.08); padding-top:22px; display:flex; justify-content:space-between; max-width:1240px; margin:0 auto; }
+.footer-bottom p { color:rgba(255,255,255,.3); font-size:12px; }
+
+/* ── LOGIN ── */
+.login-card { background:#fff; border-radius:22px; padding:38px; width:100%; max-width:460px; box-shadow:0 24px 80px rgba(0,0,0,.28); animation:fadeUp .4s ease; }
+.login-logo { display:flex; align-items:center; gap:10px; margin-bottom:28px; }
+.login-logo-icon { width:38px; height:38px; border-radius:11px; background:var(--coral); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+.login-title { font-size:20px; color:var(--navy); font-weight:900; }
+.login-sub { font-size:12px; color:var(--g400); }
+.role-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:20px; }
+.role-btn { padding:10px 9px; border-radius:10px; border:2px solid var(--g200); background:transparent; display:flex; align-items:center; gap:8px; transition:all .2s; font-size:13px; color:var(--navy); font-weight:700; }
+.role-btn:hover { border-color:var(--coral); background:var(--coral-bg); }
+.role-btn.selected { font-weight:800; }
+.demo-hint { background:var(--coral-bg); border-radius:9px; padding:9px 13px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; }
+.demo-hint-txt { font-size:11px; color:var(--coral2); direction:ltr; text-align:left; }
+.demo-fill { font-size:12px; color:var(--coral); font-weight:800; background:none; border:none; padding:0; font-family:var(--font); }
+.login-field { margin-bottom:12px; }
+.login-field label { display:block; font-size:11px; font-weight:700; color:var(--g400); margin-bottom:4px; }
+.login-field input { width:100%; padding:10px 13px; border-radius:9px; border:1px solid var(--g200); font-size:13px; outline:none; transition:border .2s; font-family:var(--font); direction:ltr; text-align:left; }
+.login-field input:focus { border-color:var(--coral); }
+.login-err { color:var(--coral); font-size:12px; margin-bottom:10px; display:none; }
+.login-submit { width:100%; padding:13px; border-radius:11px; border:none; background:linear-gradient(135deg,var(--coral),var(--coral2)); color:#fff; font-weight:800; font-size:15px; box-shadow:0 5px 18px rgba(212,114,90,.3); transition:all .2s; font-family:var(--font); }
+.login-submit:hover { transform:translateY(-1px); }
+.login-back { text-align:center; margin-top:14px; font-size:13px; color:var(--g400); }
+.login-back span { color:var(--coral); font-weight:700; }
+
+/* ── DASHBOARD ── */
+.sidebar { width:230px; min-height:100vh; background:var(--navy); display:flex; flex-direction:column; position:fixed; right:0; top:0; bottom:0; z-index:100; }
+.sb-logo { padding:22px 18px 16px; border-bottom:1px solid rgba(255,255,255,.07); display:flex; align-items:center; gap:9px; }
+.sb-logo-icon { width:32px; height:32px; border-radius:9px; background:var(--coral); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+.sb-logo-name { font-size:14px; color:#fff; font-weight:800; }
+.sb-logo-sub { font-size:10px; color:rgba(255,255,255,.38); }
+.sb-user { padding:13px 18px; border-bottom:1px solid rgba(255,255,255,.07); display:flex; align-items:center; gap:9px; }
+.sb-user-av { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:12px; flex-shrink:0; border:2px solid; }
+.sb-user-name { color:#fff; font-weight:700; font-size:13px; }
+.sb-user-role { font-size:11px; font-weight:500; }
+.sb-nav { flex:1; padding:10px; overflow-y:auto; }
+.sb-item { display:flex; align-items:center; gap:8px; padding:9px 11px; border-radius:9px; border:none; background:transparent; width:100%; text-align:right; font-size:13px; color:rgba(255,255,255,.5); cursor:pointer; margin-bottom:1px; transition:all .2s; font-family:var(--font); }
+.sb-item:hover { background:rgba(255,255,255,.07); color:rgba(255,255,255,.85); }
+.sb-item.on { font-weight:700; }
+.sb-badge { margin-right:auto; background:var(--coral); color:#fff; border-radius:9px; padding:1px 7px; font-size:10px; font-weight:700; }
+.sb-foot { padding:12px; border-top:1px solid rgba(255,255,255,.07); }
+.sb-logout { display:flex; align-items:center; gap:8px; padding:9px 11px; border-radius:9px; border:none; background:transparent; width:100%; font-size:13px; color:rgba(255,255,255,.4); cursor:pointer; transition:all .2s; font-family:var(--font); }
+.sb-logout:hover { background:rgba(212,114,90,.15); color:var(--coral); }
+.dash-main { margin-right:230px; padding:30px; min-height:100vh; background:var(--off); }
+.dash-page { animation:fadeUp .35s ease; }
+.dash-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; }
+.dash-title { font-size:24px; color:var(--navy); font-weight:900; }
+.dash-sub { color:var(--g400); font-size:13px; margin-top:2px; }
+
+/* Cards */
+.sg { display:grid; gap:14px; margin-bottom:20px; }
+.sg4 { grid-template-columns:repeat(4,1fr); }
+.sg3 { grid-template-columns:repeat(3,1fr); }
+.sg2 { grid-template-columns:1fr 1fr; }
+.sg21 { grid-template-columns:1.5fr 1fr; }
+.sg5 { grid-template-columns:repeat(5,1fr); }
+.card { background:#fff; border-radius:var(--radius); padding:20px; border:1px solid var(--g200); box-shadow:0 2px 10px rgba(15,31,53,.05); }
+.card-h { font-size:15px; color:var(--navy); font-weight:800; margin-bottom:14px; }
+.stat-card { background:#fff; border-radius:var(--radius); padding:20px; border:1px solid var(--g200); box-shadow:0 2px 10px rgba(15,31,53,.05); display:flex; justify-content:space-between; align-items:flex-start; }
+.sc-lbl { font-size:12px; color:var(--g400); font-weight:500; margin-bottom:5px; }
+.sc-val { font-size:30px; color:var(--navy); font-weight:900; }
+.sc-trend { font-size:11px; color:var(--mint); margin-top:2px; font-weight:700; }
+.sc-icon { width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:19px; }
+
+/* Table */
+.tbl-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+thead tr { border-bottom:2px solid var(--g200); }
+th { padding:9px 13px; text-align:right; font-weight:700; color:var(--g600); font-size:11px; }
+tbody tr { border-bottom:1px solid var(--g100); transition:background .13s; }
+tbody tr:hover { background:var(--off); }
+td { padding:11px 13px; color:var(--g800); vertical-align:middle; text-align:right; }
+.badge { display:inline-flex; align-items:center; padding:2px 9px; border-radius:10px; font-size:11px; font-weight:700; }
+
+/* Form */
+.field { margin-bottom:13px; }
+.field label { display:block; font-size:11px; font-weight:700; color:var(--g600); margin-bottom:4px; }
+.field input,.field select,.field textarea { width:100%; padding:9px 12px; border-radius:9px; border:1px solid var(--g200); background:#fff; font-size:13px; color:var(--g800); outline:none; transition:border .2s; font-family:var(--font); text-align:right; }
+.field input:focus,.field select:focus,.field textarea:focus { border-color:var(--coral); }
+.field textarea { resize:vertical; }
+.frow { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+
+/* Buttons */
+.btn { display:inline-flex; align-items:center; gap:6px; padding:9px 17px; border-radius:9px; border:none; font-weight:700; font-size:13px; transition:all .2s; font-family:var(--font); cursor:pointer; }
+.btn:hover { transform:translateY(-1px); }
+.btn-primary { background:var(--coral); color:#fff; }
+.btn-primary:hover { background:var(--coral2); }
+.btn-mint { background:var(--mint); color:#fff; }
+.btn-gold { background:var(--gold); color:#fff; }
+.btn-navy { background:var(--navy); color:#fff; }
+.btn-outline { background:transparent; border:1px solid var(--g200); color:var(--g600); }
+.btn-outline:hover { border-color:var(--coral); color:var(--coral); }
+.btn-sm { padding:6px 12px; font-size:11px; }
+.btn-full { width:100%; justify-content:center; margin-top:4px; }
+
+/* Alert */
+.alert { border-radius:9px; padding:11px 15px; font-size:13px; font-weight:700; margin-bottom:14px; }
+.alert-ok  { background:var(--mint-bg); color:var(--mint); border:1px solid rgba(61,170,143,.2); display:none; }
+.alert-err { background:var(--coral-bg); color:var(--coral); border:1px solid rgba(212,114,90,.2); display:none; }
+
+/* List */
+.li { display:flex; align-items:center; gap:11px; padding:10px 0; border-bottom:1px solid var(--g100); }
+.li:last-child { border-bottom:none; }
+.li-av { width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:11px; flex-shrink:0; }
+.li-name { font-weight:700; color:var(--navy); font-size:13px; }
+.li-sub { color:var(--g400); font-size:11px; margin-top:1px; }
+
+/* Progress */
+.prog { height:5px; background:var(--g100); border-radius:3px; margin-top:3px; }
+.prog-fill { height:100%; border-radius:3px; }
+
+/* Toggle */
+.tog { width:38px; height:20px; border-radius:10px; position:relative; flex-shrink:0; }
+.tog-k { width:14px; height:14px; border-radius:50%; background:#fff; position:absolute; top:3px; box-shadow:0 1px 3px rgba(0,0,0,.2); }
+
+/* Modal */
+.modal-bg { position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:2000; display:none; align-items:center; justify-content:center; padding:20px; }
+.modal-bg.open { display:flex; }
+.modal-box { background:#fff; border-radius:18px; padding:32px; width:100%; max-width:500px; max-height:85vh; overflow-y:auto; animation:fadeUp .3s ease; box-shadow:0 20px 70px rgba(0,0,0,.22); }
+.modal-hd { display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; }
+.modal-title { font-size:18px; color:var(--navy); font-weight:800; }
+.modal-close { width:30px; height:30px; border-radius:50%; border:none; background:var(--g100); color:var(--g600); font-size:15px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+.modal-close:hover { background:var(--coral-bg); color:var(--coral); }
+
+/* Msg */
+.msg-li { display:flex; gap:11px; padding:12px 0; border-bottom:1px solid var(--g100); cursor:pointer; }
+.msg-li:last-child { border-bottom:none; }
+.msg-icon { width:34px; height:34px; border-radius:50%; background:var(--coral-bg); display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; }
+.msg-subj { font-weight:700; color:var(--navy); font-size:13px; }
+.msg-meta { color:var(--g400); font-size:11px; margin-top:1px; }
+.msg-prev { color:var(--g600); font-size:12px; margin-top:2px; }
+.unread-dot { width:7px; height:7px; border-radius:50%; background:var(--coral); display:inline-block; margin-right:5px; vertical-align:middle; }
+
+@media(max-width:860px){
+  .hero-inner { grid-template-columns:1fr; padding:60px 24px; }
+  .hero-right { display:none; }
+  .nav-links { display:none; }
+  #top-nav { padding:0 20px; }
+  .pub-section { padding:60px 24px; }
+  .news-grid { grid-template-columns:1fr; }
+  .depts-grid { grid-template-columns:1fr 1fr; }
+  .reg-inner { grid-template-columns:1fr; padding:60px 24px; }
+  #footer-bg { padding:44px 24px 24px; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+  .sg4,.sg3 { grid-template-columns:1fr 1fr; }
+  .sg5 { grid-template-columns:1fr 1fr; }
+  .sidebar { width:200px; }
+  .dash-main { margin-right:200px; padding:18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ الموقع العام ══════════════════ -->
+<div id="page-public">
+
+<nav id="top-nav">
+  <div class="nav-logo">
+    <div class="nav-logo-icon">🦷</div>
+    <div><h1>كلية طب الأسنان</h1><p>نظام رعاية المرضى</p></div>
+  </div>
+  <div class="nav-links">
+    <button class="nav-lnk" onclick="gotoSection('news-bg')">الأخبار</button>
+    <button class="nav-lnk" onclick="gotoSection('depts-bg')">الأقسام</button>
+    <button class="nav-lnk" onclick="gotoSection('reg-bg')">التسجيل</button>
+    <button class="nav-lnk" onclick="gotoSection('footer-bg')">تواصل معنا</button>
+  </div>
+  <button class="nav-btn nav-btn-outline" onclick="showPage('login')">دخول الموظفين</button>
+  <button class="nav-btn nav-btn-solid" onclick="gotoSection('reg-bg')">احجز موعدك</button>
+</nav>
+
+<!-- الرئيسية -->
+<section id="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="hero-inner">
+    <div class="anim-up">
+      <div class="hero-badge"><div class="hero-badge-dot"></div><span>نقبل مرضى جدد الآن</span></div>
+      <h1 class="hero-title">التميز في<br/><em>تعليم طب الأسنان</em><br/>ورعاية المرضى</h1>
+      <p class="hero-desc">تقدم كليتنا رعاية سنية عالمية المستوى على يد طلاب مشرف عليهم وكادر أكاديمي متخصص — بأسعار مناسبة وبرعاية شاملة.</p>
+      <div class="hero-btns">
+        <button class="hero-btn hero-btn-primary" onclick="gotoSection('reg-bg')">سجّل كمريض</button>
+        <button class="hero-btn hero-btn-ghost" onclick="gotoSection('depts-bg')">أقسامنا</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-n" id="hs-patients">—</div><div class="hero-stat-l">مريض تمت رعايته</div></div>
+        <div class="hero-stat"><div class="hero-stat-n" id="hs-doctors">—</div><div class="hero-stat-l">طبيب متخصص</div></div>
+        <div class="hero-stat"><div class="hero-stat-n" id="hs-students">—</div><div class="hero-stat-l">طالب طب أسنان</div></div>
+      </div>
+    </div>
+    <div class="hero-right anim-up" style="animation-delay:.2s">
+      <div class="hero-card">
+        <p style="color:rgba(255,255,255,.44);font-size:11px;margin-bottom:12px">مواعيد اليوم</p>
+        <div id="hero-appts"></div>
+      </div>
+      <div class="hero-float hero-float-1">
+        <p style="color:rgba(255,255,255,.38);font-size:10px;margin-bottom:3px">آخر علاج</p>
+        <p style="color:#fff;font-weight:700;font-size:13px">تنظيف وتلميع</p>
+        <p style="color:rgba(255,255,255,.38);font-size:11px">أمراض اللثة</p>
+      </div>
+      <div class="hero-float hero-float-2">
+        <p style="color:rgba(255,255,255,.38);font-size:10px;margin-bottom:3px">رضا المرضى</p>
+        <p style="color:#fff;font-weight:900;font-size:22px">97%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- شريط الإحصائيات -->
+<div id="stats-bar">
+  <div class="stats-bar-grid">
+    <div class="stats-bar-item"><div class="stats-bar-n" id="sb-patients">0</div><div class="stats-bar-l">مريض مسجّل</div></div>
+    <div class="stats-bar-item"><div class="stats-bar-n">8+</div><div class="stats-bar-l">سنوات من التميز</div></div>
+    <div class="stats-bar-item"><div class="stats-bar-n">4</div><div class="stats-bar-l">أقسام تخصصية</div></div>
+    <div class="stats-bar-item"><div class="stats-bar-n">+1200</div><div class="stats-bar-l">علاج مكتمل</div></div>
+  </div>
+</div>
+
+<!-- الأخبار -->
+<div id="news-bg">
+  <div class="pub-section">
+    <div class="section-tag"><span>آخر الأخبار</span></div>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:14px">
+      <h2 class="section-title">أخبار الكلية والإعلانات</h2>
+      <button class="btn btn-outline" onclick="gotoSection('reg-bg')">عرض الكل</button>
+    </div>
+    <div class="news-grid" id="pub-news"></div>
+  </div>
+</div>
+
+<!-- الأقسام -->
+<div id="depts-bg">
+  <div class="pub-section">
+    <div class="section-tag"><span>التخصصات</span></div>
+    <h2 class="section-title">أقسامنا</h2>
+    <p class="section-sub">رعاية سنية شاملة في جميع التخصصات، يقدمها طلاب تحت إشراف هيئة التدريس.</p>
+    <div class="depts-grid">
+      <div class="dept-card" onclick="gotoSection('reg-bg')">
+        <div class="dept-icon" style="background:var(--coral-bg)">🦷</div>
+        <div class="dept-name">جراحة الفم والأسنان</div>
+        <div class="dept-desc">القلع، الزراعة، أمراض الفم، والعمليات الجراحية.</div>
+        <span class="dept-link" style="color:var(--coral)">احجز موعدك ←</span>
+      </div>
+      <div class="dept-card" onclick="gotoSection('reg-bg')">
+        <div class="dept-icon" style="background:var(--mint-bg)">🔬</div>
+        <div class="dept-name">أمراض اللثة</div>
+        <div class="dept-desc">علاج أمراض اللثة، التنظيف، والمتابعة الدورية.</div>
+        <span class="dept-link" style="color:var(--mint)">احجز موعدك ←</span>
+      </div>
+      <div class="dept-card" onclick="gotoSection('reg-bg')">
+        <div class="dept-icon" style="background:var(--gold-bg)">👑</div>
+        <div class="dept-name">تعويضات الأسنان</div>
+        <div class="dept-desc">التيجان، الجسور، الأطقم، وإعادة تأهيل الابتسامة.</div>
+        <span class="dept-link" style="color:var(--gold)">احجز موعدك ←</span>
+      </div>
+      <div class="dept-card" onclick="gotoSection('reg-bg')">
+        <div class="dept-icon" style="background:var(--blue-bg)">📐</div>
+        <div class="dept-name">تقويم الأسنان</div>
+        <div class="dept-desc">التقويم المعدني والشفاف وتصحيح الإطباق لجميع الأعمار.</div>
+        <span class="dept-link" style="color:var(--blue)">احجز موعدك ←</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- تسجيل المريض -->
+<div id="reg-bg">
+  <div class="reg-inner">
+    <div class="reg-left">
+      <div class="section-tag" style="background:rgba(212,114,90,.12)"><span style="color:var(--coral)">سجّل الآن</span></div>
+      <h2>ابدأ رحلتك<br/>نحو الابتسامة اليوم</h2>
+      <p>سجّل عبر الإنترنت وسيتواصل معك فريقنا خلال 24 ساعة لتأكيد الموعد ومطابقتك مع المختص المناسب.</p>
+      <div class="reg-steps">
+        <div class="reg-step">
+          <div class="reg-step-num">١</div>
+          <div><div class="reg-step-h">أكمل النموذج</div><div class="reg-step-p">أدخل بياناتك الأساسية وشكواك</div></div>
+        </div>
+        <div class="reg-step">
+          <div class="reg-step-num">٢</div>
+          <div><div class="reg-step-h">مكالمة التأكيد</div><div class="reg-step-p">سيتصل بك فريقنا خلال 24 ساعة</div></div>
+        </div>
+        <div class="reg-step">
+          <div class="reg-step-num">٣</div>
+          <div><div class="reg-step-h">الزيارة والعلاج</div><div class="reg-step-p">احضر للعيادة وتلقَّ الرعاية المتخصصة</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="reg-form">
+      <h3>تسجيل مريض جديد</h3>
+      <div id="pub-reg-ok" class="reg-success">تم استلام طلبك! سنتواصل معك خلال 24 ساعة.</div>
+      <div class="reg-row">
+        <div class="reg-group"><label>الاسم الأول</label><input class="reg-input" id="rf-first" placeholder="الاسم الأول"/></div>
+        <div class="reg-group"><label>اسم العائلة</label><input class="reg-input" id="rf-last" placeholder="اسم العائلة"/></div>
+      </div>
+      <div class="reg-row">
+        <div class="reg-group"><label>رقم الجوال</label><input class="reg-input" id="rf-phone" placeholder="05XXXXXXXX" style="direction:ltr;text-align:left"/></div>
+        <div class="reg-group"><label>العمر</label><input class="reg-input" id="rf-age" type="number" placeholder="العمر"/></div>
+      </div>
+      <div class="reg-group"><label>البريد الإلكتروني (اختياري)</label><input class="reg-input" id="rf-email" type="email" placeholder="example@email.com" style="direction:ltr;text-align:left"/></div>
+      <div class="reg-group"><label>الجنس</label>
+        <select class="reg-input" id="rf-gender">
+          <option value="">اختر...</option><option>ذكر</option><option>أنثى</option>
+        </select>
+      </div>
+      <div class="reg-group"><label>الشكوى الرئيسية</label>
+        <select class="reg-input" id="rf-complaint">
+          <option value="">اختر شكواك...</option>
+          <option>ألم في الأسنان</option><option>نزيف اللثة</option><option>حساسية الأسنان</option>
+          <option>مشكلة تاج أو جسر</option><option>تقويم الأسنان</option><option>فقدان أسنان</option>
+          <option>فحص دوري</option><option>أخرى</option>
+        </select>
+      </div>
+      <div class="reg-group"><label>القسم المفضّل</label>
+        <select class="reg-input" id="rf-dept">
+          <option value="">اختر القسم...</option>
+          <option>جراحة الفم والأسنان</option><option>أمراض اللثة</option>
+          <option>تقويم الأسنان</option><option>تعويضات الأسنان</option>
+        </select>
+      </div>
+      <div class="reg-group"><label>ملاحظات إضافية</label>
+        <textarea class="reg-input" id="rf-notes" rows="2" placeholder="أي معلومات إضافية..."></textarea>
+      </div>
+      <button class="reg-submit" onclick="publicRegister()">إرسال الطلب</button>
+    </div>
+  </div>
+</div>
+
+<!-- الفوتر -->
+<div id="footer-bg">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px">
+        <div style="width:30px;height:30px;border-radius:8px;background:var(--coral);display:flex;align-items:center;justify-content:center;font-size:15px">🦷</div>
+        <h2>كلية طب الأسنان</h2>
+      </div>
+      <p>ملتزمون بالتميز في تعليم طب الأسنان ورعاية المرضى بشكل رحيم. نخدم المجتمع عبر التدريب السريري المشرف عليه.</p>
+    </div>
+    <div class="footer-col">
+      <h4>خدماتنا</h4>
+      <a>جراحة الفم والأسنان</a><a>أمراض اللثة</a><a>تعويضات الأسنان</a><a>تقويم الأسنان</a>
+    </div>
+    <div class="footer-col">
+      <h4>روابط سريعة</h4>
+      <a onclick="gotoSection('reg-bg')">تسجيل كمريض</a>
+      <a onclick="showPage('login')">دخول الموظفين</a>
+      <a onclick="gotoSection('news-bg')">الأخبار</a>
+    </div>
+    <div class="footer-col">
+      <h4>تواصل معنا</h4>
+      <a>حرم الجامعة، مبنى 7</a>
+      <a>+966 11 000 0000</a>
+      <a>dental@university.edu.sa</a>
+      <a>الأحد - الخميس: 8ص - 5م</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>2025 كلية طب الأسنان. جميع الحقوق محفوظة.</p>
+    <p>نظام DentalFac لإدارة المرضى</p>
+  </div>
+</div>
+</div><!-- /page-public -->
+
+<!-- ══════════════════ صفحة الدخول ══════════════════ -->
+<div id="page-login" style="min-height:100vh;background:var(--navy);display:none;align-items:center;justify-content:center;padding:20px;">
+  <div class="login-card">
+    <div class="login-logo">
+      <div class="login-logo-icon">🦷</div>
+      <div><div class="login-title">بوابة الموظفين</div><div class="login-sub">كلية طب الأسنان</div></div>
+    </div>
+    <p style="font-size:11px;font-weight:700;color:var(--g400);margin-bottom:9px">اختر صلاحيتك</p>
+    <div class="role-grid" id="role-grid"></div>
+    <div id="demo-hint" class="demo-hint" style="display:none">
+      <span class="demo-hint-txt" id="demo-hint-txt"></span>
+      <button class="demo-fill" onclick="autofill()">تعبئة تلقائية</button>
+    </div>
+    <div class="login-field"><label>البريد الإلكتروني / الرقم الوظيفي</label><input id="l-email" type="email" placeholder="أدخل البريد الإلكتروني" style="direction:ltr;text-align:left"/></div>
+    <div class="login-field"><label>كلمة المرور</label><input id="l-pass" type="password" placeholder="أدخل كلمة المرور" style="direction:ltr;text-align:left"/></div>
+    <p class="login-err" id="l-err"></p>
+    <button class="login-submit" onclick="doLogin()">تسجيل الدخول</button>
+    <div class="login-back"><span onclick="showPage('public')" style="cursor:pointer">العودة للموقع الرئيسي</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════ لوحة التحكم ══════════════════ -->
+<div id="page-dash" style="display:none;">
+  <div class="sidebar" id="sidebar">
+    <div class="sb-logo">
+      <div class="sb-logo-icon">🦷</div>
+      <div><div class="sb-logo-name">طب الأسنان</div><div class="sb-logo-sub">بوابة الموظفين</div></div>
+    </div>
+    <div class="sb-user" id="sb-user"></div>
+    <nav class="sb-nav" id="sb-nav"></nav>
+    <div class="sb-foot"><button class="sb-logout" onclick="doLogout()">تسجيل الخروج</button></div>
+  </div>
+  <div class="dash-main" id="dash-main"></div>
+</div>
+
+<!-- المودال -->
+<div id="modal" class="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-hd">
+      <div class="modal-title" id="modal-title"></div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+var DB = {
+  get: function(k){ try{ return JSON.parse(localStorage.getItem('df_'+k))||null; }catch(e){ return null; } },
+  set: function(k,v){ try{ localStorage.setItem('df_'+k,JSON.stringify(v)); }catch(e){} },
+  init: function(){
+    if(DB.get('seeded')) return;
+    DB.set('patients',[
+      {id:'P001',name:'أحمد الرشيدي',age:34,phone:'0501234567',email:'ahmed@email.com',complaint:'ألم في الأسنان',dept:'جراحة الفم والأسنان',status:'نشط',doctor:'د. خالد',studentId:'S001',date:'2025-03-01',notes:'ألم مزمن في الضرس السفلي الأيسر',source:'walk-in'},
+      {id:'P002',name:'سارة حسن',age:28,phone:'0559876543',email:'sara@email.com',complaint:'نزيف اللثة',dept:'أمراض اللثة',status:'مجدول',doctor:'د. نورة',studentId:'S002',date:'2025-03-05',notes:'التهاب لثة عام',source:'online'},
+      {id:'P003',name:'محمد علي',age:45,phone:'0531122334',email:'',complaint:'مشكلة تاج',dept:'تعويضات الأسنان',status:'نشط',doctor:'د. خالد',studentId:'S003',date:'2025-02-20',notes:'استبدال تاج الضاحك العلوي الأيمن',source:'walk-in'},
+      {id:'P004',name:'فاطمة الزهراء',age:22,phone:'0567654321',email:'fatima@email.com',complaint:'تعديل تقويم',dept:'تقويم الأسنان',status:'مكتمل',doctor:'د. أمل',studentId:'S001',date:'2025-02-15',notes:'تعديل شهري للأسلاك',source:'online'}
+    ]);
+    DB.set('students',[
+      {id:'S001',name:'ليلى إبراهيم',level:'السنة الرابعة',dept:'جراحة الفم والأسنان',gpa:3.8,patients:12,status:'نشط',email:'layla@student.edu',pass:'1234'},
+      {id:'S002',name:'عمر سعود',level:'السنة الخامسة',dept:'أمراض اللثة',gpa:3.5,patients:18,status:'نشط',email:'omar@student.edu',pass:'1234'},
+      {id:'S003',name:'نورة خالد',level:'السنة الرابعة',dept:'تعويضات الأسنان',gpa:3.9,patients:10,status:'نشط',email:'nora@student.edu',pass:'1234'},
+      {id:'S004',name:'يوسف منصور',level:'السنة الخامسة',dept:'تقويم الأسنان',gpa:3.2,patients:15,status:'غير نشط',email:'yusuf@student.edu',pass:'1234'}
+    ]);
+    DB.set('doctors',[
+      {id:'D001',name:'د. خالد العمر',dept:'جراحة الفم والأسنان',role:'مشرف',patients:24,students:8,email:'khalid@faculty.edu',pass:'1234'},
+      {id:'D002',name:'د. نورة الفيصل',dept:'أمراض اللثة',role:'طبيب',patients:18,students:6,email:'noura@faculty.edu',pass:'1234'},
+      {id:'D003',name:'د. أمل هاشم',dept:'تقويم الأسنان',role:'مشرف',patients:20,students:10,email:'amal@faculty.edu',pass:'1234'}
+    ]);
+    DB.set('appointments',[
+      {id:'A001',patient:'أحمد الرشيدي',date:'2025-03-10',time:'09:00',dept:'جراحة الفم والأسنان',student:'ليلى إبراهيم',doctor:'د. خالد',status:'مؤكد',procedure:'فحص'},
+      {id:'A002',patient:'سارة حسن',date:'2025-03-10',time:'10:30',dept:'أمراض اللثة',student:'عمر سعود',doctor:'د. نورة',status:'معلّق',procedure:'تنظيف'},
+      {id:'A003',patient:'محمد علي',date:'2025-03-11',time:'14:00',dept:'تعويضات الأسنان',student:'نورة خالد',doctor:'د. خالد',status:'مؤكد',procedure:'تحضير التاج'}
+    ]);
+    DB.set('news',[
+      {id:'N001',title:'أسبوع صحة الفم والأسنان السنوي 2025',category:'فعالية',date:'2025-03-01',body:'انضم إلينا لأسبوع كامل من الفحوصات السنية المجانية وفعاليات التوعية المجتمعية. مفتوح لجميع أفراد المجتمع.',featured:true},
+      {id:'N002',title:'حملة تنظيف مجاني - مقاعد محدودة',category:'إعلان',date:'2025-02-20',body:'ضمن مبادرتنا للخدمة المجتمعية، نقدم خدمة التنظيف المجاني. احجز مقعدك قبل نفاد الأماكن.',featured:false},
+      {id:'N003',title:'تقنيات تقويم حديثة تُطبَّق بالكلية',category:'بحث',date:'2025-02-10',body:'اعتمدت كليتنا تقنيات جديدة للمحاذاة الشفافة تحسّن نتائج المرضى بنسبة 30% مقارنة بالطرق التقليدية.',featured:false},
+      {id:'N004',title:'احتفال تخرج طلاب السنة الخامسة',category:'فعالية',date:'2025-01-28',body:'نحتفل بفخر واعتزاز بتخرج طلاب السنة الخامسة. ألف مبروك لجميع الخريجين.',featured:false}
+    ]);
+    DB.set('messages',[
+      {id:'M001',from:'د. خالد',to:'S001',subject:'تحديث حالة المريض',body:'يرجى مراجعة خطة العلاج المحدّثة لأحمد، مع التركيز على إجراء الضرس السفلي الأيسر.',time:'منذ ساعتين',unread:true},
+      {id:'M002',from:'الإدارة',to:'all',subject:'تعديل جدول الأسبوع القادم',body:'يُرجى العلم بأن جدول العنبر قد تم تعديله للأسبوع القادم. راجع صفحة الجدول.',time:'منذ 5 ساعات',unread:true},
+      {id:'M003',from:'د. نورة',to:'S002',subject:'موعد تسليم التقييم',body:'يرجى تسليم سجل الحالات بحلول الخميس حتى أتمكن من إكمال تقييمك الفصلي.',time:'منذ يوم',unread:false}
+    ]);
+    DB.set('evaluations',[
+      {id:'E001',studentId:'S001',supervisor:'د. خالد',dept:'جراحة الفم والأسنان',period:'الربع الأول 2025',clinical:92,handling:95,theoretical:88,professionalism:97,grade:'A',comment:'أداء استثنائي. علاقة ممتازة مع المرضى.'},
+      {id:'E002',studentId:'S002',supervisor:'د. نورة',dept:'أمراض اللثة',period:'الربع الأول 2025',clinical:85,handling:80,theoretical:88,professionalism:82,grade:'B+',comment:'تقدم جيد. العمل على تعزيز الثقة في تقنيات التنظيف.'}
+    ]);
+    DB.set('seeded',true);
+  }
+};
+
+var ROLES = [
+  {id:'patient',   label:'مريض',     icon:'🦷', color:'#D4725A'},
+  {id:'student',   label:'طالب',     icon:'🎓', color:'#3DAA8F'},
+  {id:'secretary', label:'سكرتيرة',  icon:'📋', color:'#6B8DD6'},
+  {id:'doctor',    label:'طبيب',     icon:'🩺', color:'#C9A84C'},
+  {id:'admin',     label:'إدارة',    icon:'⚙️', color:'#8B5CF6'}
+];
+var DEMO = {
+  patient:   {email:'patient@demo.com',  pass:'1234',name:'أحمد الرشيدي'},
+  student:   {email:'student@demo.com',  pass:'1234',name:'ليلى إبراهيم'},
+  secretary: {email:'secretary@demo.com',pass:'1234',name:'منى الفارس'},
+  doctor:    {email:'doctor@demo.com',   pass:'1234',name:'خالد العمر'},
+  admin:     {email:'admin@demo.com',    pass:'1234',name:'مدير النظام'}
+};
+var NAV = {
+  patient:  [{id:'overview',icon:'🏠',label:'الرئيسية'},{id:'appointments',icon:'📅',label:'مواعيدي'},{id:'history',icon:'📋',label:'السجل الطبي'},{id:'complaint',icon:'💬',label:'تقديم شكوى'},{id:'inbox',icon:'📬',label:'البريد',badge:true}],
+  student:  [{id:'overview',icon:'🏠',label:'الرئيسية'},{id:'mypatients',icon:'🦷',label:'مرضاي'},{id:'schedule',icon:'📅',label:'الجدول'},{id:'evaluations',icon:'⭐',label:'تقييماتي'},{id:'inbox',icon:'📬',label:'البريد',badge:true}],
+  secretary:[{id:'overview',icon:'🏠',label:'الرئيسية'},{id:'register',icon:'➕',label:'تسجيل مريض'},{id:'allpatients',icon:'👥',label:'جميع المرضى'},{id:'appointments',icon:'📅',label:'المواعيد'},{id:'inbox',icon:'📬',label:'البريد',badge:true}],
+  doctor:   [{id:'overview',icon:'🏠',label:'الرئيسية'},{id:'allpatients',icon:'🦷',label:'المرضى'},{id:'students',icon:'🎓',label:'طلابي'},{id:'evaluate',icon:'⭐',label:'تقييم الطلاب'},{id:'cases',icon:'📋',label:'توثيق الحالات'},{id:'inbox',icon:'📬',label:'البريد',badge:true}],
+  admin:    [{id:'overview',icon:'🏠',label:'الرئيسية'},{id:'allpatients',icon:'🦷',label:'المرضى'},{id:'students',icon:'🎓',label:'الطلاب'},{id:'doctors',icon:'🩺',label:'الأطباء'},{id:'news',icon:'📰',label:'الأخبار'},{id:'schedules',icon:'📅',label:'الجداول'},{id:'broadcast',icon:'📢',label:'إرسال إشعار'},{id:'settings',icon:'⚙️',label:'الإعدادات'}]
+};
+
+var selectedRole=null, currentUser=null, activePage='overview';
+
+function showPage(p){
+  document.getElementById('page-public').style.display = p==='public'?'block':'none';
+  document.getElementById('page-login').style.display  = p==='login'?'flex':'none';
+  document.getElementById('page-dash').style.display   = p==='dash'?'block':'none';
+  if(p==='public') loadPublicData();
+  if(p==='login')  initLoginUI();
+  if(p==='dash')   renderDash();
+}
+function gotoSection(id){ var e=document.getElementById(id); if(e) e.scrollIntoView({behavior:'smooth'}); }
+
+function loadPublicData(){
+  var pts=DB.get('patients')||[], drs=DB.get('doctors')||[], sts=DB.get('students')||[], aps=DB.get('appointments')||[];
+  animNum('hs-patients',pts.length); animNum('hs-doctors',drs.length); animNum('hs-students',sts.length);
+  var sb=document.getElementById('sb-patients'); if(sb) sb.textContent=pts.length;
+  var ha=document.getElementById('hero-appts');
+  if(ha){
+    var h=''; var sh=aps.slice(0,3);
+    for(var i=0;i<sh.length;i++){
+      var a=sh[i]; var dc=a.status==='مؤكد'?'#3DAA8F':'#D4725A';
+      h+='<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07)">';
+      h+='<div style="width:7px;height:7px;border-radius:50%;background:'+dc+';flex-shrink:0"></div>';
+      h+='<div style="flex:1"><div style="color:#fff;font-size:12px;font-weight:700">'+a.patient+'</div>';
+      h+='<div style="color:rgba(255,255,255,.38);font-size:10px">'+a.time+' - '+a.dept+'</div></div>';
+      h+='<span style="font-size:10px;padding:2px 8px;border-radius:9px;font-weight:700;background:'+dc+'20;color:'+dc+'">'+a.status+'</span></div>';
+    }
+    ha.innerHTML=h;
+  }
+  renderPublicNews();
+}
+function animNum(id,target){
+  var el=document.getElementById(id); if(!el) return;
+  var cur=0, step=Math.max(1,Math.ceil(target/25));
+  var t=setInterval(function(){ cur=Math.min(cur+step,target); el.textContent=cur; if(cur>=target)clearInterval(t); },40);
+}
+function renderPublicNews(){
+  var news=DB.get('news')||[], el=document.getElementById('pub-news');
+  if(!el) return;
+  if(!news.length){ el.innerHTML='<p style="color:var(--g400);padding:20px">لا توجد أخبار حالياً.</p>'; return; }
+  var feat=null, rest=[];
+  for(var i=0;i<news.length;i++){ if(news[i].featured&&!feat) feat=news[i]; else rest.push(news[i]); }
+  if(!feat){ feat=news[0]; rest=news.slice(1); }
+  var ft=feat.title.replace(/'/g,'&#39;'), fb=feat.body.replace(/'/g,'&#39;');
+  var h='<div class="news-featured" onclick="openModal(\''+ft+'\',\''+fb+'\')">';
+  h+='<div class="news-featured-img">📰</div><div class="news-featured-body">';
+  h+='<span class="news-cat cat-'+feat.category+'">'+feat.category+'</span>';
+  h+='<div class="news-featured-title">'+feat.title+'</div>';
+  h+='<div class="news-featured-meta">'+feat.date+'</div></div></div>';
+  h+='<div class="news-list">';
+  var shown=rest.slice(0,3);
+  for(var j=0;j<shown.length;j++){
+    var n=shown[j], nt=n.title.replace(/'/g,'&#39;'), nb=n.body.replace(/'/g,'&#39;');
+    h+='<div class="news-item" onclick="openModal(\''+nt+'\',\''+nb+'\')">';
+    h+='<span class="news-cat cat-'+n.category+'">'+n.category+'</span>';
+    h+='<div class="news-item-title">'+n.title+'</div>';
+    h+='<div class="news-item-meta">'+n.date+'</div></div>';
+  }
+  h+='</div>'; el.innerHTML=h;
+}
+function publicRegister(){
+  var first=(document.getElementById('rf-first').value||'').trim();
+  var phone=(document.getElementById('rf-phone').value||'').trim();
+  var complaint=document.getElementById('rf-complaint').value;
+  if(!first||!phone||!complaint){ alert('يرجى تعبئة: الاسم ورقم الجوال والشكوى'); return; }
+  var pts=DB.get('patients')||[];
+  pts.push({ id:'P'+String(pts.length+1).padStart(3,'0'),
+    name:first+' '+(document.getElementById('rf-last').value||''),
+    age:document.getElementById('rf-age').value||'',
+    phone:phone, email:document.getElementById('rf-email').value||'',
+    complaint:complaint, dept:document.getElementById('rf-dept').value||'معلّق',
+    status:'معلّق', doctor:'غير محدد', studentId:'',
+    date:new Date().toISOString().slice(0,10),
+    notes:document.getElementById('rf-notes').value||'', source:'online' });
+  DB.set('patients',pts);
+  document.getElementById('pub-reg-ok').style.display='block';
+  var sb=document.getElementById('sb-patients'); if(sb) sb.textContent=pts.length;
+  ['rf-first','rf-last','rf-phone','rf-age','rf-email','rf-notes'].forEach(function(id){ var e=document.getElementById(id); if(e)e.value=''; });
+  ['rf-gender','rf-complaint','rf-dept'].forEach(function(id){ var e=document.getElementById(id); if(e)e.value=''; });
+}
+
+function initLoginUI(){
+  selectedRole=null;
+  var grid=document.getElementById('role-grid'); if(!grid) return;
+  var h='';
+  for(var i=0;i<ROLES.length;i++){
+    var r=ROLES[i];
+    h+='<button class="role-btn" id="rb-'+r.id+'" onclick="selectRole(\''+r.id+'\')">';
+    h+='<span style="font-size:18px">'+r.icon+'</span><span>'+r.label+'</span></button>';
+  }
+  grid.innerHTML=h;
+  document.getElementById('demo-hint').style.display='none';
+  var ee=document.getElementById('l-email'); if(ee) ee.value='';
+  var ep=document.getElementById('l-pass');  if(ep) ep.value='';
+  var er=document.getElementById('l-err');   if(er){ er.textContent=''; er.style.display='none'; }
+}
+function selectRole(rid){
+  selectedRole=rid;
+  for(var i=0;i<ROLES.length;i++){
+    var b=document.getElementById('rb-'+ROLES[i].id); if(!b) continue;
+    if(ROLES[i].id===rid){ b.style.borderColor=ROLES[i].color; b.style.background=ROLES[i].color+'15'; b.classList.add('selected'); }
+    else{ b.style.borderColor=''; b.style.background=''; b.classList.remove('selected'); }
+  }
+  var hint=document.getElementById('demo-hint'), txt=document.getElementById('demo-hint-txt'), dc=DEMO[rid];
+  if(hint&&txt&&dc){ txt.textContent=dc.email+' / '+dc.pass; hint.style.display='flex'; }
+}
+function autofill(){
+  if(!selectedRole) return;
+  var dc=DEMO[selectedRole];
+  var ee=document.getElementById('l-email'); if(ee) ee.value=dc.email;
+  var ep=document.getElementById('l-pass');  if(ep) ep.value=dc.pass;
+  var er=document.getElementById('l-err');   if(er){ er.textContent=''; er.style.display='none'; }
+}
+function doLogin(){
+  var email=(document.getElementById('l-email').value||'').trim().toLowerCase();
+  var pass=document.getElementById('l-pass').value||'';
+  var errEl=document.getElementById('l-err');
+  if(!selectedRole){ errEl.textContent='يرجى اختيار صلاحيتك أولاً'; errEl.style.display='block'; return; }
+  if(!email||!pass){ errEl.textContent='يرجى إدخال البريد الإلكتروني وكلمة المرور'; errEl.style.display='block'; return; }
+  var dc=DEMO[selectedRole];
+  if(email!==dc.email.toLowerCase()||pass!==dc.pass){ errEl.textContent='بيانات خاطئة. استخدم زر التعبئة التلقائية'; errEl.style.display='block'; return; }
+  currentUser={role:selectedRole,name:dc.name,email:dc.email};
+  DB.set('session',currentUser);
+  activePage='overview';
+  showPage('dash');
+}
+function doLogout(){ currentUser=null; DB.set('session',null); showPage('public'); }
+
+function getRoleConfig(rid){ for(var i=0;i<ROLES.length;i++) if(ROLES[i].id===rid) return ROLES[i]; return ROLES[0]; }
+
+function renderDash(){
+  if(!currentUser) return;
+  var rc=getRoleConfig(currentUser.role);
+  var msgs=DB.get('messages')||[], unread=0;
+  for(var i=0;i<msgs.length;i++) if(msgs[i].unread) unread++;
+  var uEl=document.getElementById('sb-user');
+  if(uEl) uEl.innerHTML='<div class="sb-user-av" style="background:'+rc.color+'20;border-color:'+rc.color+';color:'+rc.color+'">'+rc.icon+'</div><div><div class="sb-user-name">'+currentUser.name+'</div><div class="sb-user-role" style="color:'+rc.color+'">'+rc.label+'</div></div>';
+  var navEl=document.getElementById('sb-nav');
+  if(navEl){
+    var items=NAV[currentUser.role]||[], h='';
+    for(var n=0;n<items.length;n++){
+      var it=items[n], isOn=it.id===activePage;
+      var badge=it.badge&&unread>0?'<span class="sb-badge">'+unread+'</span>':'';
+      h+='<button class="sb-item'+(isOn?' on':'')+'" id="sbnav-'+it.id+'" style="'+(isOn?'color:'+rc.color+';background:'+rc.color+'18':'')+'" onclick="navTo(\''+it.id+'\')">'+it.icon+' '+it.label+badge+'</button>';
+    }
+    navEl.innerHTML=h;
+  }
+  renderPage(activePage);
+}
+function navTo(pid){
+  activePage=pid;
+  var rc=getRoleConfig(currentUser.role), items=NAV[currentUser.role]||[];
+  for(var i=0;i<items.length;i++){
+    var b=document.getElementById('sbnav-'+items[i].id); if(!b) continue;
+    if(items[i].id===pid){ b.classList.add('on'); b.style.color=rc.color; b.style.background=rc.color+'18'; }
+    else{ b.classList.remove('on'); b.style.color=''; b.style.background=''; }
+  }
+  renderPage(pid);
+}
+function renderPage(pid){
+  var el=document.getElementById('dash-main'); if(!el) return;
+  var c='', role=currentUser.role;
+  if(pid==='overview'){
+    if(role==='patient')   c=pgPatientHome();
+    if(role==='student')   c=pgStudentHome();
+    if(role==='secretary') c=pgSecretaryHome();
+    if(role==='doctor')    c=pgDoctorHome();
+    if(role==='admin')     c=pgAdminHome();
+  }
+  else if(pid==='appointments') c=pgAppointments();
+  else if(pid==='history')      c=pgHistory();
+  else if(pid==='complaint')    c=pgComplaint();
+  else if(pid==='inbox')        c=pgInbox();
+  else if(pid==='mypatients')   c=pgMyPatients();
+  else if(pid==='schedule')     c=pgSchedule();
+  else if(pid==='evaluations')  c=pgEvaluations();
+  else if(pid==='register')     c=pgRegister();
+  else if(pid==='allpatients')  c=pgAllPatients();
+  else if(pid==='evaluate')     c=pgEvaluate();
+  else if(pid==='cases')        c=pgCases();
+  else if(pid==='students')     c=pgStudents();
+  else if(pid==='doctors')      c=pgDoctors();
+  else if(pid==='news')         c=pgNews();
+  else if(pid==='schedules')    c=pgSchedules();
+  else if(pid==='broadcast')    c=pgBroadcast();
+  else if(pid==='settings')     c=pgSettings();
+  el.innerHTML='<div class="dash-page">'+c+'</div>';
+}
+
+// ── مساعدات HTML ──
+function H(title,sub,btn){ return '<div class="dash-head"><div><div class="dash-title">'+title+'</div>'+(sub?'<div class="dash-sub">'+sub+'</div>':'')+'</div>'+(btn||'')+'</div>'; }
+function SC(icon,label,value,color,trend){ return '<div class="stat-card"><div><div class="sc-lbl">'+label+'</div><div class="sc-val">'+value+'</div>'+(trend?'<div class="sc-trend">'+trend+'</div>':'')+'</div><div class="sc-icon" style="background:'+color+'18">'+icon+'</div></div>'; }
+function BS(s){ var m={نشط:'#3DAA8F',مؤكد:'#3DAA8F',مجدول:'#D4725A',معلّق:'#C9A84C',مكتمل:'#9E8E80','غير نشط':'#9E8E80'}; var c=m[s]||'#9E8E80'; return '<span class="badge" style="background:'+c+'18;color:'+c+'">'+s+'</span>'; }
+function TBL(cols,rows){
+  if(!rows||!rows.length) return '<p style="color:var(--g400);padding:16px">لا توجد سجلات.</p>';
+  var h='<div class="tbl-wrap"><table><thead><tr>';
+  for(var c=0;c<cols.length;c++) h+='<th>'+cols[c].l+'</th>';
+  h+='</tr></thead><tbody>';
+  for(var r=0;r<rows.length;r++){
+    h+='<tr>';
+    for(var c2=0;c2<cols.length;c2++){ var col=cols[c2],val=rows[r][col.k]; h+='<td>'+(col.r?col.r(val,rows[r]):(val!==undefined?val:'-'))+'</td>'; }
+    h+='</tr>';
+  }
+  return h+'</tbody></table></div>';
+}
+function LI(av,avBg,avC,name,sub,right){ return '<div class="li"><div class="li-av" style="background:'+avBg+';color:'+avC+'">'+av+'</div><div style="flex:1"><div class="li-name">'+name+'</div><div class="li-sub">'+sub+'</div></div>'+(right||'')+'</div>'; }
+function PR(label,val,max,color){ var pct=max>0?Math.round(val/max*100):0; return '<div style="margin-bottom:11px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:12px;color:var(--g600)">'+label+'</span><span style="font-size:12px;font-weight:700;color:var(--navy)">'+val+'</span></div><div class="prog"><div class="prog-fill" style="width:'+pct+'%;background:'+color+'"></div></div></div>'; }
+function INI(name){ var p=(name||'').split(' '); var r=''; for(var i=0;i<Math.min(p.length,2);i++) if(p[i]) r+=p[i][0]; return r; }
+function GC(v){ return v>=3.7?'var(--mint)':v>=3.3?'#C9A84C':'var(--coral)'; }
+function MSGS(msgs){ var h=''; for(var i=0;i<msgs.length;i++){ var m=msgs[i]; h+='<div class="msg-li"><div class="msg-icon">📩</div><div><div class="msg-subj">'+m.subject+(m.unread?'<span class="unread-dot"></span>':'')+'</div><div class="msg-meta">من: '+m.from+' - '+m.time+'</div><div class="msg-prev">'+m.body+'</div></div></div>'; } return h||'<p style="color:var(--g400)">لا توجد رسائل.</p>'; }
+
+// ── صفحات المريض ──
+function pgPatientHome(){
+  var ap=DB.get('appointments')||[], ms=DB.get('messages')||[], un=0;
+  for(var i=0;i<ms.length;i++) if(ms[i].unread) un++;
+  var h=H('مرحباً، '+currentUser.name.split(' ')[0]+' 👋','ملخص رعايتك السنية');
+  h+='<div class="sg sg3" style="margin-bottom:18px">'+SC('📅','المواعيد القادمة',ap.length,'var(--coral)')+SC('✅','العلاجات المكتملة','5','var(--mint)')+SC('📬','رسائل غير مقروءة',un,'#6B8DD6')+'</div>';
+  h+='<div class="sg sg21"><div class="card"><div class="card-h">المواعيد القادمة</div>';
+  for(var a=0;a<Math.min(ap.length,3);a++) h+=LI('🦷','var(--coral-bg)','var(--coral)',ap[a].dept,ap[a].date+' - '+ap[a].time,BS(ap[a].status));
+  h+='</div><div class="card"><div class="card-h">فريق الرعاية</div>';
+  h+=LI('👨‍⚕️','#FEF3C7','#C9A84C','د. خالد العمر','جراحة الفم - مشرف','');
+  h+=LI('🎓','var(--mint-bg)','var(--mint)','ليلى إبراهيم','طالبة - السنة الرابعة','');
+  return h+'</div></div>';
+}
+function pgAppointments(){
+  var ap=DB.get('appointments')||[];
+  return H('مواعيدي','جميع الزيارات')+'<div class="card">'+TBL([{k:'date',l:'التاريخ'},{k:'time',l:'الوقت'},{k:'dept',l:'القسم'},{k:'procedure',l:'الإجراء'},{k:'student',l:'الطالب'},{k:'doctor',l:'الطبيب'},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],ap)+'</div>';
+}
+function pgHistory(){
+  var secs=[{title:'الأمراض المزمنة',items:['السكري - النوع الثاني','ضغط الدم'],icon:'🏥',color:'var(--coral)'},{title:'الحساسية',items:['البنسلين','اللاتكس'],icon:'⚠️',color:'#C9A84C'},{title:'علاجات سابقة',items:['علاج العصب (2022)','تاج (2021)','قلع (2020)'],icon:'🦷',color:'var(--mint)'},{title:'الأدوية الحالية',items:['ميتفورمين 500 مجم','أسبرين 81 مجم'],icon:'💊',color:'#6B8DD6'}];
+  var h=H('السجل الطبي')+'<div class="sg sg2">';
+  for(var i=0;i<secs.length;i++){
+    var s=secs[i]; h+='<div class="card"><div style="display:flex;align-items:center;gap:8px;margin-bottom:12px"><span style="font-size:20px">'+s.icon+'</span><div class="card-h" style="margin:0">'+s.title+'</div></div>';
+    for(var j=0;j<s.items.length;j++) h+='<div style="display:flex;align-items:center;gap:8px;padding:5px 0"><div style="width:5px;height:5px;border-radius:50%;background:'+s.color+';flex-shrink:0"></div><span style="font-size:13px;color:var(--g600)">'+s.items[j]+'</span></div>';
+    h+='</div>';
+  }
+  return h+'</div>';
+}
+function pgComplaint(){
+  return H('تقديم شكوى','صِف شكواك السنية')+'<div class="card" style="max-width:500px"><div id="complaint-ok" class="alert alert-ok">تم إرسال شكواك! ستتواصل معك السكرتيرة قريباً.</div><div class="field"><label>نوع الشكوى</label><select id="c-type"><option value="">اختر...</option><option>ألم في الأسنان</option><option>نزيف اللثة</option><option>حساسية</option><option>مشكلة تاج</option><option>أخرى</option></select></div><div class="field"><label>هل المشكلة متكررة؟</label><select id="c-recur"><option>مشكلة جديدة</option><option>مزمنة / متكررة</option></select></div><div class="field"><label>الوصف</label><textarea id="c-desc" rows="3" placeholder="صف أعراضك بالتفصيل..."></textarea></div><div class="field"><label>القسم المفضّل</label><select id="c-dept"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div><button class="btn btn-primary" onclick="submitComplaint()">إرسال الشكوى</button></div>';
+}
+function pgInbox(){ var ms=DB.get('messages')||[]; return H('البريد')+'<div class="card">'+MSGS(ms)+'</div>'; }
+
+// ── صفحات الطالب ──
+function pgStudentHome(){
+  var pts=DB.get('patients')||[], mine=[];
+  for(var i=0;i<pts.length;i++) if(pts[i].studentId==='S001') mine.push(pts[i]);
+  var h=H('مرحباً، '+currentUser.name.split(' ')[0]+' 👋','السنة الرابعة - جراحة الفم والأسنان');
+  h+='<div class="sg sg4" style="margin-bottom:18px">'+SC('🦷','مرضاي',mine.length,'var(--mint)')+SC('✅','مكتمل','8','var(--coral)')+SC('⭐','المعدل','3.8','#C9A84C','الأوائل')+SC('⏱️','ساعات العنبر','24','#6B8DD6')+'</div>';
+  h+='<div class="sg sg21"><div class="card"><div class="card-h">الحالات النشطة</div>';
+  for(var j=0;j<Math.min(mine.length,4);j++) h+=LI(INI(mine[j].name),'var(--mint-bg)','var(--mint)',mine[j].name,mine[j].complaint,BS(mine[j].status));
+  h+='</div><div class="card"><div class="card-h">جدول هذا الأسبوع</div>';
+  var days=[{day:'الأحد',dept:'جراحة الفم',time:'08:00-12:00'},{day:'الاثنين',dept:'أمراض اللثة',time:'13:00-17:00'},{day:'الأربعاء',dept:'جراحة الفم',time:'08:00-12:00'}];
+  for(var d=0;d<days.length;d++){
+    h+='<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--g100)">';
+    h+='<div style="width:38px;height:32px;border-radius:8px;background:var(--mint-bg);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;color:var(--mint)">'+days[d].day+'</div>';
+    h+='<div><div style="font-weight:700;font-size:12px;color:var(--navy)">'+days[d].dept+'</div><div style="font-size:11px;color:var(--g400)">'+days[d].time+'</div></div></div>';
+  }
+  return h+'</div></div>';
+}
+function pgMyPatients(){
+  var pts=DB.get('patients')||[], mine=[];
+  for(var i=0;i<pts.length;i++) if(pts[i].studentId==='S001') mine.push(pts[i]);
+  return H('مرضاي',mine.length+' مريض')+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'complaint',l:'الشكوى'},{k:'dept',l:'القسم'},{k:'date',l:'التاريخ'},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],mine)+'</div>';
+}
+function pgSchedule(){
+  var days=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس'];
+  var shifts=[[{dept:'جراحة الفم',time:'08:00-12:00',room:'العنبر 3أ'}],[{dept:'أمراض اللثة',time:'13:00-17:00',room:'العنبر 1ب'}],[],[{dept:'جراحة الفم',time:'08:00-12:00',room:'العنبر 3أ'}],[{dept:'تعويضات',time:'10:00-14:00',room:'العنبر 2ج'}]];
+  var h=H('جدول العنبر','دورانك الأسبوعي')+'<div class="sg sg5">';
+  for(var i=0;i<days.length;i++){
+    h+='<div class="card" style="padding:14px"><div style="font-weight:800;color:var(--navy);font-size:12px;margin-bottom:10px">'+days[i]+'</div>';
+    if(shifts[i].length){ h+='<div style="background:var(--mint-bg);border-radius:8px;padding:10px"><div style="font-weight:700;color:var(--mint);font-size:11px">'+shifts[i][0].dept+'</div><div style="color:var(--g600);font-size:10px;margin-top:2px">'+shifts[i][0].time+'</div><div style="color:var(--g400);font-size:10px">'+shifts[i][0].room+'</div></div>'; }
+    else h+='<p style="color:var(--g400);font-size:11px;text-align:center;padding:12px 0">لا يوجد عنبر</p>';
+    h+='</div>';
+  }
+  return h+'</div>';
+}
+function pgEvaluations(){
+  var ev=DB.get('evaluations')||[], mine=[];
+  for(var i=0;i<ev.length;i++) if(ev[i].studentId==='S001') mine.push(ev[i]);
+  var h=H('تقييماتي','مراجعات الأداء')+'<div class="sg sg2">';
+  for(var j=0;j<mine.length;j++){
+    var e=mine[j], avg=Math.round((e.clinical+e.handling+e.theoretical+e.professionalism)/4);
+    h+='<div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px"><div><div class="card-h" style="margin:0">'+e.dept+'</div><div style="color:var(--g400);font-size:12px">'+e.supervisor+' - '+e.period+'</div></div><div style="text-align:left"><div style="font-size:28px;color:var(--mint);font-weight:900">'+avg+'%</div><span class="badge" style="background:var(--mint-bg);color:var(--mint)">'+e.grade+'</span></div></div>';
+    h+='<div class="prog" style="margin-bottom:14px"><div class="prog-fill" style="width:'+avg+'%;background:linear-gradient(to left,var(--mint),var(--coral))"></div></div>';
+    h+=PR('المهارات السريرية',e.clinical,100,'var(--mint)')+PR('التعامل مع المرضى',e.handling,100,'var(--coral)')+PR('المعرفة النظرية',e.theoretical,100,'#6B8DD6')+PR('الاحترافية',e.professionalism,100,'#C9A84C');
+    h+='<p style="color:var(--g600);font-size:12px;font-style:italic;margin-top:10px;border-top:1px solid var(--g100);padding-top:10px">'+e.comment+'</p></div>';
+  }
+  if(!mine.length) h+='<div class="card"><p style="color:var(--g400)">لا توجد تقييمات بعد.</p></div>';
+  return h+'</div>';
+}
+
+// ── صفحات السكرتيرة ──
+function pgSecretaryHome(){
+  var pts=DB.get('patients')||[], aps=DB.get('appointments')||[];
+  var pending=0, online=0;
+  for(var i=0;i<pts.length;i++){ if(pts[i].status==='معلّق') pending++; if(pts[i].source==='online') online++; }
+  var h=H('لوحة السكرتيرة','الاستقبال وإدارة المرضى','<button class="btn btn-primary" onclick="navTo(\'register\')">تسجيل مريض</button>');
+  h+='<div class="sg sg4" style="margin-bottom:18px">'+SC('👥','إجمالي المرضى',pts.length,'var(--coral)')+SC('🟡','بانتظار التحديد',pending,'#C9A84C')+SC('🌐','التسجيل الإلكتروني',online,'#6B8DD6','جديد')+SC('📅','المواعيد',aps.length,'var(--mint)')+'</div>';
+  h+='<div class="sg sg21"><div class="card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><div class="card-h" style="margin:0">أحدث المرضى</div>'+(online>0?'<span class="badge" style="background:var(--coral-bg);color:var(--coral)">'+online+' إلكتروني</span>':'')+'</div>';
+  var rec=pts.slice(-5).reverse();
+  for(var k=0;k<rec.length;k++) h+=LI(INI(rec[k].name),'var(--coral-bg)','var(--coral)',rec[k].name+(rec[k].source==='online'?' 🌐':''),rec[k].dept+' - '+rec[k].date,BS(rec[k].status));
+  h+='</div><div class="card"><div class="card-h">توزيع الأقسام</div>';
+  var dpts=['جراحة الفم والأسنان','أمراض اللثة','تعويضات الأسنان','تقويم الأسنان'];
+  var dcols=['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  for(var d=0;d<dpts.length;d++){
+    var cnt=0; for(var p=0;p<pts.length;p++) if(pts[p].dept===dpts[d]) cnt++;
+    h+=PR(dpts[d],cnt,Math.max(pts.length,1),dcols[d]);
+  }
+  return h+'</div></div>';
+}
+function pgRegister(){
+  return H('تسجيل مريض جديد')+'<div class="card" style="max-width:580px"><div id="reg-ok" class="alert alert-ok">تم تسجيل المريض بنجاح!</div><div class="frow"><div class="field"><label>الاسم الكامل</label><input id="dr-name" placeholder="اسم المريض الكامل"/></div><div class="field"><label>رقم الجوال</label><input id="dr-phone" placeholder="05XXXXXXXX" style="direction:ltr;text-align:left"/></div></div><div class="frow"><div class="field"><label>العمر</label><input id="dr-age" type="number" placeholder="العمر"/></div><div class="field"><label>الجنس</label><select id="dr-gender"><option>ذكر</option><option>أنثى</option></select></div></div><div class="frow"><div class="field"><label>رقم الهوية</label><input id="dr-nid" placeholder="رقم الهوية"/></div><div class="field"><label>البريد الإلكتروني</label><input id="dr-email" type="email" placeholder="اختياري" style="direction:ltr;text-align:left"/></div></div><div class="field"><label>الشكوى الرئيسية</label><select id="dr-complaint"><option value="">اختر...</option><option>ألم في الأسنان</option><option>نزيف اللثة</option><option>حساسية</option><option>مشكلة تاج</option><option>تقويم</option><option>فقدان أسنان</option><option>فحص دوري</option><option>أخرى</option></select></div><div class="field"><label>القسم</label><select id="dr-dept"><option value="">اختر القسم...</option><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div><div class="field"><label>ملاحظات</label><textarea id="dr-notes" rows="2" placeholder="معلومات إضافية..."></textarea></div><div style="display:flex;gap:10px"><button class="btn btn-primary" onclick="dashRegister()">تسجيل المريض</button><button class="btn btn-outline" onclick="clearDashReg()">مسح</button></div></div>';
+}
+
+// ── صفحات الطبيب ──
+function pgDoctorHome(){
+  var pts=DB.get('patients')||[], sts=DB.get('students')||[];
+  var h=H('د. '+currentUser.name,'جراحة الفم والأسنان - مشرف');
+  h+='<div class="sg sg4" style="margin-bottom:18px">'+SC('🦷','إجمالي المرضى',pts.length,'#C9A84C')+SC('🎓','الطلاب',sts.length,'var(--mint)')+SC('📋','حالات الشهر','16','var(--coral)')+SC('📬','رسائل غير مقروءة','3','#6B8DD6')+'</div>';
+  h+='<div class="sg sg21"><div class="card"><div class="card-h">مرضى اليوم</div>';
+  for(var i=0;i<Math.min(pts.length,4);i++) h+=LI(INI(pts[i].name),'#FEF3C7','#C9A84C',pts[i].name,pts[i].complaint,BS(pts[i].status));
+  h+='</div><div class="card"><div class="card-h">أداء الطلاب</div>';
+  for(var j=0;j<Math.min(sts.length,4);j++){
+    var s=sts[j];
+    h+='<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--g100)"><div style="width:7px;height:7px;border-radius:50%;background:'+GC(s.gpa)+'"></div><div style="flex:1"><div style="font-weight:700;font-size:12px;color:var(--navy)">'+s.name+'</div><div style="font-size:11px;color:var(--g400)">'+s.patients+' مريض - '+s.level+'</div></div><span style="font-weight:900;color:var(--mint);font-size:12px">'+s.gpa+'</span></div>';
+  }
+  return h+'</div></div>';
+}
+function pgEvaluate(){
+  var sts=DB.get('students')||[], opts='';
+  for(var i=0;i<sts.length;i++) opts+='<option value="'+sts[i].id+'">'+sts[i].name+'</option>';
+  return H('تقييم الطلاب','أرسل التقييمات الفصلية')+'<div class="card" style="max-width:540px"><div id="eval-ok" class="alert alert-ok">تم إرسال التقييم بنجاح!</div><div class="field"><label>الطالب</label><select id="ev-student"><option value="">اختر الطالب...</option>'+opts+'</select></div><div class="field"><label>الفترة</label><select id="ev-period"><option>الربع الأول 2025</option><option>الربع الثاني 2025</option><option>الربع الثالث 2025</option><option>الربع الرابع 2025</option></select></div><div class="frow"><div class="field"><label>المهارات السريرية (0-100)</label><input id="ev-c" type="number" min="0" max="100" placeholder="85"/></div><div class="field"><label>التعامل مع المرضى (0-100)</label><input id="ev-h" type="number" min="0" max="100" placeholder="90"/></div></div><div class="frow"><div class="field"><label>المعرفة النظرية (0-100)</label><input id="ev-t" type="number" min="0" max="100" placeholder="80"/></div><div class="field"><label>الاحترافية (0-100)</label><input id="ev-p" type="number" min="0" max="100" placeholder="95"/></div></div><div class="field"><label>التعليقات</label><textarea id="ev-comment" rows="3" placeholder="ملاحظات تفصيلية..."></textarea></div><button class="btn btn-gold" onclick="submitEval()">إرسال التقييم</button></div>';
+}
+function pgCases(){
+  var pts=DB.get('patients')||[], sts=DB.get('students')||[], pO='', sO='';
+  for(var i=0;i<pts.length;i++) pO+='<option>'+pts[i].name+'</option>';
+  for(var j=0;j<sts.length;j++) sO+='<option>'+sts[j].name+'</option>';
+  return H('توثيق الحالات','سجّل تفاصيل الإجراءات')+'<div class="card" style="max-width:540px"><div id="case-ok" class="alert alert-ok">تم حفظ الحالة بنجاح!</div><div class="field"><label>المريض</label><select id="ca-patient"><option value="">اختر المريض...</option>'+pO+'</select></div><div class="frow"><div class="field"><label>الإجراء</label><select id="ca-proc"><option>قلع</option><option>علاج العصب</option><option>تنظيف</option><option>تركيب تاج</option><option>تعديل تقويم</option><option>زراعة</option><option>أخرى</option></select></div><div class="field"><label>الطالب المكلّف</label><select id="ca-student"><option value="">اختر الطالب...</option>'+sO+'</select></div></div><div class="field"><label>التاريخ</label><input id="ca-date" type="date"/></div><div class="field"><label>الملاحظات السريرية</label><textarea id="ca-notes" rows="3" placeholder="تفاصيل الإجراء والملاحظات..."></textarea></div><div class="field"><label>الموعد القادم</label><input id="ca-next" type="date"/></div><button class="btn btn-primary" onclick="submitCase()">حفظ الحالة</button></div>';
+}
+
+// ── صفحات مشتركة ──
+function pgAllPatients(){
+  var pts=DB.get('patients')||[];
+  var btn=currentUser.role==='secretary'?'<button class="btn btn-primary" onclick="navTo(\'register\')">تسجيل جديد</button>':'';
+  return H('جميع المرضى',pts.length+' سجل',btn)+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'age',l:'العمر'},{k:'phone',l:'الجوال'},{k:'complaint',l:'الشكوى'},{k:'dept',l:'القسم'},{k:'doctor',l:'الطبيب'},{k:'date',l:'التاريخ'},{k:'source',l:'المصدر',r:function(v){return v==='online'?'<span style="font-size:11px">إلكتروني 🌐</span>':'<span style="font-size:11px">حضوري 🚶</span>';}},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],pts)+'</div>';
+}
+function pgStudents(){
+  var sts=DB.get('students')||[];
+  return H('سجلات الطلاب',sts.length+' طالب','<button class="btn btn-mint" onclick="openAddStudentModal()">إضافة طالب</button>')+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'level',l:'المستوى'},{k:'dept',l:'القسم'},{k:'gpa',l:'المعدل',r:function(v){return '<span style="font-weight:900;color:'+GC(v)+'">'+v+'</span>';}},{k:'patients',l:'المرضى'},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],sts)+'</div>';
+}
+function pgDoctors(){
+  var drs=DB.get('doctors')||[];
+  return H('سجلات الأطباء',drs.length+' طبيب','<button class="btn btn-gold" onclick="openAddDoctorModal()">إضافة طبيب</button>')+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'dept',l:'القسم'},{k:'role',l:'الدور',r:function(v){var c=v==='مشرف'?'var(--gold)':'var(--mint)';var bg=v==='مشرف'?'var(--gold-bg)':'var(--mint-bg)';return '<span class="badge" style="background:'+bg+';color:'+c+'">'+v+'</span>';}},{k:'patients',l:'المرضى'},{k:'students',l:'الطلاب'}],drs)+'</div>';
+}
+
+// ── صفحات الإدارة ──
+function pgAdminHome(){
+  var pts=DB.get('patients')||[], sts=DB.get('students')||[], drs=DB.get('doctors')||[], aps=DB.get('appointments')||[];
+  var online=0,pending=0,active=0;
+  for(var i=0;i<pts.length;i++){ if(pts[i].source==='online')online++; if(pts[i].status==='معلّق')pending++; }
+  for(var j=0;j<sts.length;j++) if(sts[j].status==='نشط') active++;
+  var h=H('لوحة الإدارة','نظرة عامة على النظام بالكامل');
+  h+='<div class="sg sg4" style="margin-bottom:18px">'+SC('🦷','إجمالي المرضى',pts.length,'var(--coral)',online+' إلكتروني')+SC('🎓','الطلاب',sts.length,'var(--mint)')+SC('🩺','الأطباء',drs.length,'#C9A84C')+SC('📅','المواعيد',aps.length,'#6B8DD6')+'</div>';
+  h+='<div class="sg" style="grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px">';
+  h+='<div class="card"><div class="card-h">حالات المرضى</div>';
+  var stats=[{l:'نشط',col:'var(--mint)'},{l:'مجدول',col:'var(--coral)'},{l:'معلّق',col:'#C9A84C'},{l:'مكتمل',col:'var(--g400)'}];
+  for(var s=0;s<stats.length;s++){ var cnt=0; for(var p=0;p<pts.length;p++) if(pts[p].status===stats[s].l) cnt++; h+=PR(stats[s].l,cnt,Math.max(pts.length,1),stats[s].col); }
+  h+='</div>';
+  var dpts=['جراحة الفم والأسنان','أمراض اللثة','تعويضات الأسنان','تقويم الأسنان'];
+  var dcols=['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  h+='<div class="card"><div class="card-h">الأقسام</div>';
+  for(var d=0;d<dpts.length;d++){ var dcnt=0; for(var dp=0;dp<pts.length;dp++) if(pts[dp].dept===dpts[d]) dcnt++; h+=PR(dpts[d],dcnt,Math.max(pts.length,1),dcols[d]); }
+  h+='</div>';
+  var acts=[{l:'الطلاب',i:'🎓',c:'var(--mint)',t:'students'},{l:'الأطباء',i:'🩺',c:'#C9A84C',t:'doctors'},{l:'نشر خبر',i:'📰',c:'#6B8DD6',t:'news'},{l:'إرسال إشعار',i:'📢',c:'var(--coral)',t:'broadcast'}];
+  h+='<div class="card"><div class="card-h">إجراءات سريعة</div>';
+  for(var a=0;a<acts.length;a++){
+    var ac=acts[a];
+    h+='<button onclick="navTo(\''+ac.t+'\')" style="width:100%;display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:9px;border:1px solid var(--g200);background:var(--off);cursor:pointer;margin-bottom:7px;font-family:var(--font)"><div style="width:26px;height:26px;border-radius:7px;background:'+ac.c+'18;display:flex;align-items:center;justify-content:center;font-size:13px">'+ac.i+'</div><span style="font-weight:700;font-size:12px;color:var(--navy)">'+ac.l+'</span><span style="margin-right:auto;color:var(--g400);font-size:12px">←</span></button>';
+  }
+  h+='</div></div>';
+  h+='<div class="sg sg21"><div class="card"><div class="card-h">أحدث المرضى</div>';
+  var rec=pts.slice(-5).reverse();
+  for(var r=0;r<rec.length;r++) h+=LI(INI(rec[r].name),'var(--coral-bg)','var(--coral)',rec[r].name+(rec[r].source==='online'?' 🌐':''),rec[r].dept+' - '+rec[r].date,BS(rec[r].status));
+  h+='</div><div class="card"><div class="card-h">نشاط النظام</div>';
+  var sysActs=[{l:'التسجيل الإلكتروني',v:online,i:'🌐'},{l:'بانتظار التحديد',v:pending,i:'⏳'},{l:'الطلاب النشطون',v:active,i:'🎓'},{l:'المواعيد',v:aps.length,i:'📅'}];
+  for(var sa=0;sa<sysActs.length;sa++) h+='<div style="display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--g100)"><span style="font-size:15px">'+sysActs[sa].i+'</span><span style="flex:1;font-size:12px;color:var(--g600)">'+sysActs[sa].l+'</span><span style="font-weight:900;color:var(--navy);font-size:13px">'+sysActs[sa].v+'</span></div>';
+  return h+'</div></div>';
+}
+function pgNews(){
+  var news=DB.get('news')||[];
+  var h=H('إدارة الأخبار','إضافة وإدارة أخبار الكلية','<button class="btn btn-primary" onclick="openAddNewsModal()">نشر خبر</button>');
+  h+='<div class="card">';
+  if(!news.length) h+='<p style="color:var(--g400)">لا توجد أخبار بعد.</p>';
+  for(var i=0;i<news.length;i++){
+    var n=news[i];
+    h+='<div style="display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--g100)"><div style="flex:1"><span class="news-cat cat-'+n.category+'">'+n.category+'</span>'+(n.featured?'<span class="badge" style="background:var(--gold-bg);color:var(--gold);margin-right:6px;font-size:10px">مميز</span>':'')+'<div style="font-weight:700;color:var(--navy);font-size:13px;margin:5px 0 2px">'+n.title+'</div><div style="color:var(--g400);font-size:11px">'+n.date+'</div></div><button class="btn btn-outline btn-sm" onclick="deleteNews(\''+n.id+'\')">حذف</button></div>';
+  }
+  return h+'</div>';
+}
+function pgSchedules(){
+  var dpts=['جراحة الفم والأسنان','أمراض اللثة','تعويضات الأسنان','تقويم الأسنان'];
+  var dcols=['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  var h=H('جداول العنابر','إدارة أوقات الأقسام')+'<div class="sg sg2">';
+  for(var i=0;i<dpts.length;i++){
+    h+='<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><div class="card-h" style="margin:0">'+dpts[i]+'</div><span class="badge" style="background:'+dcols[i]+'18;color:'+dcols[i]+'">عنبر '+(i+1)+'</span></div>';
+    var shifts=[{day:'الأحد/الثلاثاء',time:'08:00-12:00',room:'مبنى أ'},{day:'الاثنين/الأربعاء',time:'13:00-17:00',room:'مبنى ب'}];
+    for(var j=0;j<shifts.length;j++) h+='<div style="display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--g100)"><div style="width:5px;height:5px;border-radius:50%;background:'+dcols[i]+';flex-shrink:0"></div><div><div style="font-size:12px;font-weight:700;color:var(--navy)">'+shifts[j].day+'</div><div style="font-size:11px;color:var(--g400)">'+shifts[j].time+' - '+shifts[j].room+'</div></div></div>';
+    h+='</div>';
+  }
+  return h+'</div>';
+}
+function pgBroadcast(){
+  return H('إرسال إشعار جماعي','للجميع أو لفئة محددة')+'<div class="card" style="max-width:520px"><div id="broad-ok" class="alert alert-ok">تم إرسال الإشعار بنجاح!</div><div class="field"><label>المستلمون</label><select id="br-to"><option>جميع المستخدمين</option><option>جميع الطلاب</option><option>جميع الأطباء</option><option>جميع المرضى</option></select></div><div class="field"><label>الموضوع</label><input id="br-sub" placeholder="عنوان الإعلان..."/></div><div class="field"><label>الرسالة</label><textarea id="br-msg" rows="5" placeholder="اكتب رسالتك هنا..."></textarea></div><div class="field"><label>الأولوية</label><select id="br-prio"><option>عادية</option><option>عالية</option><option>عاجلة</option></select></div><button class="btn btn-primary" onclick="sendBroadcast()">إرسال الإشعار</button></div>';
+}
+function pgSettings(){
+  var togs=[{l:'التسجيل الإلكتروني للمرضى',on:true},{l:'بوابة الطلاب',on:true},{l:'لوحة الأطباء',on:true},{l:'الحجز العام',on:true},{l:'وضع الصيانة',on:false}];
+  var h=H('إعدادات النظام')+'<div class="sg sg2"><div class="card"><div class="card-h">بيانات الكلية</div>';
+  h+='<div class="field"><label>اسم الكلية</label><input value="كلية طب الأسنان"/></div>';
+  h+='<div class="field"><label>الجامعة</label><input value="اسم الجامعة"/></div>';
+  h+='<div class="field"><label>العام الدراسي</label><select><option>2024/2025</option><option>2025/2026</option></select></div>';
+  h+='<div class="field"><label>رقم التواصل</label><input value="+966 11 000 0000" style="direction:ltr;text-align:left"/></div>';
+  h+='<div class="field"><label>البريد الإلكتروني</label><input value="dental@university.edu.sa" style="direction:ltr;text-align:left"/></div>';
+  h+='<button class="btn btn-primary btn-sm" onclick="alert(\'تم حفظ الإعدادات!\')">حفظ التغييرات</button></div>';
+  h+='<div class="card"><div class="card-h">صلاحيات الوصول</div>';
+  for(var i=0;i<togs.length;i++){
+    var t=togs[i];
+    h+='<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--g100)"><span style="font-size:13px;color:var(--g600)">'+t.l+'</span><div class="tog" style="background:'+(t.on?'var(--mint)':'var(--g200)')+'"><div class="tog-k" style="'+(t.on?'right:3px':'left:3px')+'"></div></div></div>';
+  }
+  return h+'</div></div>';
+}
+
+// ── الإجراءات ──
+function dashRegister(){
+  var name=(document.getElementById('dr-name')?document.getElementById('dr-name').value.trim():'');
+  var phone=(document.getElementById('dr-phone')?document.getElementById('dr-phone').value.trim():'');
+  var complaint=document.getElementById('dr-complaint')?document.getElementById('dr-complaint').value:'';
+  if(!name||!phone){ alert('الاسم ورقم الجوال مطلوبان'); return; }
+  var pts=DB.get('patients')||[];
+  pts.push({id:'P'+String(pts.length+1).padStart(3,'0'),name:name,age:document.getElementById('dr-age')?document.getElementById('dr-age').value:'',phone:phone,email:document.getElementById('dr-email')?document.getElementById('dr-email').value:'',complaint:complaint,dept:document.getElementById('dr-dept')?document.getElementById('dr-dept').value||'معلّق':'معلّق',status:'مجدول',doctor:'غير محدد',studentId:'',date:new Date().toISOString().slice(0,10),notes:document.getElementById('dr-notes')?document.getElementById('dr-notes').value:'',source:'walk-in'});
+  DB.set('patients',pts);
+  var ok=document.getElementById('reg-ok'); if(ok) ok.style.display='block';
+}
+function clearDashReg(){ ['dr-name','dr-phone','dr-age','dr-email','dr-notes','dr-nid'].forEach(function(id){ var e=document.getElementById(id); if(e)e.value=''; }); ['dr-gender','dr-complaint','dr-dept'].forEach(function(id){ var e=document.getElementById(id); if(e)e.value=''; }); var ok=document.getElementById('reg-ok'); if(ok)ok.style.display='none'; }
+function submitComplaint(){ var t=document.getElementById('c-type'); if(!t||!t.value){ alert('يرجى اختيار نوع الشكوى'); return; } var ok=document.getElementById('complaint-ok'); if(ok) ok.style.display='block'; }
+function submitEval(){
+  var sid=document.getElementById('ev-student'); if(!sid||!sid.value){ alert('يرجى اختيار طالب'); return; }
+  var c=parseInt(document.getElementById('ev-c')?document.getElementById('ev-c').value:0)||0;
+  var hv=parseInt(document.getElementById('ev-h')?document.getElementById('ev-h').value:0)||0;
+  var t=parseInt(document.getElementById('ev-t')?document.getElementById('ev-t').value:0)||0;
+  var p=parseInt(document.getElementById('ev-p')?document.getElementById('ev-p').value:0)||0;
+  var avg=Math.round((c+hv+t+p)/4);
+  var grade=avg>=90?'A':avg>=80?'B+':avg>=70?'B':avg>=60?'C':'F';
+  var ev=DB.get('evaluations')||[];
+  ev.push({id:'E'+Date.now(),studentId:sid.value,supervisor:currentUser.name,dept:'القسم',period:document.getElementById('ev-period')?document.getElementById('ev-period').value:'الربع الأول 2025',clinical:c,handling:hv,theoretical:t,professionalism:p,grade:grade,comment:document.getElementById('ev-comment')?document.getElementById('ev-comment').value:''});
+  DB.set('evaluations',ev);
+  var ok=document.getElementById('eval-ok'); if(ok) ok.style.display='block';
+}
+function submitCase(){ var pt=document.getElementById('ca-patient'); if(!pt||!pt.value){ alert('يرجى اختيار مريض'); return; } var ok=document.getElementById('case-ok'); if(ok) ok.style.display='block'; }
+function sendBroadcast(){ var sub=document.getElementById('br-sub'); if(!sub||!sub.value.trim()){ alert('يرجى إدخال الموضوع'); return; } var ms=DB.get('messages')||[]; ms.unshift({id:'M'+Date.now(),from:'الإدارة',to:'all',subject:sub.value,body:document.getElementById('br-msg')?document.getElementById('br-msg').value:'',time:'الآن',unread:true}); DB.set('messages',ms); var ok=document.getElementById('broad-ok'); if(ok) ok.style.display='block'; }
+function deleteNews(id){ if(!confirm('هل تريد حذف هذا الخبر؟')) return; var news=(DB.get('news')||[]).filter(function(n){ return n.id!==id; }); DB.set('news',news); navTo('news'); }
+
+// ── المودال ──
+function openModal(title,body){ document.getElementById('modal-title').textContent=title; document.getElementById('modal-body').innerHTML='<p style="line-height:1.9;color:var(--g600);font-size:14px">'+body+'</p>'; document.getElementById('modal').classList.add('open'); }
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+function openAddNewsModal(){
+  document.getElementById('modal-title').textContent='نشر خبر جديد';
+  document.getElementById('modal-body').innerHTML='<div class="field"><label>العنوان</label><input id="mn-title" placeholder="عنوان الخبر..."/></div><div class="field"><label>التصنيف</label><select id="mn-cat"><option>إعلان</option><option>فعالية</option><option>بحث</option></select></div><div class="field"><label>المحتوى</label><textarea id="mn-body" rows="4" placeholder="نص الخبر..."></textarea></div><div class="field" style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="mn-feat" style="width:auto"/><label style="text-transform:none;font-size:13px;color:var(--g600)">تمييز كخبر رئيسي</label></div><button class="btn btn-primary btn-full" onclick="submitNews()">نشر الخبر</button>';
+  document.getElementById('modal').classList.add('open');
+}
+function submitNews(){ var tEl=document.getElementById('mn-title'); if(!tEl||!tEl.value.trim()){ alert('العنوان مطلوب'); return; } var news=DB.get('news')||[]; var feat=document.getElementById('mn-feat')?document.getElementById('mn-feat').checked:false; if(feat) for(var i=0;i<news.length;i++) news[i].featured=false; news.unshift({id:'N'+Date.now(),title:tEl.value.trim(),category:document.getElementById('mn-cat')?document.getElementById('mn-cat').value:'إعلان',date:new Date().toISOString().slice(0,10),body:document.getElementById('mn-body')?document.getElementById('mn-body').value:'',featured:feat}); DB.set('news',news); closeModal(); navTo('news'); }
+function openAddStudentModal(){
+  document.getElementById('modal-title').textContent='إضافة طالب جديد';
+  document.getElementById('modal-body').innerHTML='<div class="frow"><div class="field"><label>الاسم الكامل</label><input id="as-name" placeholder="اسم الطالب"/></div><div class="field"><label>المستوى</label><select id="as-level"><option>السنة الثالثة</option><option>السنة الرابعة</option><option>السنة الخامسة</option></select></div></div><div class="field"><label>القسم</label><select id="as-dept"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div><div class="frow"><div class="field"><label>البريد الإلكتروني</label><input id="as-email" type="email" placeholder="student@edu.sa" style="direction:ltr;text-align:left"/></div><div class="field"><label>كلمة المرور</label><input id="as-pass" type="password" value="1234" style="direction:ltr;text-align:left"/></div></div><button class="btn btn-mint btn-full" onclick="addStudent()">إضافة الطالب</button>';
+  document.getElementById('modal').classList.add('open');
+}
+function addStudent(){ var nEl=document.getElementById('as-name'); if(!nEl||!nEl.value.trim()){ alert('الاسم مطلوب'); return; } var sts=DB.get('students')||[]; sts.push({id:'S'+Date.now(),name:nEl.value.trim(),level:document.getElementById('as-level')?document.getElementById('as-level').value:'السنة الرابعة',dept:document.getElementById('as-dept')?document.getElementById('as-dept').value:'جراحة الفم والأسنان',gpa:0,patients:0,status:'نشط',email:document.getElementById('as-email')?document.getElementById('as-email').value:'',pass:document.getElementById('as-pass')?document.getElementById('as-pass').value:'1234'}); DB.set('students',sts); closeModal(); navTo('students'); }
+function openAddDoctorModal(){
+  document.getElementById('modal-title').textContent='إضافة طبيب جديد';
+  document.getElementById('modal-body').innerHTML='<div class="field"><label>الاسم الكامل</label><input id="ad-name" placeholder="د. الاسم"/></div><div class="field"><label>القسم</label><select id="ad-dept"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div><div class="field"><label>الدور</label><select id="ad-role"><option>طبيب</option><option>مشرف</option></select></div><div class="frow"><div class="field"><label>البريد الإلكتروني</label><input id="ad-email" type="email" placeholder="doctor@faculty.edu" style="direction:ltr;text-align:left"/></div><div class="field"><label>كلمة المرور</label><input id="ad-pass" type="password" value="1234" style="direction:ltr;text-align:left"/></div></div><button class="btn btn-gold btn-full" onclick="addDoctor()">إضافة الطبيب</button>';
+  document.getElementById('modal').classList.add('open');
+}
+function addDoctor(){ var nEl=document.getElementById('ad-name'); if(!nEl||!nEl.value.trim()){ alert('الاسم مطلوب'); return; } var drs=DB.get('doctors')||[]; drs.push({id:'D'+Date.now(),name:nEl.value.trim(),dept:document.getElementById('ad-dept')?document.getElementById('ad-dept').value:'جراحة الفم والأسنان',role:document.getElementById('ad-role')?document.getElementById('ad-role').value:'طبيب',patients:0,students:0,email:document.getElementById('ad-email')?document.getElementById('ad-email').value:'',pass:document.getElementById('ad-pass')?document.getElementById('ad-pass').value:'1234'}); DB.set('doctors',drs); closeModal(); navTo('doctors'); }
+
+// ── التهيئة ──
+window.onload = function(){
+  DB.init();
+  var lp=document.getElementById('l-pass');
+  if(lp) lp.addEventListener('keydown',function(e){ if(e.key==='Enter') doLogin(); });
+  window.addEventListener('scroll',function(){ var nav=document.getElementById('top-nav'); if(nav) nav.style.background=window.scrollY>40?'rgba(15,31,53,.98)':'rgba(15,31,53,.93)'; });
+  var session=DB.get('session');
+  if(session&&session.role){ currentUser=session; activePage='overview'; showPage('dash'); }
+  else showPage('public');
+};
+window.showPage=showPage; window.gotoSection=gotoSection; window.selectRole=selectRole; window.autofill=autofill; window.doLogin=doLogin; window.doLogout=doLogout; window.navTo=navTo; window.publicRegister=publicRegister; window.submitComplaint=submitComplaint; window.submitEval=submitEval; window.submitCase=submitCase; window.sendBroadcast=sendBroadcast; window.deleteNews=deleteNews; window.openModal=openModal; window.closeModal=closeModal; window.openAddNewsModal=openAddNewsModal; window.submitNews=submitNews; window.openAddStudentModal=openAddStudentModal; window.addStudent=addStudent; window.openAddDoctorModal=openAddDoctorModal; window.addDoctor=addDoctor; window.dashRegister=dashRegister; window.clearDashReg=clearDashReg;
+</script>
+</body>
+</html>
