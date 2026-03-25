@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -42,56 +41,56 @@ input, select, textarea { font-family:var(--body); }
 
 /* ── PAGES ── */
 #page-public  { display:block; }
-#page-login   { display:none; min-height:100vh; background:var(–navy); align-items:center; justify-content:center; padding:20px; }
+#page-login   { display:none; min-height:100vh; background:var(--navy); align-items:center; justify-content:center; padding:20px; }
 #page-dash    { display:none; }
 
 /* ── NAV ── */
 #top-nav {
-position:fixed; top:0; left:0; right:0; z-index:900;
-background:rgba(15,31,53,.93); backdrop-filter:blur(14px);
-height:68px; display:flex; align-items:center; padding:0 48px;
-border-bottom:1px solid rgba(255,255,255,.07);
-transition:background .3s;
+  position:fixed; top:0; left:0; right:0; z-index:900;
+  background:rgba(15,31,53,.93); backdrop-filter:blur(14px);
+  height:68px; display:flex; align-items:center; padding:0 48px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  transition:background .3s;
 }
 .nav-logo { display:flex; align-items:center; gap:10px; margin-right:auto; }
-.nav-logo-icon { width:36px; height:36px; border-radius:10px; background:var(–coral); display:flex; align-items:center; justify-content:center; font-size:18px; }
-.nav-logo h1 { font-family:var(–display); font-size:15px; color:#fff; font-weight:700; }
+.nav-logo-icon { width:36px; height:36px; border-radius:10px; background:var(--coral); display:flex; align-items:center; justify-content:center; font-size:18px; }
+.nav-logo h1 { font-family:var(--display); font-size:15px; color:#fff; font-weight:700; }
 .nav-logo p { font-size:9px; color:rgba(255,255,255,.45); letter-spacing:.6px; }
 .nav-links { display:flex; gap:24px; }
 .nav-lnk { color:rgba(255,255,255,.65); font-size:13px; font-weight:500; border:none; background:none; padding:4px 0; transition:color .2s; }
 .nav-lnk:hover { color:#fff; }
 .nav-btn { padding:8px 20px; border-radius:9px; font-size:13px; font-weight:600; border:none; margin-left:12px; transition:all .2s; }
 .nav-btn-outline { background:transparent; border:1.5px solid rgba(255,255,255,.28); color:#fff; }
-.nav-btn-outline:hover { border-color:var(–coral); color:var(–coral); }
-.nav-btn-solid { background:var(–coral); color:#fff; }
-.nav-btn-solid:hover { background:var(–coral2); transform:translateY(-1px); }
+.nav-btn-outline:hover { border-color:var(--coral); color:var(--coral); }
+.nav-btn-solid { background:var(--coral); color:#fff; }
+.nav-btn-solid:hover { background:var(--coral2); transform:translateY(-1px); }
 
 /* ── HERO ── */
 #hero {
-min-height:100vh; background:var(–navy);
-display:flex; align-items:center; padding-top:68px;
-position:relative; overflow:hidden;
+  min-height:100vh; background:var(--navy);
+  display:flex; align-items:center; padding-top:68px;
+  position:relative; overflow:hidden;
 }
 .hero-blob { position:absolute; border-radius:50%; opacity:.07; pointer-events:none; }
-.hero-blob-1 { width:550px; height:550px; background:var(–coral); top:-180px; right:-80px; }
-.hero-blob-2 { width:350px; height:350px; background:var(–mint); bottom:-80px; left:-60px; }
-.hero-blob-3 { width:180px; height:180px; background:var(–gold); top:45%; right:35%; animation:floatY 6s ease-in-out infinite; opacity:.08; }
+.hero-blob-1 { width:550px; height:550px; background:var(--coral); top:-180px; right:-80px; }
+.hero-blob-2 { width:350px; height:350px; background:var(--mint); bottom:-80px; left:-60px; }
+.hero-blob-3 { width:180px; height:180px; background:var(--gold); top:45%; right:35%; animation:floatY 6s ease-in-out infinite; opacity:.08; }
 .hero-inner { max-width:1240px; margin:0 auto; padding:80px 48px; display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
 .hero-badge { display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(212,114,90,.35); border-radius:30px; padding:5px 14px; margin-bottom:26px; background:rgba(212,114,90,.12); }
-.hero-badge-dot { width:6px; height:6px; border-radius:50%; background:var(–coral); animation:pulse 2s infinite; }
-.hero-badge span { font-size:11px; color:var(–coral); font-weight:600; letter-spacing:.5px; }
-.hero-title { font-family:var(–display); font-size:52px; color:#fff; line-height:1.13; margin-bottom:22px; font-weight:900; }
-.hero-title em { color:var(–coral); font-style:normal; }
+.hero-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--coral); animation:pulse 2s infinite; }
+.hero-badge span { font-size:11px; color:var(--coral); font-weight:600; letter-spacing:.5px; }
+.hero-title { font-family:var(--display); font-size:52px; color:#fff; line-height:1.13; margin-bottom:22px; font-weight:900; }
+.hero-title em { color:var(--coral); font-style:normal; }
 .hero-desc { color:rgba(255,255,255,.58); font-size:16px; line-height:1.8; margin-bottom:36px; max-width:460px; }
 .hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
 .hero-btn { padding:13px 30px; border-radius:11px; font-size:14px; font-weight:700; border:none; transition:all .25s; }
-.hero-btn-primary { background:var(–coral); color:#fff; box-shadow:0 6px 24px rgba(212,114,90,.35); }
-.hero-btn-primary:hover { background:var(–coral2); transform:translateY(-2px); }
+.hero-btn-primary { background:var(--coral); color:#fff; box-shadow:0 6px 24px rgba(212,114,90,.35); }
+.hero-btn-primary:hover { background:var(--coral2); transform:translateY(-2px); }
 .hero-btn-ghost { background:transparent; border:1.5px solid rgba(255,255,255,.28); color:#fff; }
 .hero-btn-ghost:hover { border-color:rgba(255,255,255,.6); }
 .hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.09); border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.09); margin-top:44px; }
 .hero-stat { padding:18px; background:rgba(255,255,255,.04); text-align:center; }
-.hero-stat-n { font-family:var(–display); font-size:30px; color:var(–coral); font-weight:700; }
+.hero-stat-n { font-family:var(--display); font-size:30px; color:var(--coral); font-weight:700; }
 .hero-stat-l { font-size:10px; color:rgba(255,255,255,.42); letter-spacing:.5px; margin-top:2px; }
 .hero-right { position:relative; }
 .hero-card { background:rgba(255,255,255,.07); backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.11); border-radius:18px; padding:24px; animation:floatY 7s ease-in-out infinite; }
@@ -105,76 +104,76 @@ position:relative; overflow:hidden;
 .hero-appt-meta { color:rgba(255,255,255,.38); font-size:10px; }
 
 /* ── STATS BAR ── */
-#stats-bar { background:var(–coral); padding:26px 48px; }
+#stats-bar { background:var(--coral); padding:26px 48px; }
 .stats-bar-grid { max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
 .stats-bar-item { text-align:center; color:#fff; }
-.stats-bar-n { font-family:var(–display); font-size:36px; font-weight:700; }
+.stats-bar-n { font-family:var(--display); font-size:36px; font-weight:700; }
 .stats-bar-l { font-size:11px; opacity:.78; letter-spacing:.5px; margin-top:2px; }
 
 /* ── SECTION BASE ── */
 .pub-section { padding:90px 48px; max-width:1240px; margin:0 auto; }
-.section-tag { display:inline-flex; align-items:center; gap:6px; background:var(–coral-bg); border-radius:20px; padding:5px 14px; margin-bottom:14px; }
-.section-tag span { font-size:10px; font-weight:700; color:var(–coral); letter-spacing:.5px; text-transform:uppercase; }
-.section-title { font-family:var(–display); font-size:38px; color:var(–navy); line-height:1.2; font-weight:700; margin-bottom:12px; }
-.section-sub { color:var(–g400); font-size:15px; line-height:1.75; max-width:520px; }
+.section-tag { display:inline-flex; align-items:center; gap:6px; background:var(--coral-bg); border-radius:20px; padding:5px 14px; margin-bottom:14px; }
+.section-tag span { font-size:10px; font-weight:700; color:var(--coral); letter-spacing:.5px; text-transform:uppercase; }
+.section-title { font-family:var(--display); font-size:38px; color:var(--navy); line-height:1.2; font-weight:700; margin-bottom:12px; }
+.section-sub { color:var(--g400); font-size:15px; line-height:1.75; max-width:520px; }
 
 /* ── NEWS ── */
 #news-bg { background:#fff; }
 .news-grid { display:grid; grid-template-columns:1.5fr 1fr; gap:28px; margin-top:44px; }
-.news-featured { border-radius:18px; overflow:hidden; background:var(–navy); cursor:pointer; transition:transform .2s; }
+.news-featured { border-radius:18px; overflow:hidden; background:var(--navy); cursor:pointer; transition:transform .2s; }
 .news-featured:hover { transform:translateY(-3px); }
-.news-featured-img { width:100%; height:240px; background:linear-gradient(135deg,var(–navy2),var(–coral2)); display:flex; align-items:center; justify-content:center; font-size:56px; opacity:.45; }
+.news-featured-img { width:100%; height:240px; background:linear-gradient(135deg,var(--navy2),var(--coral2)); display:flex; align-items:center; justify-content:center; font-size:56px; opacity:.45; }
 .news-featured-body { padding:24px; }
-.news-featured-title { font-family:var(–display); font-size:20px; color:#fff; font-weight:700; margin-bottom:8px; line-height:1.35; }
+.news-featured-title { font-family:var(--display); font-size:20px; color:#fff; font-weight:700; margin-bottom:8px; line-height:1.35; }
 .news-featured-meta { color:rgba(255,255,255,.45); font-size:11px; }
 .news-list { display:flex; flex-direction:column; gap:12px; }
-.news-item { background:var(–off); border-radius:13px; padding:16px; cursor:pointer; border:1px solid var(–g100); transition:all .2s; }
-.news-item:hover { background:#fff; box-shadow:var(–shadow); transform:translateX(4px); }
-.news-item-title { font-family:var(–display); font-size:14px; color:var(–navy); font-weight:600; line-height:1.4; margin-bottom:5px; }
-.news-item-meta { color:var(–g400); font-size:11px; }
+.news-item { background:var(--off); border-radius:13px; padding:16px; cursor:pointer; border:1px solid var(--g100); transition:all .2s; }
+.news-item:hover { background:#fff; box-shadow:var(--shadow); transform:translateX(4px); }
+.news-item-title { font-family:var(--display); font-size:14px; color:var(--navy); font-weight:600; line-height:1.4; margin-bottom:5px; }
+.news-item-meta { color:var(--g400); font-size:11px; }
 .news-cat { display:inline-block; padding:2px 9px; border-radius:10px; font-size:10px; font-weight:700; letter-spacing:.4px; text-transform:uppercase; margin-bottom:8px; }
-.cat-Announcement { background:var(–coral-bg); color:var(–coral); }
-.cat-Event { background:var(–mint-bg); color:var(–mint); }
-.cat-Research { background:var(–gold-bg); color:var(–gold); }
+.cat-Announcement { background:var(--coral-bg); color:var(--coral); }
+.cat-Event { background:var(--mint-bg); color:var(--mint); }
+.cat-Research { background:var(--gold-bg); color:var(--gold); }
 
 /* ── DEPARTMENTS ── */
-#depts-bg { background:var(–off); }
+#depts-bg { background:var(--off); }
 .depts-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:44px; }
-.dept-card { background:#fff; border-radius:18px; padding:26px; border:1px solid var(–g200); cursor:pointer; transition:all .3s; position:relative; overflow:hidden; }
-.dept-card:hover { transform:translateY(-4px); box-shadow:var(–shadow); }
+.dept-card { background:#fff; border-radius:18px; padding:26px; border:1px solid var(--g200); cursor:pointer; transition:all .3s; position:relative; overflow:hidden; }
+.dept-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
 .dept-icon { width:50px; height:50px; border-radius:13px; display:flex; align-items:center; justify-content:center; font-size:23px; margin-bottom:14px; }
-.dept-name { font-family:var(–display); font-size:15px; color:var(–navy); font-weight:700; margin-bottom:7px; }
-.dept-desc { color:var(–g400); font-size:12px; line-height:1.6; }
+.dept-name { font-family:var(--display); font-size:15px; color:var(--navy); font-weight:700; margin-bottom:7px; }
+.dept-desc { color:var(--g400); font-size:12px; line-height:1.6; }
 .dept-link { font-size:12px; font-weight:600; margin-top:14px; display:block; }
 
 /* ── REGISTER PUBLIC ── */
-#reg-bg { background:var(–navy); position:relative; overflow:hidden; }
-#reg-bg::before { content:’’; position:absolute; top:-120px; right:-120px; width:480px; height:480px; border-radius:50%; background:var(–coral); opacity:.05; }
+#reg-bg { background:var(--navy); position:relative; overflow:hidden; }
+#reg-bg::before { content:''; position:absolute; top:-120px; right:-120px; width:480px; height:480px; border-radius:50%; background:var(--coral); opacity:.05; }
 .reg-inner { max-width:1240px; margin:0 auto; padding:90px 48px; display:grid; grid-template-columns:1fr 1.1fr; gap:72px; align-items:center; }
-.reg-left h2 { font-family:var(–display); font-size:40px; color:#fff; font-weight:700; line-height:1.2; margin-bottom:16px; }
+.reg-left h2 { font-family:var(--display); font-size:40px; color:#fff; font-weight:700; line-height:1.2; margin-bottom:16px; }
 .reg-left p { color:rgba(255,255,255,.58); font-size:15px; line-height:1.75; margin-bottom:30px; }
 .reg-steps { display:flex; flex-direction:column; gap:16px; }
 .reg-step { display:flex; align-items:flex-start; gap:13px; }
-.reg-step-num { width:30px; height:30px; border-radius:50%; background:rgba(212,114,90,.18); border:1.5px solid var(–coral); display:flex; align-items:center; justify-content:center; color:var(–coral); font-weight:700; font-size:12px; flex-shrink:0; }
+.reg-step-num { width:30px; height:30px; border-radius:50%; background:rgba(212,114,90,.18); border:1.5px solid var(--coral); display:flex; align-items:center; justify-content:center; color:var(--coral); font-weight:700; font-size:12px; flex-shrink:0; }
 .reg-step-h { color:#fff; font-weight:600; font-size:13px; margin-bottom:2px; }
 .reg-step-p { color:rgba(255,255,255,.46); font-size:12px; }
 .reg-form { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.11); border-radius:18px; padding:32px; }
-.reg-form h3 { font-family:var(–display); font-size:20px; color:#fff; margin-bottom:22px; }
+.reg-form h3 { font-family:var(--display); font-size:20px; color:#fff; margin-bottom:22px; }
 .reg-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 .reg-group { margin-bottom:12px; }
 .reg-group label { display:block; font-size:10px; font-weight:600; color:rgba(255,255,255,.46); letter-spacing:.6px; text-transform:uppercase; margin-bottom:4px; }
-.reg-input { width:100%; padding:10px 13px; border-radius:9px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:#fff; font-size:13px; outline:none; transition:border .2s; font-family:var(–body); }
+.reg-input { width:100%; padding:10px 13px; border-radius:9px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:#fff; font-size:13px; outline:none; transition:border .2s; font-family:var(--body); }
 .reg-input::placeholder { color:rgba(255,255,255,.22); }
-.reg-input:focus { border-color:var(–coral); }
-.reg-input option { background:var(–navy2); color:#fff; }
-.reg-submit { width:100%; padding:12px; border-radius:10px; border:none; background:var(–coral); color:#fff; font-weight:700; font-size:14px; margin-top:8px; box-shadow:0 6px 20px rgba(212,114,90,.3); transition:all .25s; }
-.reg-submit:hover { background:var(–coral2); transform:translateY(-1px); }
+.reg-input:focus { border-color:var(--coral); }
+.reg-input option { background:var(--navy2); color:#fff; }
+.reg-submit { width:100%; padding:12px; border-radius:10px; border:none; background:var(--coral); color:#fff; font-weight:700; font-size:14px; margin-top:8px; box-shadow:0 6px 20px rgba(212,114,90,.3); transition:all .25s; }
+.reg-submit:hover { background:var(--coral2); transform:translateY(-1px); }
 .reg-success { display:none; background:rgba(61,170,143,.15); border:1px solid rgba(61,170,143,.28); border-radius:10px; padding:14px; text-align:center; color:#5DCBAF; font-weight:600; font-size:13px; margin-bottom:14px; }
 
 /* ── FOOTER ── */
-#footer-bg { background:var(–g800); padding:56px 48px 32px; }
+#footer-bg { background:var(--g800); padding:56px 48px 32px; }
 .footer-grid { max-width:1240px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:44px; margin-bottom:36px; }
-.footer-brand h2 { font-family:var(–display); font-size:17px; color:#fff; margin-bottom:10px; }
+.footer-brand h2 { font-family:var(--display); font-size:17px; color:#fff; margin-bottom:10px; }
 .footer-brand p { color:rgba(255,255,255,.38); font-size:12px; line-height:1.75; max-width:260px; }
 .footer-col h4 { font-size:11px; font-weight:700; color:rgba(255,255,255,.38); letter-spacing:.6px; text-transform:uppercase; margin-bottom:14px; }
 .footer-col a { display:block; color:rgba(255,255,255,.56); font-size:12px; margin-bottom:9px; transition:color .2s; }
@@ -185,32 +184,32 @@ position:relative; overflow:hidden;
 /* ── LOGIN ── */
 .login-card { background:#fff; border-radius:22px; padding:38px; width:100%; max-width:460px; box-shadow:0 24px 80px rgba(0,0,0,.28); animation:fadeUp .4s ease; }
 .login-logo { display:flex; align-items:center; gap:10px; margin-bottom:28px; }
-.login-logo-icon { width:38px; height:38px; border-radius:11px; background:var(–coral); display:flex; align-items:center; justify-content:center; font-size:20px; }
-.login-title { font-family:var(–display); font-size:20px; color:var(–navy); font-weight:700; }
-.login-sub { font-size:11px; color:var(–g400); }
+.login-logo-icon { width:38px; height:38px; border-radius:11px; background:var(--coral); display:flex; align-items:center; justify-content:center; font-size:20px; }
+.login-title { font-family:var(--display); font-size:20px; color:var(--navy); font-weight:700; }
+.login-sub { font-size:11px; color:var(--g400); }
 .role-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:20px; }
-.role-btn { padding:10px 9px; border-radius:10px; border:2px solid var(–g200); background:transparent; display:flex; align-items:center; gap:8px; transition:all .2s; font-size:12px; color:var(–navy); font-weight:600; }
-.role-btn:hover { border-color:var(–coral); background:var(–coral-bg); }
+.role-btn { padding:10px 9px; border-radius:10px; border:2px solid var(--g200); background:transparent; display:flex; align-items:center; gap:8px; transition:all .2s; font-size:12px; color:var(--navy); font-weight:600; }
+.role-btn:hover { border-color:var(--coral); background:var(--coral-bg); }
 .role-btn.selected { font-weight:700; }
 .role-icon { font-size:17px; }
-.demo-hint { background:var(–coral-bg); border-radius:9px; padding:9px 13px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; }
-.demo-hint-txt { font-size:11px; color:var(–coral2); }
-.demo-fill { font-size:11px; color:var(–coral); font-weight:700; background:none; border:none; padding:0; }
+.demo-hint { background:var(--coral-bg); border-radius:9px; padding:9px 13px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; }
+.demo-hint-txt { font-size:11px; color:var(--coral2); }
+.demo-fill { font-size:11px; color:var(--coral); font-weight:700; background:none; border:none; padding:0; }
 .login-field { margin-bottom:12px; }
-.login-field label { display:block; font-size:10px; font-weight:700; color:var(–g400); letter-spacing:.6px; text-transform:uppercase; margin-bottom:4px; }
-.login-field input { width:100%; padding:10px 13px; border-radius:9px; border:1px solid var(–g200); font-size:13px; outline:none; transition:border .2s; }
-.login-field input:focus { border-color:var(–coral); }
-.login-err { color:var(–coral); font-size:12px; margin-bottom:10px; display:none; }
-.login-submit { width:100%; padding:13px; border-radius:11px; border:none; background:linear-gradient(135deg,var(–coral),var(–coral2)); color:#fff; font-weight:700; font-size:15px; box-shadow:0 5px 18px rgba(212,114,90,.3); transition:all .2s; }
+.login-field label { display:block; font-size:10px; font-weight:700; color:var(--g400); letter-spacing:.6px; text-transform:uppercase; margin-bottom:4px; }
+.login-field input { width:100%; padding:10px 13px; border-radius:9px; border:1px solid var(--g200); font-size:13px; outline:none; transition:border .2s; }
+.login-field input:focus { border-color:var(--coral); }
+.login-err { color:var(--coral); font-size:12px; margin-bottom:10px; display:none; }
+.login-submit { width:100%; padding:13px; border-radius:11px; border:none; background:linear-gradient(135deg,var(--coral),var(--coral2)); color:#fff; font-weight:700; font-size:15px; box-shadow:0 5px 18px rgba(212,114,90,.3); transition:all .2s; }
 .login-submit:hover { transform:translateY(-1px); box-shadow:0 7px 24px rgba(212,114,90,.35); }
-.login-back { text-align:center; margin-top:14px; font-size:12px; color:var(–g400); }
-.login-back span { color:var(–coral); font-weight:600; }
+.login-back { text-align:center; margin-top:14px; font-size:12px; color:var(--g400); }
+.login-back span { color:var(--coral); font-weight:600; }
 
 /* ── DASHBOARD ── */
-.sidebar { width:225px; min-height:100vh; background:var(–navy); display:flex; flex-direction:column; position:fixed; left:0; top:0; bottom:0; z-index:100; }
+.sidebar { width:225px; min-height:100vh; background:var(--navy); display:flex; flex-direction:column; position:fixed; left:0; top:0; bottom:0; z-index:100; }
 .sb-logo { padding:22px 18px 16px; border-bottom:1px solid rgba(255,255,255,.07); display:flex; align-items:center; gap:9px; }
-.sb-logo-icon { width:32px; height:32px; border-radius:9px; background:var(–coral); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
-.sb-logo-name { font-family:var(–display); font-size:13px; color:#fff; }
+.sb-logo-icon { width:32px; height:32px; border-radius:9px; background:var(--coral); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+.sb-logo-name { font-family:var(--display); font-size:13px; color:#fff; }
 .sb-logo-sub { font-size:9px; color:rgba(255,255,255,.38); letter-spacing:.4px; }
 .sb-user { padding:13px 18px; border-bottom:1px solid rgba(255,255,255,.07); display:flex; align-items:center; gap:9px; }
 .sb-user-av { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px; flex-shrink:0; border:2px solid; }
@@ -220,15 +219,15 @@ position:relative; overflow:hidden;
 .sb-item { display:flex; align-items:center; gap:8px; padding:9px 11px; border-radius:9px; border:none; background:transparent; width:100%; text-align:left; font-size:13px; color:rgba(255,255,255,.5); cursor:pointer; margin-bottom:1px; transition:all .2s; }
 .sb-item:hover { background:rgba(255,255,255,.07); color:rgba(255,255,255,.85); }
 .sb-item.on { font-weight:600; }
-.sb-badge { margin-left:auto; background:var(–coral); color:#fff; border-radius:9px; padding:1px 7px; font-size:10px; font-weight:700; }
+.sb-badge { margin-left:auto; background:var(--coral); color:#fff; border-radius:9px; padding:1px 7px; font-size:10px; font-weight:700; }
 .sb-foot { padding:12px; border-top:1px solid rgba(255,255,255,.07); }
 .sb-logout { display:flex; align-items:center; gap:8px; padding:9px 11px; border-radius:9px; border:none; background:transparent; width:100%; font-size:13px; color:rgba(255,255,255,.4); cursor:pointer; transition:all .2s; }
-.sb-logout:hover { background:rgba(212,114,90,.15); color:var(–coral); }
-.dash-main { margin-left:225px; padding:30px; min-height:100vh; background:var(–off); }
+.sb-logout:hover { background:rgba(212,114,90,.15); color:var(--coral); }
+.dash-main { margin-left:225px; padding:30px; min-height:100vh; background:var(--off); }
 .dash-page { animation:fadeUp .35s ease; }
 .dash-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; }
-.dash-title { font-family:var(–display); font-size:24px; color:var(–navy); font-weight:700; }
-.dash-sub { color:var(–g400); font-size:12px; margin-top:2px; }
+.dash-title { font-family:var(--display); font-size:24px; color:var(--navy); font-weight:700; }
+.dash-sub { color:var(--g400); font-size:12px; margin-top:2px; }
 
 /* Cards */
 .sg { display:grid; gap:14px; margin-bottom:20px; }
@@ -237,60 +236,60 @@ position:relative; overflow:hidden;
 .sg2 { grid-template-columns:1fr 1fr; }
 .sg21 { grid-template-columns:1.5fr 1fr; }
 .sg5 { grid-template-columns:repeat(5,1fr); }
-.card { background:#fff; border-radius:var(–radius); padding:20px; border:1px solid var(–g200); box-shadow:0 2px 10px rgba(15,31,53,.05); }
-.card-h { font-family:var(–display); font-size:15px; color:var(–navy); font-weight:700; margin-bottom:14px; }
-.stat-card { background:#fff; border-radius:var(–radius); padding:20px; border:1px solid var(–g200); box-shadow:0 2px 10px rgba(15,31,53,.05); display:flex; justify-content:space-between; align-items:flex-start; }
-.sc-lbl { font-size:11px; color:var(–g400); font-weight:500; margin-bottom:5px; }
-.sc-val { font-family:var(–display); font-size:30px; color:var(–navy); font-weight:700; }
-.sc-trend { font-size:11px; color:var(–mint); margin-top:2px; font-weight:500; }
+.card { background:#fff; border-radius:var(--radius); padding:20px; border:1px solid var(--g200); box-shadow:0 2px 10px rgba(15,31,53,.05); }
+.card-h { font-family:var(--display); font-size:15px; color:var(--navy); font-weight:700; margin-bottom:14px; }
+.stat-card { background:#fff; border-radius:var(--radius); padding:20px; border:1px solid var(--g200); box-shadow:0 2px 10px rgba(15,31,53,.05); display:flex; justify-content:space-between; align-items:flex-start; }
+.sc-lbl { font-size:11px; color:var(--g400); font-weight:500; margin-bottom:5px; }
+.sc-val { font-family:var(--display); font-size:30px; color:var(--navy); font-weight:700; }
+.sc-trend { font-size:11px; color:var(--mint); margin-top:2px; font-weight:500; }
 .sc-icon { width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:19px; }
 
 /* Table */
 .tbl-wrap { overflow-x:auto; }
 table { width:100%; border-collapse:collapse; font-size:12px; }
-thead tr { border-bottom:2px solid var(–g200); }
-th { padding:9px 13px; text-align:left; font-weight:700; color:var(–g600); font-size:10px; letter-spacing:.6px; text-transform:uppercase; }
-tbody tr { border-bottom:1px solid var(–g100); transition:background .13s; }
-tbody tr:hover { background:var(–off); }
-td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
+thead tr { border-bottom:2px solid var(--g200); }
+th { padding:9px 13px; text-align:left; font-weight:700; color:var(--g600); font-size:10px; letter-spacing:.6px; text-transform:uppercase; }
+tbody tr { border-bottom:1px solid var(--g100); transition:background .13s; }
+tbody tr:hover { background:var(--off); }
+td { padding:11px 13px; color:var(--g800); vertical-align:middle; }
 .badge { display:inline-flex; align-items:center; padding:2px 9px; border-radius:10px; font-size:10px; font-weight:700; }
 
 /* Form */
 .field { margin-bottom:13px; }
-.field label { display:block; font-size:10px; font-weight:700; color:var(–g600); letter-spacing:.5px; text-transform:uppercase; margin-bottom:4px; }
-.field input,.field select,.field textarea { width:100%; padding:9px 12px; border-radius:9px; border:1px solid var(–g200); background:#fff; font-size:13px; color:var(–g800); outline:none; transition:border .2s; }
-.field input:focus,.field select:focus,.field textarea:focus { border-color:var(–coral); }
+.field label { display:block; font-size:10px; font-weight:700; color:var(--g600); letter-spacing:.5px; text-transform:uppercase; margin-bottom:4px; }
+.field input,.field select,.field textarea { width:100%; padding:9px 12px; border-radius:9px; border:1px solid var(--g200); background:#fff; font-size:13px; color:var(--g800); outline:none; transition:border .2s; }
+.field input:focus,.field select:focus,.field textarea:focus { border-color:var(--coral); }
 .field textarea { resize:vertical; }
 .frow { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
 
 /* Btn */
-.btn { display:inline-flex; align-items:center; gap:6px; padding:9px 17px; border-radius:9px; border:none; font-weight:600; font-size:13px; transition:all .2s; font-family:var(–body); cursor:pointer; }
+.btn { display:inline-flex; align-items:center; gap:6px; padding:9px 17px; border-radius:9px; border:none; font-weight:600; font-size:13px; transition:all .2s; font-family:var(--body); cursor:pointer; }
 .btn:hover { transform:translateY(-1px); }
-.btn-primary { background:var(–coral); color:#fff; }
-.btn-primary:hover { background:var(–coral2); }
-.btn-mint { background:var(–mint); color:#fff; }
-.btn-gold { background:var(–gold); color:#fff; }
-.btn-navy { background:var(–navy); color:#fff; }
-.btn-purple { background:var(–purple); color:#fff; }
-.btn-outline { background:transparent; border:1px solid var(–g200); color:var(–g600); }
-.btn-outline:hover { border-color:var(–coral); color:var(–coral); }
+.btn-primary { background:var(--coral); color:#fff; }
+.btn-primary:hover { background:var(--coral2); }
+.btn-mint { background:var(--mint); color:#fff; }
+.btn-gold { background:var(--gold); color:#fff; }
+.btn-navy { background:var(--navy); color:#fff; }
+.btn-purple { background:var(--purple); color:#fff; }
+.btn-outline { background:transparent; border:1px solid var(--g200); color:var(--g600); }
+.btn-outline:hover { border-color:var(--coral); color:var(--coral); }
 .btn-sm { padding:6px 12px; font-size:11px; }
 .btn-full { width:100%; justify-content:center; margin-top:4px; }
 
 /* Alert */
 .alert { border-radius:9px; padding:11px 15px; font-size:13px; font-weight:500; margin-bottom:14px; }
-.alert-ok { background:var(–mint-bg); color:var(–mint); border:1px solid rgba(61,170,143,.2); display:none; }
-.alert-err { background:var(–coral-bg); color:var(–coral); border:1px solid rgba(212,114,90,.2); display:none; }
+.alert-ok { background:var(--mint-bg); color:var(--mint); border:1px solid rgba(61,170,143,.2); display:none; }
+.alert-err { background:var(--coral-bg); color:var(--coral); border:1px solid rgba(212,114,90,.2); display:none; }
 
 /* List */
-.li { display:flex; align-items:center; gap:11px; padding:10px 0; border-bottom:1px solid var(–g100); }
+.li { display:flex; align-items:center; gap:11px; padding:10px 0; border-bottom:1px solid var(--g100); }
 .li:last-child { border-bottom:none; }
 .li-av { width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:11px; flex-shrink:0; }
-.li-name { font-weight:600; color:var(–navy); font-size:13px; }
-.li-sub { color:var(–g400); font-size:11px; margin-top:1px; }
+.li-name { font-weight:600; color:var(--navy); font-size:13px; }
+.li-sub { color:var(--g400); font-size:11px; margin-top:1px; }
 
 /* Progress */
-.prog { height:5px; background:var(–g100); border-radius:3px; margin-top:3px; }
+.prog { height:5px; background:var(--g100); border-radius:3px; margin-top:3px; }
 .prog-fill { height:100%; border-radius:3px; }
 
 /* Toggle */
@@ -302,42 +301,40 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 .modal-bg.open { display:flex; }
 .modal-box { background:#fff; border-radius:18px; padding:32px; width:100%; max-width:500px; max-height:85vh; overflow-y:auto; animation:fadeUp .3s ease; box-shadow:0 20px 70px rgba(0,0,0,.22); }
 .modal-hd { display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; }
-.modal-title { font-family:var(–display); font-size:18px; color:var(–navy); font-weight:700; }
-.modal-close { width:30px; height:30px; border-radius:50%; border:none; background:var(–g100); color:var(–g600); font-size:15px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all .2s; }
-.modal-close:hover { background:var(–coral-bg); color:var(–coral); }
+.modal-title { font-family:var(--display); font-size:18px; color:var(--navy); font-weight:700; }
+.modal-close { width:30px; height:30px; border-radius:50%; border:none; background:var(--g100); color:var(--g600); font-size:15px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all .2s; }
+.modal-close:hover { background:var(--coral-bg); color:var(--coral); }
 
 /* Msg */
-.msg-li { display:flex; gap:11px; padding:12px 0; border-bottom:1px solid var(–g100); cursor:pointer; }
+.msg-li { display:flex; gap:11px; padding:12px 0; border-bottom:1px solid var(--g100); cursor:pointer; }
 .msg-li:last-child { border-bottom:none; }
-.msg-icon { width:34px; height:34px; border-radius:50%; background:var(–coral-bg); display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; }
-.msg-subj { font-weight:600; color:var(–navy); font-size:13px; }
-.msg-meta { color:var(–g400); font-size:11px; margin-top:1px; }
-.msg-prev { color:var(–g600); font-size:12px; margin-top:2px; }
-.unread-dot { width:7px; height:7px; border-radius:50%; background:var(–coral); display:inline-block; margin-left:5px; vertical-align:middle; }
+.msg-icon { width:34px; height:34px; border-radius:50%; background:var(--coral-bg); display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; }
+.msg-subj { font-weight:600; color:var(--navy); font-size:13px; }
+.msg-meta { color:var(--g400); font-size:11px; margin-top:1px; }
+.msg-prev { color:var(--g600); font-size:12px; margin-top:2px; }
+.unread-dot { width:7px; height:7px; border-radius:50%; background:var(--coral); display:inline-block; margin-left:5px; vertical-align:middle; }
 
 @media(max-width:860px){
-.hero-inner { grid-template-columns:1fr; padding:60px 24px; }
-.hero-right { display:none; }
-.nav-links { display:none; }
-#top-nav { padding:0 20px; }
-.pub-section { padding:60px 24px; }
-.news-grid { grid-template-columns:1fr; }
-.depts-grid { grid-template-columns:1fr 1fr; }
-.reg-inner { grid-template-columns:1fr; padding:60px 24px; }
-#footer-bg { padding:44px 24px 24px; }
-.footer-grid { grid-template-columns:1fr 1fr; }
-.sg4,.sg3 { grid-template-columns:1fr 1fr; }
-.sg5 { grid-template-columns:1fr 1fr; }
-.sidebar { width:190px; }
-.dash-main { margin-left:190px; padding:18px; }
+  .hero-inner { grid-template-columns:1fr; padding:60px 24px; }
+  .hero-right { display:none; }
+  .nav-links { display:none; }
+  #top-nav { padding:0 20px; }
+  .pub-section { padding:60px 24px; }
+  .news-grid { grid-template-columns:1fr; }
+  .depts-grid { grid-template-columns:1fr 1fr; }
+  .reg-inner { grid-template-columns:1fr; padding:60px 24px; }
+  #footer-bg { padding:44px 24px 24px; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+  .sg4,.sg3 { grid-template-columns:1fr 1fr; }
+  .sg5 { grid-template-columns:1fr 1fr; }
+  .sidebar { width:190px; }
+  .dash-main { margin-left:190px; padding:18px; }
 }
 </style>
-
 </head>
 <body>
 
 <!-- ════════════════════════════════════ PUBLIC SITE ═══════════════════════════════════ -->
-
 <div id="page-public">
 
 <nav id="top-nav">
@@ -356,7 +353,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </nav>
 
 <!-- HERO -->
-
 <section id="hero">
   <div class="hero-blob hero-blob-1"></div>
   <div class="hero-blob hero-blob-2"></div>
@@ -395,7 +391,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </section>
 
 <!-- STATS BAR -->
-
 <div id="stats-bar">
   <div class="stats-bar-grid">
     <div class="stats-bar-item"><div class="stats-bar-n" id="sb-patients">0</div><div class="stats-bar-l">REGISTERED PATIENTS</div></div>
@@ -406,7 +401,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div>
 
 <!-- NEWS -->
-
 <div id="news-bg">
   <div class="pub-section">
     <div class="section-tag"><span>Latest</span></div>
@@ -419,7 +413,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div>
 
 <!-- DEPARTMENTS -->
-
 <div id="depts-bg">
   <div class="pub-section">
     <div class="section-tag"><span>Specialties</span></div>
@@ -455,7 +448,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div>
 
 <!-- REGISTRATION -->
-
 <div id="reg-bg">
   <div class="reg-inner">
     <div class="reg-left">
@@ -517,7 +509,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div>
 
 <!-- FOOTER -->
-
 <div id="footer-bg">
   <div class="footer-grid">
     <div class="footer-brand">
@@ -554,7 +545,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div><!-- /page-public -->
 
 <!-- ════════════════════════════════════ LOGIN ════════════════════════════════════════ -->
-
 <div id="page-login" style="min-height:100vh;background:var(--navy);display:none;align-items:center;justify-content:center;padding:20px;">
   <div class="login-card">
     <div class="login-logo">
@@ -576,7 +566,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div>
 
 <!-- ════════════════════════════════════ DASHBOARD ═══════════════════════════════════ -->
-
 <div id="page-dash" style="display:none;">
   <div class="sidebar" id="sidebar">
     <div class="sb-logo">
@@ -591,7 +580,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div>
 
 <!-- MODAL -->
-
 <div id="modal" class="modal-bg" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
     <div class="modal-hd">
@@ -603,7 +591,6 @@ td { padding:11px 13px; color:var(–g800); vertical-align:middle; }
 </div>
 
 <!-- ════════════════════════════════════ JAVASCRIPT ══════════════════════════════════ -->
-
 <script>
 'use strict';
 
@@ -1159,643 +1146,638 @@ function pageComplaint() {
     '<div class="field"><label>Type of Complaint</label><select id="c-type"><option value="">Select...</option><option>Tooth Pain</option><option>Gum Bleeding</option><option>Sensitivity</option><option>Crown Issue</option><option>Other</option></select></div>' +
     '<div class="field"><label>Recurring?</label><select id="c-recur"><option>New Problem</option><option>Chronic / Ongoing</option></select></div>' +
     '<div class="field"><label>Description</label><textarea id="c-desc" rows="3" placeholder="Describe symptoms..."></textarea></div>' +
-
-```
-'<div class="field"><label>Preferred Department</label><select id="c-dept"><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>' +
-'<button class="btn btn-primary" onclick="submitComplaint()">Submit Complaint</button></div>';
-```
-
+    '<div class="field"><label>Preferred Department</label><select id="c-dept"><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>' +
+    '<button class="btn btn-primary" onclick="submitComplaint()">Submit Complaint</button></div>';
 }
 
 function pageInbox() {
-var msgs = DB.get(‘messages’) || [];
-return H(‘Inbox’) + ‘<div class="card">’ + msgList(msgs) + ‘</div>’;
+  var msgs = DB.get('messages') || [];
+  return H('Inbox') + '<div class="card">' + msgList(msgs) + '</div>';
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // STUDENT PAGES
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function pageStudentOverview() {
-var patients = DB.get(‘patients’) || [];
-var mine = []; for(var i=0;i<patients.length;i++){if(patients[i].studentId===‘S001’)mine.push(patients[i]);}
-var html = H(‘Hello, ’ + currentUser.name.split(’ ‘)[0] + ’ 👋’,‘4th Year - Oral Surgery’);
-html += ‘<div class="sg sg4" style="margin-bottom:18px">’;
-html += statCard(‘🦷’,‘My Patients’,mine.length,‘var(–mint)’);
-html += statCard(‘✅’,‘Completed’,‘8’,‘var(–coral)’);
-html += statCard(‘⭐’,‘GPA’,‘3.8’,’#C9A84C’,‘Top 10%’);
-html += statCard(‘⏱️’,‘Ward Hours’,‘24h’,’#6B8DD6’);
-html += ‘</div><div class="sg sg21">’;
-html += ‘<div class="card"><div class="card-h">Active Cases</div>’;
-for(var j=0;j<Math.min(mine.length,4);j++){
-html += listItem(initials(mine[j].name),‘var(–mint-bg)’,‘var(–mint)’,mine[j].name,mine[j].complaint,badgeStatus(mine[j].status));
-}
-html += ‘</div>’;
-var days = [{day:‘Mon’,dept:‘Oral Surgery’,time:‘08:00-12:00’},{day:‘Tue’,dept:‘Periodontology’,time:‘13:00-17:00’},{day:‘Thu’,dept:‘Oral Surgery’,time:‘08:00-12:00’}];
-html += ‘<div class="card"><div class="card-h">This Week</div>’;
-for(var d=0;d<days.length;d++){
-html += ‘<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--g100)">’;
-html += ‘<div style="width:32px;height:32px;border-radius:8px;background:var(--mint-bg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;color:var(--mint)">’ + days[d].day + ‘</div>’;
-html += ‘<div><div style="font-weight:600;font-size:12px;color:var(--navy)">’ + days[d].dept + ‘</div><div style="font-size:11px;color:var(--g400)">’ + days[d].time + ‘</div></div></div>’;
-}
-html += ‘</div></div>’;
-return html;
+  var patients = DB.get('patients') || [];
+  var mine = []; for(var i=0;i<patients.length;i++){if(patients[i].studentId==='S001')mine.push(patients[i]);}
+  var html = H('Hello, ' + currentUser.name.split(' ')[0] + ' 👋','4th Year - Oral Surgery');
+  html += '<div class="sg sg4" style="margin-bottom:18px">';
+  html += statCard('🦷','My Patients',mine.length,'var(--mint)');
+  html += statCard('✅','Completed','8','var(--coral)');
+  html += statCard('⭐','GPA','3.8','#C9A84C','Top 10%');
+  html += statCard('⏱️','Ward Hours','24h','#6B8DD6');
+  html += '</div><div class="sg sg21">';
+  html += '<div class="card"><div class="card-h">Active Cases</div>';
+  for(var j=0;j<Math.min(mine.length,4);j++){
+    html += listItem(initials(mine[j].name),'var(--mint-bg)','var(--mint)',mine[j].name,mine[j].complaint,badgeStatus(mine[j].status));
+  }
+  html += '</div>';
+  var days = [{day:'Mon',dept:'Oral Surgery',time:'08:00-12:00'},{day:'Tue',dept:'Periodontology',time:'13:00-17:00'},{day:'Thu',dept:'Oral Surgery',time:'08:00-12:00'}];
+  html += '<div class="card"><div class="card-h">This Week</div>';
+  for(var d=0;d<days.length;d++){
+    html += '<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--g100)">';
+    html += '<div style="width:32px;height:32px;border-radius:8px;background:var(--mint-bg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:10px;color:var(--mint)">' + days[d].day + '</div>';
+    html += '<div><div style="font-weight:600;font-size:12px;color:var(--navy)">' + days[d].dept + '</div><div style="font-size:11px;color:var(--g400)">' + days[d].time + '</div></div></div>';
+  }
+  html += '</div></div>';
+  return html;
 }
 
 function pageMyPatients() {
-var patients = DB.get(‘patients’) || [];
-var mine = []; for(var i=0;i<patients.length;i++){if(patients[i].studentId===‘S001’)mine.push(patients[i]);}
-var cols = [{k:‘id’,l:‘ID’},{k:‘name’,l:‘Name’},{k:‘complaint’,l:‘Complaint’},{k:‘dept’,l:‘Dept’},{k:‘date’,l:‘Date’},{k:‘status’,l:‘Status’,r:function(v){return badgeStatus(v);}}];
-return H(‘My Patients’,mine.length+’ patients assigned’) + ‘<div class="card">’ + buildTable(cols,mine) + ‘</div>’;
+  var patients = DB.get('patients') || [];
+  var mine = []; for(var i=0;i<patients.length;i++){if(patients[i].studentId==='S001')mine.push(patients[i]);}
+  var cols = [{k:'id',l:'ID'},{k:'name',l:'Name'},{k:'complaint',l:'Complaint'},{k:'dept',l:'Dept'},{k:'date',l:'Date'},{k:'status',l:'Status',r:function(v){return badgeStatus(v);}}];
+  return H('My Patients',mine.length+' patients assigned') + '<div class="card">' + buildTable(cols,mine) + '</div>';
 }
 
 function pageSchedule() {
-var days = [‘Monday’,‘Tuesday’,‘Wednesday’,‘Thursday’,‘Friday’];
-var shifts = [
-[{dept:‘Oral Surgery’,time:‘08:00-12:00’,room:‘Ward 3A’}],
-[{dept:‘Periodontics’,time:‘13:00-17:00’,room:‘Ward 1B’}],
-[],
-[{dept:‘Oral Surgery’,time:‘08:00-12:00’,room:‘Ward 3A’}],
-[{dept:‘Prosthodontics’,time:‘10:00-14:00’,room:‘Ward 2C’}]
-];
-var html = H(‘Ward Schedule’,‘Your weekly rotation’);
-html += ‘<div class="sg sg5">’;
-for(var i=0;i<days.length;i++){
-html += ‘<div class="card" style="padding:14px"><div style="font-weight:700;color:var(--navy);font-size:12px;margin-bottom:10px">’ + days[i] + ‘</div>’;
-if(shifts[i].length){
-html += ‘<div style="background:var(--mint-bg);border-radius:8px;padding:10px">’;
-html += ‘<div style="font-weight:600;color:var(--mint);font-size:11px">’ + shifts[i][0].dept + ‘</div>’;
-html += ‘<div style="color:var(--g600);font-size:10px;margin-top:2px">’ + shifts[i][0].time + ‘</div>’;
-html += ‘<div style="color:var(--g400);font-size:10px">’ + shifts[i][0].room + ‘</div></div>’;
-} else {
-html += ‘<p style="color:var(--g400);font-size:11px;text-align:center;padding:12px 0">No shift</p>’;
-}
-html += ‘</div>’;
-}
-html += ‘</div>’;
-return html;
+  var days = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
+  var shifts = [
+    [{dept:'Oral Surgery',time:'08:00-12:00',room:'Ward 3A'}],
+    [{dept:'Periodontics',time:'13:00-17:00',room:'Ward 1B'}],
+    [],
+    [{dept:'Oral Surgery',time:'08:00-12:00',room:'Ward 3A'}],
+    [{dept:'Prosthodontics',time:'10:00-14:00',room:'Ward 2C'}]
+  ];
+  var html = H('Ward Schedule','Your weekly rotation');
+  html += '<div class="sg sg5">';
+  for(var i=0;i<days.length;i++){
+    html += '<div class="card" style="padding:14px"><div style="font-weight:700;color:var(--navy);font-size:12px;margin-bottom:10px">' + days[i] + '</div>';
+    if(shifts[i].length){
+      html += '<div style="background:var(--mint-bg);border-radius:8px;padding:10px">';
+      html += '<div style="font-weight:600;color:var(--mint);font-size:11px">' + shifts[i][0].dept + '</div>';
+      html += '<div style="color:var(--g600);font-size:10px;margin-top:2px">' + shifts[i][0].time + '</div>';
+      html += '<div style="color:var(--g400);font-size:10px">' + shifts[i][0].room + '</div></div>';
+    } else {
+      html += '<p style="color:var(--g400);font-size:11px;text-align:center;padding:12px 0">No shift</p>';
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
 }
 
 function pageEvaluations() {
-var evals = DB.get(‘evaluations’) || [];
-var mine = []; for(var i=0;i<evals.length;i++){if(evals[i].studentId===‘S001’)mine.push(evals[i]);}
-var html = H(‘My Evaluations’,‘Performance reviews’);
-html += ‘<div class="sg sg2">’;
-for(var j=0;j<mine.length;j++){
-var ev = mine[j];
-var avg = Math.round((ev.clinical+ev.handling+ev.theoretical+ev.professionalism)/4);
-html += ‘<div class="card">’;
-html += ‘<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">’;
-html += ‘<div><div class="card-h" style="margin:0">’ + ev.dept + ‘</div><div style="color:var(--g400);font-size:12px">’ + ev.supervisor + ’ - ’ + ev.period + ‘</div></div>’;
-html += ‘<div style="text-align:right"><div style="font-family:var(--display);font-size:28px;color:var(--mint);font-weight:700">’ + avg + ‘%</div>’;
-html += ‘<span class="badge" style="background:var(--mint-bg);color:var(--mint)">’ + ev.grade + ‘</span></div></div>’;
-html += ‘<div class="prog" style="margin-bottom:14px"><div class="prog-fill" style="width:' + avg + '%;background:linear-gradient(90deg,var(--mint),var(--coral))"></div></div>’;
-html += progRow(‘Clinical Skills’,ev.clinical,100,‘var(–mint)’);
-html += progRow(‘Patient Handling’,ev.handling,100,‘var(–coral)’);
-html += progRow(‘Theoretical’,ev.theoretical,100,’#6B8DD6’);
-html += progRow(‘Professionalism’,ev.professionalism,100,’#C9A84C’);
-html += ‘<p style="color:var(--g600);font-size:12px;font-style:italic;margin-top:10px;border-top:1px solid var(--g100);padding-top:10px">’ + ev.comment + ‘</p>’;
-html += ‘</div>’;
-}
-if(!mine.length) html += ‘<div class="card"><p style="color:var(--g400)">No evaluations yet.</p></div>’;
-html += ‘</div>’;
-return html;
+  var evals = DB.get('evaluations') || [];
+  var mine = []; for(var i=0;i<evals.length;i++){if(evals[i].studentId==='S001')mine.push(evals[i]);}
+  var html = H('My Evaluations','Performance reviews');
+  html += '<div class="sg sg2">';
+  for(var j=0;j<mine.length;j++){
+    var ev = mine[j];
+    var avg = Math.round((ev.clinical+ev.handling+ev.theoretical+ev.professionalism)/4);
+    html += '<div class="card">';
+    html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">';
+    html += '<div><div class="card-h" style="margin:0">' + ev.dept + '</div><div style="color:var(--g400);font-size:12px">' + ev.supervisor + ' - ' + ev.period + '</div></div>';
+    html += '<div style="text-align:right"><div style="font-family:var(--display);font-size:28px;color:var(--mint);font-weight:700">' + avg + '%</div>';
+    html += '<span class="badge" style="background:var(--mint-bg);color:var(--mint)">' + ev.grade + '</span></div></div>';
+    html += '<div class="prog" style="margin-bottom:14px"><div class="prog-fill" style="width:' + avg + '%;background:linear-gradient(90deg,var(--mint),var(--coral))"></div></div>';
+    html += progRow('Clinical Skills',ev.clinical,100,'var(--mint)');
+    html += progRow('Patient Handling',ev.handling,100,'var(--coral)');
+    html += progRow('Theoretical',ev.theoretical,100,'#6B8DD6');
+    html += progRow('Professionalism',ev.professionalism,100,'#C9A84C');
+    html += '<p style="color:var(--g600);font-size:12px;font-style:italic;margin-top:10px;border-top:1px solid var(--g100);padding-top:10px">' + ev.comment + '</p>';
+    html += '</div>';
+  }
+  if(!mine.length) html += '<div class="card"><p style="color:var(--g400)">No evaluations yet.</p></div>';
+  html += '</div>';
+  return html;
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // SECRETARY PAGES
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function pageSecretaryOverview() {
-var patients = DB.get(‘patients’) || [];
-var appts    = DB.get(‘appointments’) || [];
-var pending  = 0; for(var i=0;i<patients.length;i++){if(patients[i].status===‘Pending’)pending++;}
-var online   = 0; for(var j=0;j<patients.length;j++){if(patients[j].source===‘online’)online++;}
-var html = H(‘Secretary Dashboard’,‘Reception and patient management’,’<button class="btn btn-primary" onclick="navTo(\'register\')">Register Patient</button>’);
-html += ‘<div class="sg sg4" style="margin-bottom:18px">’;
-html += statCard(‘👥’,‘Total Patients’,patients.length,‘var(–coral)’);
-html += statCard(‘🟡’,‘Pending’,pending,’#C9A84C’);
-html += statCard(‘🌐’,‘Online Registrations’,online,’#6B8DD6’,‘New’);
-html += statCard(‘📅’,‘Appointments’,appts.length,‘var(–mint)’);
-html += ‘</div><div class="sg sg21">’;
-html += ‘<div class="card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">’;
-html += ‘<div class="card-h" style="margin:0">Recent Patients</div>’;
-if(online>0) html += ‘<span class="badge" style="background:var(--coral-bg);color:var(--coral)">’ + online + ’ online</span>’;
-html += ‘</div>’;
-var recent = patients.slice(-5).reverse();
-for(var k=0;k<recent.length;k++){
-html += listItem(initials(recent[k].name),‘var(–coral-bg)’,‘var(–coral)’,
-recent[k].name + (recent[k].source===‘online’?’ 🌐’:’’),
-recent[k].dept+’ - ‘+recent[k].date,
-badgeStatus(recent[k].status));
-}
-html += ‘</div>’;
-html += ‘<div class="card"><div class="card-h">Dept Distribution</div>’;
-var depts = [‘Oral Surgery’,‘Periodontology’,‘Prosthodontics’,‘Orthodontics’];
-var dcols = [‘var(–coral)’,‘var(–mint)’,’#6B8DD6’,’#C9A84C’];
-for(var d=0;d<depts.length;d++){
-var cnt=0; for(var p=0;p<patients.length;p++){if(patients[p].dept===depts[d])cnt++;}
-html += progRow(depts[d],cnt,Math.max(patients.length,1),dcols[d]);
-}
-html += ‘</div></div>’;
-return html;
+  var patients = DB.get('patients') || [];
+  var appts    = DB.get('appointments') || [];
+  var pending  = 0; for(var i=0;i<patients.length;i++){if(patients[i].status==='Pending')pending++;}
+  var online   = 0; for(var j=0;j<patients.length;j++){if(patients[j].source==='online')online++;}
+  var html = H('Secretary Dashboard','Reception and patient management','<button class="btn btn-primary" onclick="navTo(\'register\')">Register Patient</button>');
+  html += '<div class="sg sg4" style="margin-bottom:18px">';
+  html += statCard('👥','Total Patients',patients.length,'var(--coral)');
+  html += statCard('🟡','Pending',pending,'#C9A84C');
+  html += statCard('🌐','Online Registrations',online,'#6B8DD6','New');
+  html += statCard('📅','Appointments',appts.length,'var(--mint)');
+  html += '</div><div class="sg sg21">';
+  html += '<div class="card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">';
+  html += '<div class="card-h" style="margin:0">Recent Patients</div>';
+  if(online>0) html += '<span class="badge" style="background:var(--coral-bg);color:var(--coral)">' + online + ' online</span>';
+  html += '</div>';
+  var recent = patients.slice(-5).reverse();
+  for(var k=0;k<recent.length;k++){
+    html += listItem(initials(recent[k].name),'var(--coral-bg)','var(--coral)',
+      recent[k].name + (recent[k].source==='online'?' 🌐':''),
+      recent[k].dept+' - '+recent[k].date,
+      badgeStatus(recent[k].status));
+  }
+  html += '</div>';
+  html += '<div class="card"><div class="card-h">Dept Distribution</div>';
+  var depts = ['Oral Surgery','Periodontology','Prosthodontics','Orthodontics'];
+  var dcols = ['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  for(var d=0;d<depts.length;d++){
+    var cnt=0; for(var p=0;p<patients.length;p++){if(patients[p].dept===depts[d])cnt++;}
+    html += progRow(depts[d],cnt,Math.max(patients.length,1),dcols[d]);
+  }
+  html += '</div></div>';
+  return html;
 }
 
 function pageRegister() {
-return H(‘Register New Patient’) +
-‘<div class="card" style="max-width:580px">’ +
-‘<div id="reg-ok" class="alert alert-ok">Patient registered successfully!</div>’ +
-‘<div class="frow"><div class="field"><label>Full Name</label><input id="dr-name" placeholder="Patient full name"/></div>’ +
-‘<div class="field"><label>Phone</label><input id="dr-phone" placeholder="05XXXXXXXX"/></div></div>’ +
-‘<div class="frow"><div class="field"><label>Age</label><input id="dr-age" type="number" placeholder="Age"/></div>’ +
-‘<div class="field"><label>Gender</label><select id="dr-gender"><option>Male</option><option>Female</option></select></div></div>’ +
-‘<div class="frow"><div class="field"><label>National ID</label><input id="dr-nid" placeholder="ID number"/></div>’ +
-‘<div class="field"><label>Email</label><input id="dr-email" type="email" placeholder="Optional"/></div></div>’ +
-‘<div class="field"><label>Chief Complaint</label><select id="dr-complaint"><option value="">Select…</option><option>Tooth Pain</option><option>Gum Bleeding</option><option>Sensitivity</option><option>Crown Issue</option><option>Braces</option><option>Missing Teeth</option><option>Routine Checkup</option><option>Other</option></select></div>’ +
-‘<div class="field"><label>Department</label><select id="dr-dept"><option value="">Select…</option><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>’ +
-‘<div class="field"><label>Notes</label><textarea id="dr-notes" rows="2" placeholder="Additional info..."></textarea></div>’ +
-‘<div style="display:flex;gap:10px"><button class="btn btn-primary" onclick="dashRegister()">Register Patient</button>’ +
-‘<button class="btn btn-outline" onclick="clearDashReg()">Clear</button></div></div>’;
+  return H('Register New Patient') +
+    '<div class="card" style="max-width:580px">' +
+    '<div id="reg-ok" class="alert alert-ok">Patient registered successfully!</div>' +
+    '<div class="frow"><div class="field"><label>Full Name</label><input id="dr-name" placeholder="Patient full name"/></div>' +
+    '<div class="field"><label>Phone</label><input id="dr-phone" placeholder="05XXXXXXXX"/></div></div>' +
+    '<div class="frow"><div class="field"><label>Age</label><input id="dr-age" type="number" placeholder="Age"/></div>' +
+    '<div class="field"><label>Gender</label><select id="dr-gender"><option>Male</option><option>Female</option></select></div></div>' +
+    '<div class="frow"><div class="field"><label>National ID</label><input id="dr-nid" placeholder="ID number"/></div>' +
+    '<div class="field"><label>Email</label><input id="dr-email" type="email" placeholder="Optional"/></div></div>' +
+    '<div class="field"><label>Chief Complaint</label><select id="dr-complaint"><option value="">Select...</option><option>Tooth Pain</option><option>Gum Bleeding</option><option>Sensitivity</option><option>Crown Issue</option><option>Braces</option><option>Missing Teeth</option><option>Routine Checkup</option><option>Other</option></select></div>' +
+    '<div class="field"><label>Department</label><select id="dr-dept"><option value="">Select...</option><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>' +
+    '<div class="field"><label>Notes</label><textarea id="dr-notes" rows="2" placeholder="Additional info..."></textarea></div>' +
+    '<div style="display:flex;gap:10px"><button class="btn btn-primary" onclick="dashRegister()">Register Patient</button>' +
+    '<button class="btn btn-outline" onclick="clearDashReg()">Clear</button></div></div>';
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // DOCTOR PAGES
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function pageDoctorOverview() {
-var patients = DB.get(‘patients’) || [];
-var students = DB.get(‘students’) || [];
-var html = H(‘Dr. ’ + currentUser.name,‘Oral Surgery - Supervisor’);
-html += ‘<div class="sg sg4" style="margin-bottom:18px">’;
-html += statCard(‘🦷’,‘Total Patients’,patients.length,’#C9A84C’);
-html += statCard(‘🎓’,‘Students’,students.length,‘var(–mint)’);
-html += statCard(‘📋’,‘Cases This Month’,‘16’,‘var(–coral)’);
-html += statCard(‘📬’,‘Unread Messages’,‘3’,’#6B8DD6’);
-html += ‘</div><div class="sg sg21">’;
-html += ‘<div class="card"><div class="card-h">Today's Patients</div>’;
-for(var i=0;i<Math.min(patients.length,4);i++){
-html += listItem(initials(patients[i].name),’#FEF3C7’,’#C9A84C’,patients[i].name,patients[i].complaint,badgeStatus(patients[i].status));
-}
-html += ‘</div><div class="card"><div class="card-h">Student Performance</div>’;
-for(var j=0;j<Math.min(students.length,4);j++){
-var s=students[j];
-html += ‘<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--g100)">’;
-html += ‘<div style="width:7px;height:7px;border-radius:50%;background:' + gradeColor(s.gpa) + '"></div>’;
-html += ‘<div style="flex:1"><div style="font-weight:600;font-size:12px;color:var(--navy)">’ + s.name + ‘</div>’;
-html += ‘<div style="font-size:11px;color:var(--g400)">’ + s.patients + ’ patients - ’ + s.level + ‘</div></div>’;
-html += ‘<span style="font-weight:700;color:var(--mint);font-size:12px">’ + s.gpa + ‘</span></div>’;
-}
-html += ‘</div></div>’;
-return html;
+  var patients = DB.get('patients') || [];
+  var students = DB.get('students') || [];
+  var html = H('Dr. ' + currentUser.name,'Oral Surgery - Supervisor');
+  html += '<div class="sg sg4" style="margin-bottom:18px">';
+  html += statCard('🦷','Total Patients',patients.length,'#C9A84C');
+  html += statCard('🎓','Students',students.length,'var(--mint)');
+  html += statCard('📋','Cases This Month','16','var(--coral)');
+  html += statCard('📬','Unread Messages','3','#6B8DD6');
+  html += '</div><div class="sg sg21">';
+  html += '<div class="card"><div class="card-h">Today\'s Patients</div>';
+  for(var i=0;i<Math.min(patients.length,4);i++){
+    html += listItem(initials(patients[i].name),'#FEF3C7','#C9A84C',patients[i].name,patients[i].complaint,badgeStatus(patients[i].status));
+  }
+  html += '</div><div class="card"><div class="card-h">Student Performance</div>';
+  for(var j=0;j<Math.min(students.length,4);j++){
+    var s=students[j];
+    html += '<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--g100)">';
+    html += '<div style="width:7px;height:7px;border-radius:50%;background:' + gradeColor(s.gpa) + '"></div>';
+    html += '<div style="flex:1"><div style="font-weight:600;font-size:12px;color:var(--navy)">' + s.name + '</div>';
+    html += '<div style="font-size:11px;color:var(--g400)">' + s.patients + ' patients - ' + s.level + '</div></div>';
+    html += '<span style="font-weight:700;color:var(--mint);font-size:12px">' + s.gpa + '</span></div>';
+  }
+  html += '</div></div>';
+  return html;
 }
 
 function pageEvaluate() {
-var students = DB.get(‘students’) || [];
-var options = ‘’;
-for(var i=0;i<students.length;i++) options += ‘<option value="' + students[i].id + '">’ + students[i].name + ‘</option>’;
-return H(‘Evaluate Students’,‘Submit quarterly evaluations’) +
-‘<div class="card" style="max-width:540px">’ +
-‘<div id="eval-ok" class="alert alert-ok">Evaluation submitted successfully!</div>’ +
-‘<div class="field"><label>Student</label><select id="ev-student"><option value="">Select student…</option>’ + options + ‘</select></div>’ +
-‘<div class="field"><label>Period</label><select id="ev-period"><option>Q1 2025</option><option>Q2 2025</option><option>Q3 2025</option><option>Q4 2025</option></select></div>’ +
-‘<div class="frow"><div class="field"><label>Clinical Skills (0-100)</label><input id="ev-c" type="number" min="0" max="100" placeholder="85"/></div>’ +
-‘<div class="field"><label>Patient Handling (0-100)</label><input id="ev-h" type="number" min="0" max="100" placeholder="90"/></div></div>’ +
-‘<div class="frow"><div class="field"><label>Theoretical (0-100)</label><input id="ev-t" type="number" min="0" max="100" placeholder="80"/></div>’ +
-‘<div class="field"><label>Professionalism (0-100)</label><input id="ev-p" type="number" min="0" max="100" placeholder="95"/></div></div>’ +
-‘<div class="field"><label>Comments</label><textarea id="ev-comment" rows="3" placeholder="Detailed feedback..."></textarea></div>’ +
-‘<button class="btn btn-gold" onclick="submitEval()">Submit Evaluation</button></div>’;
+  var students = DB.get('students') || [];
+  var options = '';
+  for(var i=0;i<students.length;i++) options += '<option value="' + students[i].id + '">' + students[i].name + '</option>';
+  return H('Evaluate Students','Submit quarterly evaluations') +
+    '<div class="card" style="max-width:540px">' +
+    '<div id="eval-ok" class="alert alert-ok">Evaluation submitted successfully!</div>' +
+    '<div class="field"><label>Student</label><select id="ev-student"><option value="">Select student...</option>' + options + '</select></div>' +
+    '<div class="field"><label>Period</label><select id="ev-period"><option>Q1 2025</option><option>Q2 2025</option><option>Q3 2025</option><option>Q4 2025</option></select></div>' +
+    '<div class="frow"><div class="field"><label>Clinical Skills (0-100)</label><input id="ev-c" type="number" min="0" max="100" placeholder="85"/></div>' +
+    '<div class="field"><label>Patient Handling (0-100)</label><input id="ev-h" type="number" min="0" max="100" placeholder="90"/></div></div>' +
+    '<div class="frow"><div class="field"><label>Theoretical (0-100)</label><input id="ev-t" type="number" min="0" max="100" placeholder="80"/></div>' +
+    '<div class="field"><label>Professionalism (0-100)</label><input id="ev-p" type="number" min="0" max="100" placeholder="95"/></div></div>' +
+    '<div class="field"><label>Comments</label><textarea id="ev-comment" rows="3" placeholder="Detailed feedback..."></textarea></div>' +
+    '<button class="btn btn-gold" onclick="submitEval()">Submit Evaluation</button></div>';
 }
 
 function pageCases() {
-var patients = DB.get(‘patients’) || [];
-var students = DB.get(‘students’) || [];
-var pOpts = ‘’; for(var i=0;i<patients.length;i++) pOpts += ‘<option>’ + patients[i].name + ‘</option>’;
-var sOpts = ‘’; for(var j=0;j<students.length;j++) sOpts += ‘<option>’ + students[j].name + ‘</option>’;
-return H(‘Document Cases’,‘Record procedure details’) +
-‘<div class="card" style="max-width:540px">’ +
-‘<div id="case-ok" class="alert alert-ok">Case recorded successfully!</div>’ +
-‘<div class="field"><label>Patient</label><select id="ca-patient"><option value="">Select patient…</option>’ + pOpts + ‘</select></div>’ +
-‘<div class="frow"><div class="field"><label>Procedure</label><select id="ca-proc"><option>Extraction</option><option>Root Canal</option><option>Scaling</option><option>Crown Fitting</option><option>Braces Adjustment</option><option>Implant</option><option>Other</option></select></div>’ +
-‘<div class="field"><label>Assigned Student</label><select id="ca-student"><option value="">Select student…</option>’ + sOpts + ‘</select></div></div>’ +
-‘<div class="field"><label>Date</label><input id="ca-date" type="date"/></div>’ +
-‘<div class="field"><label>Clinical Notes</label><textarea id="ca-notes" rows="3" placeholder="Procedure details..."></textarea></div>’ +
-‘<div class="field"><label>Next Appointment</label><input id="ca-next" type="date"/></div>’ +
-‘<button class="btn btn-primary" onclick="submitCase()">Save Case Record</button></div>’;
+  var patients = DB.get('patients') || [];
+  var students = DB.get('students') || [];
+  var pOpts = ''; for(var i=0;i<patients.length;i++) pOpts += '<option>' + patients[i].name + '</option>';
+  var sOpts = ''; for(var j=0;j<students.length;j++) sOpts += '<option>' + students[j].name + '</option>';
+  return H('Document Cases','Record procedure details') +
+    '<div class="card" style="max-width:540px">' +
+    '<div id="case-ok" class="alert alert-ok">Case recorded successfully!</div>' +
+    '<div class="field"><label>Patient</label><select id="ca-patient"><option value="">Select patient...</option>' + pOpts + '</select></div>' +
+    '<div class="frow"><div class="field"><label>Procedure</label><select id="ca-proc"><option>Extraction</option><option>Root Canal</option><option>Scaling</option><option>Crown Fitting</option><option>Braces Adjustment</option><option>Implant</option><option>Other</option></select></div>' +
+    '<div class="field"><label>Assigned Student</label><select id="ca-student"><option value="">Select student...</option>' + sOpts + '</select></div></div>' +
+    '<div class="field"><label>Date</label><input id="ca-date" type="date"/></div>' +
+    '<div class="field"><label>Clinical Notes</label><textarea id="ca-notes" rows="3" placeholder="Procedure details..."></textarea></div>' +
+    '<div class="field"><label>Next Appointment</label><input id="ca-next" type="date"/></div>' +
+    '<button class="btn btn-primary" onclick="submitCase()">Save Case Record</button></div>';
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // SHARED PAGES
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function pageAllPatients() {
-var patients = DB.get(‘patients’) || [];
-var cols = [
-{k:‘id’,l:‘ID’},{k:‘name’,l:‘Name’},{k:‘age’,l:‘Age’},{k:‘phone’,l:‘Phone’},
-{k:‘complaint’,l:‘Complaint’},{k:‘dept’,l:‘Dept’},{k:‘doctor’,l:‘Doctor’},
-{k:‘date’,l:‘Date’},
-{k:‘source’,l:‘Source’,r:function(v){return v===‘online’?’<span style="font-size:11px">Online</span>’:’<span style="font-size:11px">Walk-in</span>’;}},
-{k:‘status’,l:‘Status’,r:function(v){return badgeStatus(v);}}
-];
-var btn = currentUser.role===‘secretary’ ? ‘<button class="btn btn-primary" onclick="navTo(\'register\')">Register New</button>’ : ‘’;
-return H(‘All Patients’,patients.length+’ records’,btn) + ‘<div class="card">’ + buildTable(cols,patients) + ‘</div>’;
+  var patients = DB.get('patients') || [];
+  var cols = [
+    {k:'id',l:'ID'},{k:'name',l:'Name'},{k:'age',l:'Age'},{k:'phone',l:'Phone'},
+    {k:'complaint',l:'Complaint'},{k:'dept',l:'Dept'},{k:'doctor',l:'Doctor'},
+    {k:'date',l:'Date'},
+    {k:'source',l:'Source',r:function(v){return v==='online'?'<span style="font-size:11px">Online</span>':'<span style="font-size:11px">Walk-in</span>';}},
+    {k:'status',l:'Status',r:function(v){return badgeStatus(v);}}
+  ];
+  var btn = currentUser.role==='secretary' ? '<button class="btn btn-primary" onclick="navTo(\'register\')">Register New</button>' : '';
+  return H('All Patients',patients.length+' records',btn) + '<div class="card">' + buildTable(cols,patients) + '</div>';
 }
 
 function pageStudents() {
-var students = DB.get(‘students’) || [];
-var cols = [
-{k:‘id’,l:‘ID’},{k:‘name’,l:‘Name’},{k:‘level’,l:‘Level’},{k:‘dept’,l:‘Department’},
-{k:‘gpa’,l:‘GPA’,r:function(v){return ‘<span style="font-weight:700;color:' + gradeColor(v) + '">’ + v + ‘</span>’;}},
-{k:‘patients’,l:‘Patients’},
-{k:‘status’,l:‘Status’,r:function(v){return badgeStatus(v);}}
-];
-return H(‘Student Records’,students.length+’ students’,’<button class="btn btn-mint" onclick="openAddStudentModal()">Add Student</button>’) + ‘<div class="card">’ + buildTable(cols,students) + ‘</div>’;
+  var students = DB.get('students') || [];
+  var cols = [
+    {k:'id',l:'ID'},{k:'name',l:'Name'},{k:'level',l:'Level'},{k:'dept',l:'Department'},
+    {k:'gpa',l:'GPA',r:function(v){return '<span style="font-weight:700;color:' + gradeColor(v) + '">' + v + '</span>';}},
+    {k:'patients',l:'Patients'},
+    {k:'status',l:'Status',r:function(v){return badgeStatus(v);}}
+  ];
+  return H('Student Records',students.length+' students','<button class="btn btn-mint" onclick="openAddStudentModal()">Add Student</button>') + '<div class="card">' + buildTable(cols,students) + '</div>';
 }
 
 function pageDoctors() {
-var doctors = DB.get(‘doctors’) || [];
-var cols = [
-{k:‘id’,l:‘ID’},{k:‘name’,l:‘Name’},{k:‘dept’,l:‘Department’},
-{k:‘role’,l:‘Role’,r:function(v){var c=v===‘Supervisor’?‘var(–gold)’:‘var(–mint)’;var bg=v===‘Supervisor’?‘var(–gold-bg)’:‘var(–mint-bg)’;return ‘<span class="badge" style="background:'+bg+';color:'+c+'">’+v+’</span>’;}},
-{k:‘patients’,l:‘Patients’},{k:‘students’,l:‘Students’}
-];
-return H(‘Doctor Records’,doctors.length+’ doctors’,’<button class="btn btn-gold" onclick="openAddDoctorModal()">Add Doctor</button>’) + ‘<div class="card">’ + buildTable(cols,doctors) + ‘</div>’;
+  var doctors = DB.get('doctors') || [];
+  var cols = [
+    {k:'id',l:'ID'},{k:'name',l:'Name'},{k:'dept',l:'Department'},
+    {k:'role',l:'Role',r:function(v){var c=v==='Supervisor'?'var(--gold)':'var(--mint)';var bg=v==='Supervisor'?'var(--gold-bg)':'var(--mint-bg)';return '<span class="badge" style="background:'+bg+';color:'+c+'">'+v+'</span>';}},
+    {k:'patients',l:'Patients'},{k:'students',l:'Students'}
+  ];
+  return H('Doctor Records',doctors.length+' doctors','<button class="btn btn-gold" onclick="openAddDoctorModal()">Add Doctor</button>') + '<div class="card">' + buildTable(cols,doctors) + '</div>';
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // ADMIN PAGES
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function pageAdminOverview() {
-var patients = DB.get(‘patients’) || [];
-var students = DB.get(‘students’) || [];
-var doctors  = DB.get(‘doctors’)  || [];
-var appts    = DB.get(‘appointments’) || [];
-var online=0; for(var i=0;i<patients.length;i++){if(patients[i].source===‘online’)online++;}
-var pending=0; for(var j=0;j<patients.length;j++){if(patients[j].status===‘Pending’)pending++;}
-var active=0; for(var k=0;k<students.length;k++){if(students[k].status===‘Active’)active++;}
+  var patients = DB.get('patients') || [];
+  var students = DB.get('students') || [];
+  var doctors  = DB.get('doctors')  || [];
+  var appts    = DB.get('appointments') || [];
+  var online=0; for(var i=0;i<patients.length;i++){if(patients[i].source==='online')online++;}
+  var pending=0; for(var j=0;j<patients.length;j++){if(patients[j].status==='Pending')pending++;}
+  var active=0; for(var k=0;k<students.length;k++){if(students[k].status==='Active')active++;}
 
-var html = H(‘Administration Panel’,‘Full System Overview’);
-html += ‘<div class="sg sg4" style="margin-bottom:18px">’;
-html += statCard(‘🦷’,‘Total Patients’,patients.length,‘var(–coral)’,online+’ online new’);
-html += statCard(‘🎓’,‘Students’,students.length,‘var(–mint)’);
-html += statCard(‘🩺’,‘Doctors’,doctors.length,’#C9A84C’);
-html += statCard(‘📅’,‘Appointments’,appts.length,’#6B8DD6’);
-html += ‘</div><div class="sg" style="grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px">’;
+  var html = H('Administration Panel','Full System Overview');
+  html += '<div class="sg sg4" style="margin-bottom:18px">';
+  html += statCard('🦷','Total Patients',patients.length,'var(--coral)',online+' online new');
+  html += statCard('🎓','Students',students.length,'var(--mint)');
+  html += statCard('🩺','Doctors',doctors.length,'#C9A84C');
+  html += statCard('📅','Appointments',appts.length,'#6B8DD6');
+  html += '</div><div class="sg" style="grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px">';
 
-// Patient status card
-html += ‘<div class="card"><div class="card-h">Patient Status</div>’;
-var statuses = [{l:‘Active’,col:‘var(–mint)’},{l:‘Scheduled’,col:‘var(–coral)’},{l:‘Pending’,col:’#C9A84C’},{l:‘Completed’,col:‘var(–g400)’}];
-for(var s=0;s<statuses.length;s++){
-var cnt=0; for(var p=0;p<patients.length;p++){if(patients[p].status===statuses[s].l)cnt++;}
-html += progRow(statuses[s].l,cnt,Math.max(patients.length,1),statuses[s].col);
-}
-html += ‘</div>’;
+  // Patient status card
+  html += '<div class="card"><div class="card-h">Patient Status</div>';
+  var statuses = [{l:'Active',col:'var(--mint)'},{l:'Scheduled',col:'var(--coral)'},{l:'Pending',col:'#C9A84C'},{l:'Completed',col:'var(--g400)'}];
+  for(var s=0;s<statuses.length;s++){
+    var cnt=0; for(var p=0;p<patients.length;p++){if(patients[p].status===statuses[s].l)cnt++;}
+    html += progRow(statuses[s].l,cnt,Math.max(patients.length,1),statuses[s].col);
+  }
+  html += '</div>';
 
-// Dept card
-var depts = [‘Oral Surgery’,‘Periodontology’,‘Prosthodontics’,‘Orthodontics’];
-var dcols = [‘var(–coral)’,‘var(–mint)’,’#6B8DD6’,’#C9A84C’];
-html += ‘<div class="card"><div class="card-h">Departments</div>’;
-for(var d=0;d<depts.length;d++){
-var dcnt=0; for(var dp=0;dp<patients.length;dp++){if(patients[dp].dept===depts[d])dcnt++;}
-html += progRow(depts[d],dcnt,Math.max(patients.length,1),dcols[d]);
-}
-html += ‘</div>’;
+  // Dept card
+  var depts = ['Oral Surgery','Periodontology','Prosthodontics','Orthodontics'];
+  var dcols = ['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  html += '<div class="card"><div class="card-h">Departments</div>';
+  for(var d=0;d<depts.length;d++){
+    var dcnt=0; for(var dp=0;dp<patients.length;dp++){if(patients[dp].dept===depts[d])dcnt++;}
+    html += progRow(depts[d],dcnt,Math.max(patients.length,1),dcols[d]);
+  }
+  html += '</div>';
 
-// Quick actions
-var actions = [
-{l:‘Students’,i:‘🎓’,c:‘var(–mint)’,t:‘students’},
-{l:‘Doctors’,i:‘🩺’,c:’#C9A84C’,t:‘doctors’},
-{l:‘Post News’,i:‘📰’,c:’#6B8DD6’,t:‘news’},
-{l:‘Broadcast’,i:‘📢’,c:‘var(–coral)’,t:‘broadcast’}
-];
-html += ‘<div class="card"><div class="card-h">Quick Actions</div>’;
-for(var a=0;a<actions.length;a++){
-var ac=actions[a];
-html += ‘<button onclick="navTo(\'' + ac.t + '\')" style="width:100%;display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:9px;border:1px solid var(--g200);background:var(--off);cursor:pointer;margin-bottom:7px;font-family:var(--body);transition:background .2s">’;
-html += ‘<div style="width:26px;height:26px;border-radius:7px;background:' + ac.c + '18;display:flex;align-items:center;justify-content:center;font-size:13px">’ + ac.i + ‘</div>’;
-html += ‘<span style="font-weight:600;font-size:12px;color:var(--navy)">’ + ac.l + ‘</span>’;
-html += ‘<span style="margin-left:auto;color:var(--g400);font-size:12px">→</span></button>’;
-}
-html += ‘</div></div>’;
+  // Quick actions
+  var actions = [
+    {l:'Students',i:'🎓',c:'var(--mint)',t:'students'},
+    {l:'Doctors',i:'🩺',c:'#C9A84C',t:'doctors'},
+    {l:'Post News',i:'📰',c:'#6B8DD6',t:'news'},
+    {l:'Broadcast',i:'📢',c:'var(--coral)',t:'broadcast'}
+  ];
+  html += '<div class="card"><div class="card-h">Quick Actions</div>';
+  for(var a=0;a<actions.length;a++){
+    var ac=actions[a];
+    html += '<button onclick="navTo(\'' + ac.t + '\')" style="width:100%;display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:9px;border:1px solid var(--g200);background:var(--off);cursor:pointer;margin-bottom:7px;font-family:var(--body);transition:background .2s">';
+    html += '<div style="width:26px;height:26px;border-radius:7px;background:' + ac.c + '18;display:flex;align-items:center;justify-content:center;font-size:13px">' + ac.i + '</div>';
+    html += '<span style="font-weight:600;font-size:12px;color:var(--navy)">' + ac.l + '</span>';
+    html += '<span style="margin-left:auto;color:var(--g400);font-size:12px">→</span></button>';
+  }
+  html += '</div></div>';
 
-// Bottom row
-html += ‘<div class="sg sg21">’;
-html += ‘<div class="card"><div class="card-h">Recent Patients</div>’;
-var recent = patients.slice(-5).reverse();
-for(var r=0;r<recent.length;r++){
-html += listItem(initials(recent[r].name),‘var(–coral-bg)’,‘var(–coral)’,
-recent[r].name+(recent[r].source===‘online’?’ 🌐’:’’),
-recent[r].dept+’ - ’+recent[r].date,
-badgeStatus(recent[r].status));
-}
-html += ‘</div>’;
-html += ‘<div class="card"><div class="card-h">System Activity</div>’;
-var acts = [{l:‘Online Registrations’,v:online,i:‘🌐’},{l:‘Pending Assignment’,v:pending,i:‘⏳’},{l:‘Active Students’,v:active,i:‘🎓’},{l:‘Appointments’,v:appts.length,i:‘📅’}];
-for(var ac2=0;ac2<acts.length;ac2++){
-html += ‘<div style="display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--g100)">’;
-html += ‘<span style="font-size:15px">’ + acts[ac2].i + ‘</span>’;
-html += ‘<span style="flex:1;font-size:12px;color:var(--g600)">’ + acts[ac2].l + ‘</span>’;
-html += ‘<span style="font-weight:700;color:var(--navy);font-size:13px">’ + acts[ac2].v + ‘</span></div>’;
-}
-html += ‘</div></div>’;
-return html;
+  // Bottom row
+  html += '<div class="sg sg21">';
+  html += '<div class="card"><div class="card-h">Recent Patients</div>';
+  var recent = patients.slice(-5).reverse();
+  for(var r=0;r<recent.length;r++){
+    html += listItem(initials(recent[r].name),'var(--coral-bg)','var(--coral)',
+      recent[r].name+(recent[r].source==='online'?' 🌐':''),
+      recent[r].dept+' - '+recent[r].date,
+      badgeStatus(recent[r].status));
+  }
+  html += '</div>';
+  html += '<div class="card"><div class="card-h">System Activity</div>';
+  var acts = [{l:'Online Registrations',v:online,i:'🌐'},{l:'Pending Assignment',v:pending,i:'⏳'},{l:'Active Students',v:active,i:'🎓'},{l:'Appointments',v:appts.length,i:'📅'}];
+  for(var ac2=0;ac2<acts.length;ac2++){
+    html += '<div style="display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--g100)">';
+    html += '<span style="font-size:15px">' + acts[ac2].i + '</span>';
+    html += '<span style="flex:1;font-size:12px;color:var(--g600)">' + acts[ac2].l + '</span>';
+    html += '<span style="font-weight:700;color:var(--navy);font-size:13px">' + acts[ac2].v + '</span></div>';
+  }
+  html += '</div></div>';
+  return html;
 }
 
 function pageNews() {
-var news = DB.get(‘news’) || [];
-var html = H(‘Manage News’,‘Post and manage college announcements’,’<button class="btn btn-primary" onclick="openAddNewsModal()">Post News</button>’);
-html += ‘<div class="card">’;
-if(!news.length){ html += ‘<p style="color:var(--g400)">No news yet.</p>’; }
-for(var i=0;i<news.length;i++){
-var n = news[i];
-html += ‘<div style="display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--g100)">’;
-html += ‘<div style="flex:1">’;
-html += ‘<span class="news-cat cat-' + n.category + '">’ + n.category + ‘</span>’;
-if(n.featured) html += ‘<span class="badge" style="background:var(--gold-bg);color:var(--gold);margin-left:6px;font-size:10px">Featured</span>’;
-html += ‘<div style="font-weight:700;color:var(--navy);font-size:13px;margin:5px 0 2px">’ + n.title + ‘</div>’;
-html += ‘<div style="color:var(--g400);font-size:11px">’ + n.date + ‘</div></div>’;
-html += ‘<button class="btn btn-outline btn-sm" onclick="deleteNews(\'' + n.id + '\')">Delete</button></div>’;
-}
-html += ‘</div>’;
-return html;
+  var news = DB.get('news') || [];
+  var html = H('Manage News','Post and manage college announcements','<button class="btn btn-primary" onclick="openAddNewsModal()">Post News</button>');
+  html += '<div class="card">';
+  if(!news.length){ html += '<p style="color:var(--g400)">No news yet.</p>'; }
+  for(var i=0;i<news.length;i++){
+    var n = news[i];
+    html += '<div style="display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--g100)">';
+    html += '<div style="flex:1">';
+    html += '<span class="news-cat cat-' + n.category + '">' + n.category + '</span>';
+    if(n.featured) html += '<span class="badge" style="background:var(--gold-bg);color:var(--gold);margin-left:6px;font-size:10px">Featured</span>';
+    html += '<div style="font-weight:700;color:var(--navy);font-size:13px;margin:5px 0 2px">' + n.title + '</div>';
+    html += '<div style="color:var(--g400);font-size:11px">' + n.date + '</div></div>';
+    html += '<button class="btn btn-outline btn-sm" onclick="deleteNews(\'' + n.id + '\')">Delete</button></div>';
+  }
+  html += '</div>';
+  return html;
 }
 
 function pageSchedules() {
-var depts = [‘Oral Surgery’,‘Periodontology’,‘Prosthodontics’,‘Orthodontics’];
-var dcols = [‘var(–coral)’,‘var(–mint)’,’#6B8DD6’,’#C9A84C’];
-var html = H(‘Ward Schedules’,‘Manage department timings’);
-html += ‘<div class="sg sg2">’;
-for(var i=0;i<depts.length;i++){
-html += ‘<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">’;
-html += ‘<div class="card-h" style="margin:0">’ + depts[i] + ‘</div>’;
-html += ’<span class="badge" style="background:' + dcols[i] + '18;color:' + dcols[i] + '">Ward ’ + (i+1) + ‘</span></div>’;
-var shifts = [{day:‘Mon/Wed’,time:‘08:00-12:00’,room:‘Building A’},{day:‘Tue/Thu’,time:‘13:00-17:00’,room:‘Building B’}];
-for(var j=0;j<shifts.length;j++){
-html += ‘<div style="display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--g100)">’;
-html += ‘<div style="width:5px;height:5px;border-radius:50%;background:' + dcols[i] + ';flex-shrink:0"></div>’;
-html += ‘<div><div style="font-size:12px;font-weight:600;color:var(--navy)">’ + shifts[j].day + ‘</div>’;
-html += ‘<div style="font-size:11px;color:var(--g400)">’ + shifts[j].time + ’ - ’ + shifts[j].room + ‘</div></div></div>’;
-}
-html += ‘</div>’;
-}
-html += ‘</div>’;
-return html;
+  var depts = ['Oral Surgery','Periodontology','Prosthodontics','Orthodontics'];
+  var dcols = ['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  var html = H('Ward Schedules','Manage department timings');
+  html += '<div class="sg sg2">';
+  for(var i=0;i<depts.length;i++){
+    html += '<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">';
+    html += '<div class="card-h" style="margin:0">' + depts[i] + '</div>';
+    html += '<span class="badge" style="background:' + dcols[i] + '18;color:' + dcols[i] + '">Ward ' + (i+1) + '</span></div>';
+    var shifts = [{day:'Mon/Wed',time:'08:00-12:00',room:'Building A'},{day:'Tue/Thu',time:'13:00-17:00',room:'Building B'}];
+    for(var j=0;j<shifts.length;j++){
+      html += '<div style="display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--g100)">';
+      html += '<div style="width:5px;height:5px;border-radius:50%;background:' + dcols[i] + ';flex-shrink:0"></div>';
+      html += '<div><div style="font-size:12px;font-weight:600;color:var(--navy)">' + shifts[j].day + '</div>';
+      html += '<div style="font-size:11px;color:var(--g400)">' + shifts[j].time + ' - ' + shifts[j].room + '</div></div></div>';
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
 }
 
 function pageBroadcast() {
-return H(‘Broadcast Mail’,‘Send to all users’) +
-‘<div class="card" style="max-width:520px">’ +
-‘<div id="broad-ok" class="alert alert-ok">Broadcast sent successfully!</div>’ +
-‘<div class="field"><label>Recipients</label><select id="br-to"><option>All Users</option><option>All Students</option><option>All Doctors</option><option>All Patients</option></select></div>’ +
-‘<div class="field"><label>Subject</label><input id="br-sub" placeholder="Announcement title..."/></div>’ +
-‘<div class="field"><label>Message</label><textarea id="br-msg" rows="5" placeholder="Write your message..."></textarea></div>’ +
-‘<div class="field"><label>Priority</label><select id="br-prio"><option>Normal</option><option>High</option><option>Urgent</option></select></div>’ +
-‘<button class="btn btn-primary" onclick="sendBroadcast()">Send Broadcast</button></div>’;
+  return H('Broadcast Mail','Send to all users') +
+    '<div class="card" style="max-width:520px">' +
+    '<div id="broad-ok" class="alert alert-ok">Broadcast sent successfully!</div>' +
+    '<div class="field"><label>Recipients</label><select id="br-to"><option>All Users</option><option>All Students</option><option>All Doctors</option><option>All Patients</option></select></div>' +
+    '<div class="field"><label>Subject</label><input id="br-sub" placeholder="Announcement title..."/></div>' +
+    '<div class="field"><label>Message</label><textarea id="br-msg" rows="5" placeholder="Write your message..."></textarea></div>' +
+    '<div class="field"><label>Priority</label><select id="br-prio"><option>Normal</option><option>High</option><option>Urgent</option></select></div>' +
+    '<button class="btn btn-primary" onclick="sendBroadcast()">Send Broadcast</button></div>';
 }
 
 function pageSettings() {
-var toggles = [
-{l:‘Patient Online Registration’,on:true},{l:‘Student Portal’,on:true},
-{l:‘Doctor Dashboard’,on:true},{l:‘Public Booking’,on:true},{l:‘Maintenance Mode’,on:false}
-];
-var html = H(‘System Settings’);
-html += ‘<div class="sg sg2">’;
-html += ‘<div class="card"><div class="card-h">College Info</div>’;
-html += ‘<div class="field"><label>College Name</label><input value="College of Dentistry"/></div>’;
-html += ‘<div class="field"><label>University</label><input value="University Name"/></div>’;
-html += ‘<div class="field"><label>Academic Year</label><select><option>2024/2025</option><option>2025/2026</option></select></div>’;
-html += ‘<div class="field"><label>Phone</label><input value="+966 11 000 0000"/></div>’;
-html += ‘<div class="field"><label>Email</label><input value="dental@university.edu.sa"/></div>’;
-html += ‘<button class="btn btn-primary btn-sm" onclick="alert(\'Settings saved!\')">Save Changes</button></div>’;
-html += ‘<div class="card"><div class="card-h">Access Control</div>’;
-for(var i=0;i<toggles.length;i++){
-var t = toggles[i];
-html += ‘<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--g100)">’;
-html += ‘<span style="font-size:13px;color:var(--g600)">’ + t.l + ‘</span>’;
-html += ‘<div class="tog" style="background:' + (t.on?'var(--mint)':'var(--g200)') + '">’;
-html += ‘<div class="tog-k" style="left:' + (t.on?'21px':'3px') + '"></div></div></div>’;
-}
-html += ‘</div></div>’;
-return html;
+  var toggles = [
+    {l:'Patient Online Registration',on:true},{l:'Student Portal',on:true},
+    {l:'Doctor Dashboard',on:true},{l:'Public Booking',on:true},{l:'Maintenance Mode',on:false}
+  ];
+  var html = H('System Settings');
+  html += '<div class="sg sg2">';
+  html += '<div class="card"><div class="card-h">College Info</div>';
+  html += '<div class="field"><label>College Name</label><input value="College of Dentistry"/></div>';
+  html += '<div class="field"><label>University</label><input value="University Name"/></div>';
+  html += '<div class="field"><label>Academic Year</label><select><option>2024/2025</option><option>2025/2026</option></select></div>';
+  html += '<div class="field"><label>Phone</label><input value="+966 11 000 0000"/></div>';
+  html += '<div class="field"><label>Email</label><input value="dental@university.edu.sa"/></div>';
+  html += '<button class="btn btn-primary btn-sm" onclick="alert(\'Settings saved!\')">Save Changes</button></div>';
+  html += '<div class="card"><div class="card-h">Access Control</div>';
+  for(var i=0;i<toggles.length;i++){
+    var t = toggles[i];
+    html += '<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--g100)">';
+    html += '<span style="font-size:13px;color:var(--g600)">' + t.l + '</span>';
+    html += '<div class="tog" style="background:' + (t.on?'var(--mint)':'var(--g200)') + '">';
+    html += '<div class="tog-k" style="left:' + (t.on?'21px':'3px') + '"></div></div></div>';
+  }
+  html += '</div></div>';
+  return html;
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // ACTIONS (DB writes)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function dashRegister() {
-var name  = (document.getElementById(‘dr-name’)  ? document.getElementById(‘dr-name’).value.trim() : ‘’);
-var phone = (document.getElementById(‘dr-phone’) ? document.getElementById(‘dr-phone’).value.trim() : ‘’);
-var complaint = document.getElementById(‘dr-complaint’) ? document.getElementById(‘dr-complaint’).value : ‘’;
-if (!name || !phone) { alert(‘Name and Phone are required.’); return; }
-var patients = DB.get(‘patients’) || [];
-patients.push({
-id:        ‘P’ + String(patients.length+1).padStart(3,‘0’),
-name:      name,
-age:       document.getElementById(‘dr-age’) ? document.getElementById(‘dr-age’).value : ‘’,
-phone:     phone,
-email:     document.getElementById(‘dr-email’) ? document.getElementById(‘dr-email’).value : ‘’,
-complaint: complaint,
-dept:      document.getElementById(‘dr-dept’) ? document.getElementById(‘dr-dept’).value || ‘Pending’ : ‘Pending’,
-status:    ‘Scheduled’,
-doctor:    ‘Unassigned’,
-studentId: ‘’,
-date:      new Date().toISOString().slice(0,10),
-notes:     document.getElementById(‘dr-notes’) ? document.getElementById(‘dr-notes’).value : ‘’,
-source:    ‘walk-in’
-});
-DB.set(‘patients’, patients);
-var ok = document.getElementById(‘reg-ok’);
-if (ok) ok.style.display = ‘block’;
+  var name  = (document.getElementById('dr-name')  ? document.getElementById('dr-name').value.trim() : '');
+  var phone = (document.getElementById('dr-phone') ? document.getElementById('dr-phone').value.trim() : '');
+  var complaint = document.getElementById('dr-complaint') ? document.getElementById('dr-complaint').value : '';
+  if (!name || !phone) { alert('Name and Phone are required.'); return; }
+  var patients = DB.get('patients') || [];
+  patients.push({
+    id:        'P' + String(patients.length+1).padStart(3,'0'),
+    name:      name,
+    age:       document.getElementById('dr-age') ? document.getElementById('dr-age').value : '',
+    phone:     phone,
+    email:     document.getElementById('dr-email') ? document.getElementById('dr-email').value : '',
+    complaint: complaint,
+    dept:      document.getElementById('dr-dept') ? document.getElementById('dr-dept').value || 'Pending' : 'Pending',
+    status:    'Scheduled',
+    doctor:    'Unassigned',
+    studentId: '',
+    date:      new Date().toISOString().slice(0,10),
+    notes:     document.getElementById('dr-notes') ? document.getElementById('dr-notes').value : '',
+    source:    'walk-in'
+  });
+  DB.set('patients', patients);
+  var ok = document.getElementById('reg-ok');
+  if (ok) ok.style.display = 'block';
 }
 
 function clearDashReg() {
-var ids = [‘dr-name’,‘dr-phone’,‘dr-age’,‘dr-email’,‘dr-notes’,‘dr-nid’];
-for(var i=0;i<ids.length;i++){var e=document.getElementById(ids[i]);if(e)e.value=’’;}
-var sels = [‘dr-gender’,‘dr-complaint’,‘dr-dept’];
-for(var j=0;j<sels.length;j++){var s=document.getElementById(sels[j]);if(s)s.value=’’;}
-var ok = document.getElementById(‘reg-ok’); if(ok)ok.style.display=‘none’;
+  var ids = ['dr-name','dr-phone','dr-age','dr-email','dr-notes','dr-nid'];
+  for(var i=0;i<ids.length;i++){var e=document.getElementById(ids[i]);if(e)e.value='';}
+  var sels = ['dr-gender','dr-complaint','dr-dept'];
+  for(var j=0;j<sels.length;j++){var s=document.getElementById(sels[j]);if(s)s.value='';}
+  var ok = document.getElementById('reg-ok'); if(ok)ok.style.display='none';
 }
 
 function submitComplaint() {
-var type = document.getElementById(‘c-type’);
-if (!type || !type.value) { alert(‘Please select a complaint type.’); return; }
-var ok = document.getElementById(‘complaint-ok’);
-if (ok) ok.style.display = ‘block’;
+  var type = document.getElementById('c-type');
+  if (!type || !type.value) { alert('Please select a complaint type.'); return; }
+  var ok = document.getElementById('complaint-ok');
+  if (ok) ok.style.display = 'block';
 }
 
 function submitEval() {
-var sid = document.getElementById(‘ev-student’);
-if (!sid || !sid.value) { alert(‘Please select a student.’); return; }
-var c = parseInt(document.getElementById(‘ev-c’) ? document.getElementById(‘ev-c’).value : 0) || 0;
-var h = parseInt(document.getElementById(‘ev-h’) ? document.getElementById(‘ev-h’).value : 0) || 0;
-var t = parseInt(document.getElementById(‘ev-t’) ? document.getElementById(‘ev-t’).value : 0) || 0;
-var p = parseInt(document.getElementById(‘ev-p’) ? document.getElementById(‘ev-p’).value : 0) || 0;
-var avg = Math.round((c+h+t+p)/4);
-var grade = avg>=90?‘A’:avg>=80?‘B+’:avg>=70?‘B’:avg>=60?‘C’:‘F’;
-var evals = DB.get(‘evaluations’) || [];
-evals.push({
-id:             ‘E’ + Date.now(),
-studentId:      sid.value,
-supervisor:     currentUser.name,
-dept:           ‘Department’,
-period:         document.getElementById(‘ev-period’) ? document.getElementById(‘ev-period’).value : ‘Q1 2025’,
-clinical:       c, handling:h, theoretical:t, professionalism:p,
-grade:          grade,
-comment:        document.getElementById(‘ev-comment’) ? document.getElementById(‘ev-comment’).value : ‘’
-});
-DB.set(‘evaluations’, evals);
-var ok = document.getElementById(‘eval-ok’); if(ok) ok.style.display=‘block’;
+  var sid = document.getElementById('ev-student');
+  if (!sid || !sid.value) { alert('Please select a student.'); return; }
+  var c = parseInt(document.getElementById('ev-c') ? document.getElementById('ev-c').value : 0) || 0;
+  var h = parseInt(document.getElementById('ev-h') ? document.getElementById('ev-h').value : 0) || 0;
+  var t = parseInt(document.getElementById('ev-t') ? document.getElementById('ev-t').value : 0) || 0;
+  var p = parseInt(document.getElementById('ev-p') ? document.getElementById('ev-p').value : 0) || 0;
+  var avg = Math.round((c+h+t+p)/4);
+  var grade = avg>=90?'A':avg>=80?'B+':avg>=70?'B':avg>=60?'C':'F';
+  var evals = DB.get('evaluations') || [];
+  evals.push({
+    id:             'E' + Date.now(),
+    studentId:      sid.value,
+    supervisor:     currentUser.name,
+    dept:           'Department',
+    period:         document.getElementById('ev-period') ? document.getElementById('ev-period').value : 'Q1 2025',
+    clinical:       c, handling:h, theoretical:t, professionalism:p,
+    grade:          grade,
+    comment:        document.getElementById('ev-comment') ? document.getElementById('ev-comment').value : ''
+  });
+  DB.set('evaluations', evals);
+  var ok = document.getElementById('eval-ok'); if(ok) ok.style.display='block';
 }
 
 function submitCase() {
-var pt = document.getElementById(‘ca-patient’);
-if (!pt || !pt.value) { alert(‘Please select a patient.’); return; }
-var ok = document.getElementById(‘case-ok’); if(ok) ok.style.display=‘block’;
+  var pt = document.getElementById('ca-patient');
+  if (!pt || !pt.value) { alert('Please select a patient.'); return; }
+  var ok = document.getElementById('case-ok'); if(ok) ok.style.display='block';
 }
 
 function sendBroadcast() {
-var sub = document.getElementById(‘br-sub’);
-if (!sub || !sub.value.trim()) { alert(‘Please enter a subject.’); return; }
-var msgs = DB.get(‘messages’) || [];
-msgs.unshift({id:‘M’+Date.now(),from:‘Admin’,to:‘all’,subject:sub.value,body:document.getElementById(‘br-msg’)?document.getElementById(‘br-msg’).value:’’,time:‘Just now’,unread:true});
-DB.set(‘messages’, msgs);
-var ok = document.getElementById(‘broad-ok’); if(ok) ok.style.display=‘block’;
+  var sub = document.getElementById('br-sub');
+  if (!sub || !sub.value.trim()) { alert('Please enter a subject.'); return; }
+  var msgs = DB.get('messages') || [];
+  msgs.unshift({id:'M'+Date.now(),from:'Admin',to:'all',subject:sub.value,body:document.getElementById('br-msg')?document.getElementById('br-msg').value:'',time:'Just now',unread:true});
+  DB.set('messages', msgs);
+  var ok = document.getElementById('broad-ok'); if(ok) ok.style.display='block';
 }
 
 function deleteNews(id) {
-if (!confirm(‘Delete this news post?’)) return;
-var news = DB.get(‘news’) || [];
-var filtered = []; for(var i=0;i<news.length;i++){if(news[i].id!==id)filtered.push(news[i]);}
-DB.set(‘news’, filtered);
-navTo(‘news’);
+  if (!confirm('Delete this news post?')) return;
+  var news = DB.get('news') || [];
+  var filtered = []; for(var i=0;i<news.length;i++){if(news[i].id!==id)filtered.push(news[i]);}
+  DB.set('news', filtered);
+  navTo('news');
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // MODAL
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 function openModal(title, body) {
-document.getElementById(‘modal-title’).textContent = title;
-document.getElementById(‘modal-body’).innerHTML = ‘<p style="line-height:1.75;color:var(--g600);font-size:14px">’ + body + ‘</p>’;
-document.getElementById(‘modal’).classList.add(‘open’);
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-body').innerHTML = '<p style="line-height:1.75;color:var(--g600);font-size:14px">' + body + '</p>';
+  document.getElementById('modal').classList.add('open');
 }
 
 function closeModal() {
-document.getElementById(‘modal’).classList.remove(‘open’);
+  document.getElementById('modal').classList.remove('open');
 }
 
 // MODAL content for add forms
 function openAddNewsModal() {
-document.getElementById(‘modal-title’).textContent = ‘Post News Article’;
-document.getElementById(‘modal-body’).innerHTML =
-‘<div class="field"><label>Title</label><input id="mn-title" placeholder="Article headline..."/></div>’ +
-‘<div class="field"><label>Category</label><select id="mn-cat"><option>Announcement</option><option>Event</option><option>Research</option></select></div>’ +
-‘<div class="field"><label>Content</label><textarea id="mn-body" rows="4" placeholder="Article body..."></textarea></div>’ +
-‘<div class="field" style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="mn-feat" style="width:auto"/><label style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--g600)">Set as Featured</label></div>’ +
-‘<button class="btn btn-primary btn-full" onclick="submitNews()">Post Article</button>’;
-document.getElementById(‘modal’).classList.add(‘open’);
+  document.getElementById('modal-title').textContent = 'Post News Article';
+  document.getElementById('modal-body').innerHTML =
+    '<div class="field"><label>Title</label><input id="mn-title" placeholder="Article headline..."/></div>' +
+    '<div class="field"><label>Category</label><select id="mn-cat"><option>Announcement</option><option>Event</option><option>Research</option></select></div>' +
+    '<div class="field"><label>Content</label><textarea id="mn-body" rows="4" placeholder="Article body..."></textarea></div>' +
+    '<div class="field" style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="mn-feat" style="width:auto"/><label style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--g600)">Set as Featured</label></div>' +
+    '<button class="btn btn-primary btn-full" onclick="submitNews()">Post Article</button>';
+  document.getElementById('modal').classList.add('open');
 }
 
 function submitNews() {
-var titleEl = document.getElementById(‘mn-title’);
-if (!titleEl || !titleEl.value.trim()) { alert(‘Title required.’); return; }
-var news = DB.get(‘news’) || [];
-var featured = document.getElementById(‘mn-feat’) ? document.getElementById(‘mn-feat’).checked : false;
-if (featured) { for(var i=0;i<news.length;i++) news[i].featured=false; }
-news.unshift({
-id:       ‘N’+Date.now(),
-title:    titleEl.value.trim(),
-category: document.getElementById(‘mn-cat’) ? document.getElementById(‘mn-cat’).value : ‘Announcement’,
-date:     new Date().toISOString().slice(0,10),
-body:     document.getElementById(‘mn-body’) ? document.getElementById(‘mn-body’).value : ‘’,
-featured: featured
-});
-DB.set(‘news’, news);
-closeModal();
-navTo(‘news’);
+  var titleEl = document.getElementById('mn-title');
+  if (!titleEl || !titleEl.value.trim()) { alert('Title required.'); return; }
+  var news = DB.get('news') || [];
+  var featured = document.getElementById('mn-feat') ? document.getElementById('mn-feat').checked : false;
+  if (featured) { for(var i=0;i<news.length;i++) news[i].featured=false; }
+  news.unshift({
+    id:       'N'+Date.now(),
+    title:    titleEl.value.trim(),
+    category: document.getElementById('mn-cat') ? document.getElementById('mn-cat').value : 'Announcement',
+    date:     new Date().toISOString().slice(0,10),
+    body:     document.getElementById('mn-body') ? document.getElementById('mn-body').value : '',
+    featured: featured
+  });
+  DB.set('news', news);
+  closeModal();
+  navTo('news');
 }
 
 function openAddStudentModal() {
-document.getElementById(‘modal-title’).textContent = ‘Add New Student’;
-document.getElementById(‘modal-body’).innerHTML =
-‘<div class="frow"><div class="field"><label>Full Name</label><input id="as-name" placeholder="Student name"/></div>’ +
-‘<div class="field"><label>Level</label><select id="as-level"><option>3rd Year</option><option>4th Year</option><option>5th Year</option></select></div></div>’ +
-‘<div class="field"><label>Department</label><select id="as-dept"><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>’ +
-‘<div class="frow"><div class="field"><label>Email</label><input id="as-email" type="email" placeholder="student@edu.sa"/></div>’ +
-‘<div class="field"><label>Password</label><input id="as-pass" type="password" value="1234"/></div></div>’ +
-‘<button class="btn btn-mint btn-full" onclick="addStudent()">Add Student</button>’;
-document.getElementById(‘modal’).classList.add(‘open’);
+  document.getElementById('modal-title').textContent = 'Add New Student';
+  document.getElementById('modal-body').innerHTML =
+    '<div class="frow"><div class="field"><label>Full Name</label><input id="as-name" placeholder="Student name"/></div>' +
+    '<div class="field"><label>Level</label><select id="as-level"><option>3rd Year</option><option>4th Year</option><option>5th Year</option></select></div></div>' +
+    '<div class="field"><label>Department</label><select id="as-dept"><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>' +
+    '<div class="frow"><div class="field"><label>Email</label><input id="as-email" type="email" placeholder="student@edu.sa"/></div>' +
+    '<div class="field"><label>Password</label><input id="as-pass" type="password" value="1234"/></div></div>' +
+    '<button class="btn btn-mint btn-full" onclick="addStudent()">Add Student</button>';
+  document.getElementById('modal').classList.add('open');
 }
 
 function addStudent() {
-var nameEl = document.getElementById(‘as-name’);
-if (!nameEl || !nameEl.value.trim()) { alert(‘Name required.’); return; }
-var students = DB.get(‘students’) || [];
-students.push({
-id:       ‘S’+Date.now(),
-name:     nameEl.value.trim(),
-level:    document.getElementById(‘as-level’) ? document.getElementById(‘as-level’).value : ‘4th Year’,
-dept:     document.getElementById(‘as-dept’)  ? document.getElementById(‘as-dept’).value  : ‘Oral Surgery’,
-gpa:      0, patients:0, status:‘Active’,
-email:    document.getElementById(‘as-email’) ? document.getElementById(‘as-email’).value : ‘’,
-pass:     document.getElementById(‘as-pass’)  ? document.getElementById(‘as-pass’).value  : ‘1234’
-});
-DB.set(‘students’, students);
-closeModal();
-navTo(‘students’);
+  var nameEl = document.getElementById('as-name');
+  if (!nameEl || !nameEl.value.trim()) { alert('Name required.'); return; }
+  var students = DB.get('students') || [];
+  students.push({
+    id:       'S'+Date.now(),
+    name:     nameEl.value.trim(),
+    level:    document.getElementById('as-level') ? document.getElementById('as-level').value : '4th Year',
+    dept:     document.getElementById('as-dept')  ? document.getElementById('as-dept').value  : 'Oral Surgery',
+    gpa:      0, patients:0, status:'Active',
+    email:    document.getElementById('as-email') ? document.getElementById('as-email').value : '',
+    pass:     document.getElementById('as-pass')  ? document.getElementById('as-pass').value  : '1234'
+  });
+  DB.set('students', students);
+  closeModal();
+  navTo('students');
 }
 
 function openAddDoctorModal() {
-document.getElementById(‘modal-title’).textContent = ‘Add New Doctor’;
-document.getElementById(‘modal-body’).innerHTML =
-‘<div class="field"><label>Full Name</label><input id="ad-name" placeholder="Dr. Name"/></div>’ +
-‘<div class="field"><label>Department</label><select id="ad-dept"><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>’ +
-‘<div class="field"><label>Role</label><select id="ad-role"><option>Doctor</option><option>Supervisor</option></select></div>’ +
-‘<div class="frow"><div class="field"><label>Email</label><input id="ad-email" type="email" placeholder="doctor@faculty.edu"/></div>’ +
-‘<div class="field"><label>Password</label><input id="ad-pass" type="password" value="1234"/></div></div>’ +
-‘<button class="btn btn-gold btn-full" onclick="addDoctor()">Add Doctor</button>’;
-document.getElementById(‘modal’).classList.add(‘open’);
+  document.getElementById('modal-title').textContent = 'Add New Doctor';
+  document.getElementById('modal-body').innerHTML =
+    '<div class="field"><label>Full Name</label><input id="ad-name" placeholder="Dr. Name"/></div>' +
+    '<div class="field"><label>Department</label><select id="ad-dept"><option>Oral Surgery</option><option>Periodontology</option><option>Orthodontics</option><option>Prosthodontics</option></select></div>' +
+    '<div class="field"><label>Role</label><select id="ad-role"><option>Doctor</option><option>Supervisor</option></select></div>' +
+    '<div class="frow"><div class="field"><label>Email</label><input id="ad-email" type="email" placeholder="doctor@faculty.edu"/></div>' +
+    '<div class="field"><label>Password</label><input id="ad-pass" type="password" value="1234"/></div></div>' +
+    '<button class="btn btn-gold btn-full" onclick="addDoctor()">Add Doctor</button>';
+  document.getElementById('modal').classList.add('open');
 }
 
 function addDoctor() {
-var nameEl = document.getElementById(‘ad-name’);
-if (!nameEl || !nameEl.value.trim()) { alert(‘Name required.’); return; }
-var doctors = DB.get(‘doctors’) || [];
-doctors.push({
-id:       ‘D’+Date.now(),
-name:     nameEl.value.trim(),
-dept:     document.getElementById(‘ad-dept’) ? document.getElementById(‘ad-dept’).value : ‘Oral Surgery’,
-role:     document.getElementById(‘ad-role’) ? document.getElementById(‘ad-role’).value : ‘Doctor’,
-patients: 0, students:0,
-email:    document.getElementById(‘ad-email’) ? document.getElementById(‘ad-email’).value : ‘’,
-pass:     document.getElementById(‘ad-pass’)  ? document.getElementById(‘ad-pass’).value  : ‘1234’
-});
-DB.set(‘doctors’, doctors);
-closeModal();
-navTo(‘doctors’);
+  var nameEl = document.getElementById('ad-name');
+  if (!nameEl || !nameEl.value.trim()) { alert('Name required.'); return; }
+  var doctors = DB.get('doctors') || [];
+  doctors.push({
+    id:       'D'+Date.now(),
+    name:     nameEl.value.trim(),
+    dept:     document.getElementById('ad-dept') ? document.getElementById('ad-dept').value : 'Oral Surgery',
+    role:     document.getElementById('ad-role') ? document.getElementById('ad-role').value : 'Doctor',
+    patients: 0, students:0,
+    email:    document.getElementById('ad-email') ? document.getElementById('ad-email').value : '',
+    pass:     document.getElementById('ad-pass')  ? document.getElementById('ad-pass').value  : '1234'
+  });
+  DB.set('doctors', doctors);
+  closeModal();
+  navTo('doctors');
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // INIT
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-document.addEventListener(‘DOMContentLoaded’, function() {
-DB.init();
+document.addEventListener('DOMContentLoaded', function() {
+  DB.init();
 
-// Keyboard login
-var lpass = document.getElementById(‘l-pass’);
-if (lpass) lpass.addEventListener(‘keydown’, function(e){ if(e.key===‘Enter’) doLogin(); });
+  // Keyboard login
+  var lpass = document.getElementById('l-pass');
+  if (lpass) lpass.addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
 
-// Scroll nav effect
-window.addEventListener(‘scroll’, function() {
-var nav = document.getElementById(‘top-nav’);
-if (nav) nav.style.background = window.scrollY > 40 ? ‘rgba(15,31,53,.98)’ : ‘rgba(15,31,53,.93)’;
-});
+  // Scroll nav effect
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('top-nav');
+    if (nav) nav.style.background = window.scrollY > 40 ? 'rgba(15,31,53,.98)' : 'rgba(15,31,53,.93)';
+  });
 
-// Check existing session
-var session = DB.get(‘session’);
-if (session && session.role) {
-currentUser = session;
-activePage = ‘overview’;
-showPage(‘dash’);
-} else {
-showPage(‘public’);
-}
+  // Check existing session
+  var session = DB.get('session');
+  if (session && session.role) {
+    currentUser = session;
+    activePage = 'overview';
+    showPage('dash');
+  } else {
+    showPage('public');
+  }
 });
 </script>
-
 </body>
 </html>
