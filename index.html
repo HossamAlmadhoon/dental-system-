@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8"/>
@@ -36,22 +35,22 @@ button,input,select,textarea{font-family:var(--font);}
 .ai{animation:fadeIn .25s ease both;}
 
 /* LOADING SCREEN */
-#loading-screen{position:fixed;inset:0;background:var(–navy);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;}
+#loading-screen{position:fixed;inset:0;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;}
 .loading-logo{font-size:52px;margin-bottom:16px;}
 .loading-title{font-size:20px;color:#fff;font-weight:800;margin-bottom:8px;}
 .loading-sub{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:28px;}
-.loading-spinner{width:36px;height:36px;border:3px solid rgba(255,255,255,.15);border-top-color:var(–coral);border-radius:50%;animation:spin .8s linear infinite;}
+.loading-spinner{width:36px;height:36px;border:3px solid rgba(255,255,255,.15);border-top-color:var(--coral);border-radius:50%;animation:spin .8s linear infinite;}
 .loading-msg{font-size:12px;color:rgba(255,255,255,.35);margin-top:14px;}
 
 /* PAGES */
 #pg-pub{display:none;}
-#pg-login{display:none;min-height:100vh;background:var(–navy);align-items:center;justify-content:center;padding:20px;}
+#pg-login{display:none;min-height:100vh;background:var(--navy);align-items:center;justify-content:center;padding:20px;}
 #pg-dash{display:none;}
 
 /* NAV */
 #top-nav{position:fixed;top:0;right:0;left:0;z-index:900;background:rgba(15,31,53,.95);backdrop-filter:blur(14px);height:66px;display:flex;align-items:center;padding:0 44px;border-bottom:1px solid rgba(255,255,255,.07);}
 .nav-logo{display:flex;align-items:center;gap:10px;margin-left:auto;}
-.nav-logo-icon{width:34px;height:34px;border-radius:9px;background:var(–coral);display:flex;align-items:center;justify-content:center;font-size:17px;}
+.nav-logo-icon{width:34px;height:34px;border-radius:9px;background:var(--coral);display:flex;align-items:center;justify-content:center;font-size:17px;}
 .nav-logo h1{font-size:14px;color:#fff;font-weight:800;}
 .nav-logo p{font-size:9px;color:rgba(255,255,255,.4);}
 .nav-links{display:flex;gap:22px;}
@@ -59,30 +58,30 @@ button,input,select,textarea{font-family:var(--font);}
 .nlnk:hover{color:#fff;}
 .nbtn{padding:7px 18px;border-radius:8px;font-size:13px;font-weight:700;border:none;margin-right:10px;cursor:pointer;transition:all .2s;}
 .nbtn-o{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:#fff;}
-.nbtn-o:hover{border-color:var(–coral);color:var(–coral);}
-.nbtn-s{background:var(–coral);color:#fff;}
-.nbtn-s:hover{background:var(–coral2);}
+.nbtn-o:hover{border-color:var(--coral);color:var(--coral);}
+.nbtn-s{background:var(--coral);color:#fff;}
+.nbtn-s:hover{background:var(--coral2);}
 
 /* HERO */
-#hero{min-height:100vh;background:var(–navy);display:flex;align-items:center;padding-top:66px;position:relative;overflow:hidden;}
+#hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding-top:66px;position:relative;overflow:hidden;}
 .hblob{position:absolute;border-radius:50%;opacity:.07;pointer-events:none;}
-.hblob-1{width:520px;height:520px;background:var(–coral);top:-160px;left:-70px;}
-.hblob-2{width:320px;height:320px;background:var(–mint);bottom:-70px;right:-50px;}
+.hblob-1{width:520px;height:520px;background:var(--coral);top:-160px;left:-70px;}
+.hblob-2{width:320px;height:320px;background:var(--mint);bottom:-70px;right:-50px;}
 .hero-inner{max-width:1220px;margin:0 auto;padding:70px 44px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
 .hbadge{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(212,114,90,.35);border-radius:30px;padding:5px 13px;margin-bottom:24px;background:rgba(212,114,90,.1);}
-.hbadge-dot{width:6px;height:6px;border-radius:50%;background:var(–coral);animation:pulse 2s infinite;}
-.hbadge span{font-size:12px;color:var(–coral);font-weight:700;}
+.hbadge-dot{width:6px;height:6px;border-radius:50%;background:var(--coral);animation:pulse 2s infinite;}
+.hbadge span{font-size:12px;color:var(--coral);font-weight:700;}
 .htitle{font-size:48px;color:#fff;line-height:1.28;margin-bottom:20px;font-weight:900;}
-.htitle em{color:var(–coral);font-style:normal;}
+.htitle em{color:var(--coral);font-style:normal;}
 .hdesc{color:rgba(255,255,255,.55);font-size:15px;line-height:2;margin-bottom:32px;}
 .hbtns{display:flex;gap:11px;flex-wrap:wrap;}
 .hbtn{padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .25s;}
-.hbtn-p{background:var(–coral);color:#fff;box-shadow:0 6px 22px rgba(212,114,90,.32);}
-.hbtn-p:hover{background:var(–coral2);transform:translateY(-2px);}
+.hbtn-p{background:var(--coral);color:#fff;box-shadow:0 6px 22px rgba(212,114,90,.32);}
+.hbtn-p:hover{background:var(--coral2);transform:translateY(-2px);}
 .hbtn-g{background:transparent;border:1.5px solid rgba(255,255,255,.26);color:#fff;}
 .hstats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.09);border-radius:13px;overflow:hidden;border:1px solid rgba(255,255,255,.09);margin-top:40px;}
 .hstat{padding:16px;background:rgba(255,255,255,.04);text-align:center;}
-.hstat-n{font-size:28px;color:var(–coral);font-weight:900;}
+.hstat-n{font-size:28px;color:var(--coral);font-weight:900;}
 .hstat-l{font-size:10px;color:rgba(255,255,255,.4);margin-top:2px;}
 .hright{position:relative;}
 .hcard{background:rgba(255,255,255,.07);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);border-radius:17px;padding:22px;animation:floatY 7s ease-in-out infinite;}
@@ -91,7 +90,7 @@ button,input,select,textarea{font-family:var(--font);}
 .hfloat-2{top:14px;left:-14px;animation:floatY 8s ease-in-out infinite .4s;}
 
 /* STATS BAR */
-#sbar{background:var(–coral);padding:24px 44px;}
+#sbar{background:var(--coral);padding:24px 44px;}
 .sbar-g{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
 .sbar-i{text-align:center;color:#fff;}
 .sbar-n{font-size:34px;font-weight:900;}
@@ -99,47 +98,47 @@ button,input,select,textarea{font-family:var(--font);}
 
 /* SECTION */
 .psec{padding:84px 44px;max-width:1220px;margin:0 auto;}
-.stag{display:inline-flex;align-items:center;background:var(–coral-bg);border-radius:20px;padding:4px 13px;margin-bottom:12px;}
-.stag span{font-size:10px;font-weight:800;color:var(–coral);}
-.stitle{font-size:36px;color:var(–navy);line-height:1.3;font-weight:900;margin-bottom:10px;}
-.ssub{color:var(–g400);font-size:14px;line-height:1.9;max-width:500px;}
+.stag{display:inline-flex;align-items:center;background:var(--coral-bg);border-radius:20px;padding:4px 13px;margin-bottom:12px;}
+.stag span{font-size:10px;font-weight:800;color:var(--coral);}
+.stitle{font-size:36px;color:var(--navy);line-height:1.3;font-weight:900;margin-bottom:10px;}
+.ssub{color:var(--g400);font-size:14px;line-height:1.9;max-width:500px;}
 
 /* NEWS */
 #nbg{background:#fff;}
 .ngrid{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;margin-top:40px;}
-.nfeat{border-radius:17px;overflow:hidden;background:var(–navy);cursor:pointer;transition:transform .2s;}
+.nfeat{border-radius:17px;overflow:hidden;background:var(--navy);cursor:pointer;transition:transform .2s;}
 .nfeat:hover{transform:translateY(-3px);}
-.nfeat-img{width:100%;height:220px;background:linear-gradient(135deg,var(–navy2),var(–coral2));display:flex;align-items:center;justify-content:center;font-size:52px;opacity:.42;}
+.nfeat-img{width:100%;height:220px;background:linear-gradient(135deg,var(--navy2),var(--coral2));display:flex;align-items:center;justify-content:center;font-size:52px;opacity:.42;}
 .nfeat-body{padding:22px;}
 .nfeat-title{font-size:18px;color:#fff;font-weight:800;margin-bottom:7px;line-height:1.5;}
 .nfeat-meta{color:rgba(255,255,255,.42);font-size:11px;}
 .nlist{display:flex;flex-direction:column;gap:10px;}
-.nitem{background:var(–off);border-radius:12px;padding:14px;cursor:pointer;border:1px solid var(–g100);transition:all .2s;}
-.nitem:hover{background:#fff;box-shadow:var(–shadow);}
-.nitem-title{font-size:13px;color:var(–navy);font-weight:700;line-height:1.5;margin-bottom:4px;}
+.nitem{background:var(--off);border-radius:12px;padding:14px;cursor:pointer;border:1px solid var(--g100);transition:all .2s;}
+.nitem:hover{background:#fff;box-shadow:var(--shadow);}
+.nitem-title{font-size:13px;color:var(--navy);font-weight:700;line-height:1.5;margin-bottom:4px;}
 .ncat{display:inline-block;padding:2px 8px;border-radius:9px;font-size:10px;font-weight:700;margin-bottom:7px;}
-.cat-إعلان,.cat-Announcement{background:var(–coral-bg);color:var(–coral);}
-.cat-فعالية,.cat-Event{background:var(–mint-bg);color:var(–mint);}
-.cat-بحث,.cat-Research{background:var(–gold-bg);color:var(–gold);}
+.cat-إعلان,.cat-Announcement{background:var(--coral-bg);color:var(--coral);}
+.cat-فعالية,.cat-Event{background:var(--mint-bg);color:var(--mint);}
+.cat-بحث,.cat-Research{background:var(--gold-bg);color:var(--gold);}
 
 /* DEPTS */
-#dbg{background:var(–off);}
+#dbg{background:var(--off);}
 .dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;}
-.dcard{background:#fff;border-radius:17px;padding:24px;border:1px solid var(–g200);cursor:pointer;transition:all .3s;}
-.dcard:hover{transform:translateY(-4px);box-shadow:var(–shadow);}
+.dcard{background:#fff;border-radius:17px;padding:24px;border:1px solid var(--g200);cursor:pointer;transition:all .3s;}
+.dcard:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
 .dicon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:13px;}
-.dname{font-size:14px;color:var(–navy);font-weight:800;margin-bottom:6px;}
-.ddesc{color:var(–g400);font-size:12px;line-height:1.7;}
+.dname{font-size:14px;color:var(--navy);font-weight:800;margin-bottom:6px;}
+.ddesc{color:var(--g400);font-size:12px;line-height:1.7;}
 .dlnk{font-size:12px;font-weight:700;margin-top:12px;display:block;}
 
 /* REGISTER PUBLIC */
-#rbg{background:var(–navy);position:relative;overflow:hidden;}
+#rbg{background:var(--navy);position:relative;overflow:hidden;}
 .rinner{max-width:1220px;margin:0 auto;padding:84px 44px;display:grid;grid-template-columns:1fr 1.1fr;gap:66px;align-items:center;}
 .rleft h2{font-size:38px;color:#fff;font-weight:900;line-height:1.3;margin-bottom:14px;}
 .rleft p{color:rgba(255,255,255,.55);font-size:14px;line-height:2;margin-bottom:28px;}
 .rsteps{display:flex;flex-direction:column;gap:14px;}
 .rstep{display:flex;align-items:flex-start;gap:12px;}
-.rstep-num{width:28px;height:28px;border-radius:50%;background:rgba(212,114,90,.18);border:1.5px solid var(–coral);display:flex;align-items:center;justify-content:center;color:var(–coral);font-weight:900;font-size:12px;flex-shrink:0;}
+.rstep-num{width:28px;height:28px;border-radius:50%;background:rgba(212,114,90,.18);border:1.5px solid var(--coral);display:flex;align-items:center;justify-content:center;color:var(--coral);font-weight:900;font-size:12px;flex-shrink:0;}
 .rstep-h{color:#fff;font-weight:700;font-size:13px;}
 .rstep-p{color:rgba(255,255,255,.44);font-size:11px;}
 .rform{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:17px;padding:30px;}
@@ -147,16 +146,16 @@ button,input,select,textarea{font-family:var(--font);}
 .rrow{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
 .rg{margin-bottom:11px;}
 .rg label{display:block;font-size:10px;font-weight:700;color:rgba(255,255,255,.44);margin-bottom:3px;}
-.ri{width:100%;padding:9px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.06);color:#fff;font-size:13px;outline:none;transition:border .2s;font-family:var(–font);text-align:right;}
+.ri{width:100%;padding:9px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.06);color:#fff;font-size:13px;outline:none;transition:border .2s;font-family:var(--font);text-align:right;}
 .ri::placeholder{color:rgba(255,255,255,.2);}
-.ri:focus{border-color:var(–coral);}
-.ri option{background:var(–navy2);}
-.rsub{width:100%;padding:11px;border-radius:9px;border:none;background:var(–coral);color:#fff;font-weight:800;font-size:14px;margin-top:7px;cursor:pointer;font-family:var(–font);}
-.rsub:hover{background:var(–coral2);}
+.ri:focus{border-color:var(--coral);}
+.ri option{background:var(--navy2);}
+.rsub{width:100%;padding:11px;border-radius:9px;border:none;background:var(--coral);color:#fff;font-weight:800;font-size:14px;margin-top:7px;cursor:pointer;font-family:var(--font);}
+.rsub:hover{background:var(--coral2);}
 .rsucc{display:none;background:rgba(61,170,143,.15);border:1px solid rgba(61,170,143,.26);border-radius:9px;padding:13px;text-align:center;color:#5DCBAF;font-weight:700;font-size:13px;margin-bottom:13px;}
 
 /* FOOTER */
-#fbg{background:var(–g800);padding:52px 44px 28px;}
+#fbg{background:var(--g800);padding:52px 44px 28px;}
 .fgrid{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px;}
 .fbrand h2{font-size:16px;color:#fff;margin-bottom:9px;font-weight:800;}
 .fbrand p{color:rgba(255,255,255,.36);font-size:12px;line-height:1.9;}
@@ -169,30 +168,30 @@ button,input,select,textarea{font-family:var(--font);}
 /* LOGIN */
 .lcard{background:#fff;border-radius:20px;padding:36px;width:100%;max-width:440px;box-shadow:0 24px 80px rgba(0,0,0,.28);animation:fadeUp .4s ease;}
 .llogo{display:flex;align-items:center;gap:10px;margin-bottom:26px;}
-.llogo-icon{width:36px;height:36px;border-radius:10px;background:var(–coral);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
-.ltitle{font-size:19px;color:var(–navy);font-weight:900;}
-.lsub{font-size:11px;color:var(–g400);}
+.llogo-icon{width:36px;height:36px;border-radius:10px;background:var(--coral);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.ltitle{font-size:19px;color:var(--navy);font-weight:900;}
+.lsub{font-size:11px;color:var(--g400);}
 .rgrid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:18px;}
-.rbtn{padding:9px 8px;border-radius:9px;border:2px solid var(–g200);background:transparent;display:flex;align-items:center;gap:7px;transition:all .2s;font-size:12px;color:var(–navy);font-weight:700;cursor:pointer;}
-.rbtn:hover,.rbtn.sel{border-color:var(–coral);background:var(–coral-bg);}
+.rbtn{padding:9px 8px;border-radius:9px;border:2px solid var(--g200);background:transparent;display:flex;align-items:center;gap:7px;transition:all .2s;font-size:12px;color:var(--navy);font-weight:700;cursor:pointer;}
+.rbtn:hover,.rbtn.sel{border-color:var(--coral);background:var(--coral-bg);}
 .rbtn.sel{font-weight:800;}
-.dhint{background:var(–coral-bg);border-radius:8px;padding:8px 12px;margin-bottom:13px;display:flex;align-items:center;justify-content:space-between;}
-.dhint-t{font-size:10px;color:var(–coral2);direction:ltr;text-align:left;}
-.dfill{font-size:11px;color:var(–coral);font-weight:800;background:none;border:none;cursor:pointer;font-family:var(–font);}
+.dhint{background:var(--coral-bg);border-radius:8px;padding:8px 12px;margin-bottom:13px;display:flex;align-items:center;justify-content:space-between;}
+.dhint-t{font-size:10px;color:var(--coral2);direction:ltr;text-align:left;}
+.dfill{font-size:11px;color:var(--coral);font-weight:800;background:none;border:none;cursor:pointer;font-family:var(--font);}
 .lfield{margin-bottom:11px;}
-.lfield label{display:block;font-size:10px;font-weight:700;color:var(–g400);margin-bottom:3px;}
-.lfield input{width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(–g200);font-size:13px;outline:none;transition:border .2s;font-family:var(–font);direction:ltr;text-align:left;}
-.lfield input:focus{border-color:var(–coral);}
-.lerr{color:var(–coral);font-size:12px;margin-bottom:9px;display:none;padding:8px 12px;background:var(–coral-bg);border-radius:8px;}
-.lsub-btn{width:100%;padding:12px;border-radius:10px;border:none;background:linear-gradient(135deg,var(–coral),var(–coral2));color:#fff;font-weight:800;font-size:14px;cursor:pointer;font-family:var(–font);}
+.lfield label{display:block;font-size:10px;font-weight:700;color:var(--g400);margin-bottom:3px;}
+.lfield input{width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--g200);font-size:13px;outline:none;transition:border .2s;font-family:var(--font);direction:ltr;text-align:left;}
+.lfield input:focus{border-color:var(--coral);}
+.lerr{color:var(--coral);font-size:12px;margin-bottom:9px;display:none;padding:8px 12px;background:var(--coral-bg);border-radius:8px;}
+.lsub-btn{width:100%;padding:12px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--coral),var(--coral2));color:#fff;font-weight:800;font-size:14px;cursor:pointer;font-family:var(--font);}
 .lsub-btn:hover{transform:translateY(-1px);}
-.lback{text-align:center;margin-top:12px;font-size:12px;color:var(–g400);}
-.lback span{color:var(–coral);font-weight:700;cursor:pointer;}
+.lback{text-align:center;margin-top:12px;font-size:12px;color:var(--g400);}
+.lback span{color:var(--coral);font-weight:700;cursor:pointer;}
 
 /* DASHBOARD */
-.sidebar{width:230px;min-height:100vh;background:var(–navy);display:flex;flex-direction:column;position:fixed;right:0;top:0;bottom:0;z-index:100;}
+.sidebar{width:230px;min-height:100vh;background:var(--navy);display:flex;flex-direction:column;position:fixed;right:0;top:0;bottom:0;z-index:100;}
 .sb-logo{padding:20px 17px 15px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:8px;}
-.sb-logo-icon{width:31px;height:31px;border-radius:8px;background:var(–coral);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.sb-logo-icon{width:31px;height:31px;border-radius:8px;background:var(--coral);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
 .sb-logo-n{font-size:13px;color:#fff;font-weight:800;}
 .sb-logo-s{font-size:9px;color:rgba(255,255,255,.36);}
 .sb-user{padding:12px 17px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:8px;}
@@ -200,18 +199,18 @@ button,input,select,textarea{font-family:var(--font);}
 .sb-name{color:#fff;font-weight:700;font-size:12px;}
 .sb-role{font-size:10px;font-weight:500;}
 .sb-nav{flex:1;padding:8px;overflow-y:auto;}
-.sbi{display:flex;align-items:center;gap:7px;padding:8px 10px;border-radius:8px;border:none;background:transparent;width:100%;text-align:right;font-size:13px;color:rgba(255,255,255,.48);cursor:pointer;margin-bottom:1px;transition:all .2s;font-family:var(–font);}
+.sbi{display:flex;align-items:center;gap:7px;padding:8px 10px;border-radius:8px;border:none;background:transparent;width:100%;text-align:right;font-size:13px;color:rgba(255,255,255,.48);cursor:pointer;margin-bottom:1px;transition:all .2s;font-family:var(--font);}
 .sbi:hover{background:rgba(255,255,255,.07);color:rgba(255,255,255,.85);}
 .sbi.on{font-weight:700;}
-.sbadge{margin-right:auto;background:var(–coral);color:#fff;border-radius:8px;padding:1px 6px;font-size:10px;font-weight:700;}
+.sbadge{margin-right:auto;background:var(--coral);color:#fff;border-radius:8px;padding:1px 6px;font-size:10px;font-weight:700;}
 .sb-foot{padding:10px;border-top:1px solid rgba(255,255,255,.07);}
-.sb-out{display:flex;align-items:center;gap:7px;padding:8px 10px;border-radius:8px;border:none;background:transparent;width:100%;font-size:13px;color:rgba(255,255,255,.38);cursor:pointer;transition:all .2s;font-family:var(–font);}
-.sb-out:hover{background:rgba(212,114,90,.15);color:var(–coral);}
-.dmain{margin-right:230px;padding:28px;min-height:100vh;background:var(–off);}
+.sb-out{display:flex;align-items:center;gap:7px;padding:8px 10px;border-radius:8px;border:none;background:transparent;width:100%;font-size:13px;color:rgba(255,255,255,.38);cursor:pointer;transition:all .2s;font-family:var(--font);}
+.sb-out:hover{background:rgba(212,114,90,.15);color:var(--coral);}
+.dmain{margin-right:230px;padding:28px;min-height:100vh;background:var(--off);}
 .dpage{animation:fadeUp .35s ease;}
 .dhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px;}
-.dtitle{font-size:22px;color:var(–navy);font-weight:900;}
-.dsub{color:var(–g400);font-size:12px;margin-top:2px;}
+.dtitle{font-size:22px;color:var(--navy);font-weight:900;}
+.dsub{color:var(--g400);font-size:12px;margin-top:2px;}
 
 /* CARDS */
 .sg{display:grid;gap:13px;margin-bottom:18px;}
@@ -220,61 +219,61 @@ button,input,select,textarea{font-family:var(--font);}
 .sg2{grid-template-columns:1fr 1fr;}
 .sg21{grid-template-columns:1.5fr 1fr;}
 .sg5{grid-template-columns:repeat(5,1fr);}
-.card{background:#fff;border-radius:var(–r);padding:19px;border:1px solid var(–g200);box-shadow:0 2px 10px rgba(15,31,53,.05);}
-.ch{font-size:14px;color:var(–navy);font-weight:800;margin-bottom:13px;}
-.sc{background:#fff;border-radius:var(–r);padding:19px;border:1px solid var(–g200);box-shadow:0 2px 10px rgba(15,31,53,.05);display:flex;justify-content:space-between;align-items:flex-start;}
-.sc-l{font-size:11px;color:var(–g400);font-weight:500;margin-bottom:4px;}
-.sc-v{font-size:28px;color:var(–navy);font-weight:900;}
-.sc-t{font-size:11px;color:var(–mint);margin-top:2px;font-weight:700;}
+.card{background:#fff;border-radius:var(--r);padding:19px;border:1px solid var(--g200);box-shadow:0 2px 10px rgba(15,31,53,.05);}
+.ch{font-size:14px;color:var(--navy);font-weight:800;margin-bottom:13px;}
+.sc{background:#fff;border-radius:var(--r);padding:19px;border:1px solid var(--g200);box-shadow:0 2px 10px rgba(15,31,53,.05);display:flex;justify-content:space-between;align-items:flex-start;}
+.sc-l{font-size:11px;color:var(--g400);font-weight:500;margin-bottom:4px;}
+.sc-v{font-size:28px;color:var(--navy);font-weight:900;}
+.sc-t{font-size:11px;color:var(--mint);margin-top:2px;font-weight:700;}
 .sc-i{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
 
 /* TABLE */
 .tw{overflow-x:auto;}
 table{width:100%;border-collapse:collapse;font-size:12px;}
-thead tr{border-bottom:2px solid var(–g200);}
-th{padding:8px 12px;text-align:right;font-weight:700;color:var(–g600);font-size:10px;}
-tbody tr{border-bottom:1px solid var(–g100);transition:background .13s;}
-tbody tr:hover{background:var(–off);}
-td{padding:10px 12px;color:var(–g800);text-align:right;vertical-align:middle;}
+thead tr{border-bottom:2px solid var(--g200);}
+th{padding:8px 12px;text-align:right;font-weight:700;color:var(--g600);font-size:10px;}
+tbody tr{border-bottom:1px solid var(--g100);transition:background .13s;}
+tbody tr:hover{background:var(--off);}
+td{padding:10px 12px;color:var(--g800);text-align:right;vertical-align:middle;}
 .badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:9px;font-size:10px;font-weight:700;}
 
 /* FORM */
 .field{margin-bottom:12px;}
-.field label{display:block;font-size:10px;font-weight:700;color:var(–g600);margin-bottom:3px;}
-.field input,.field select,.field textarea{width:100%;padding:8px 11px;border-radius:8px;border:1px solid var(–g200);background:#fff;font-size:13px;color:var(–g800);outline:none;transition:border .2s;font-family:var(–font);text-align:right;}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(–coral);}
+.field label{display:block;font-size:10px;font-weight:700;color:var(--g600);margin-bottom:3px;}
+.field input,.field select,.field textarea{width:100%;padding:8px 11px;border-radius:8px;border:1px solid var(--g200);background:#fff;font-size:13px;color:var(--g800);outline:none;transition:border .2s;font-family:var(--font);text-align:right;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--coral);}
 .field textarea{resize:vertical;}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;border-radius:8px;border:none;font-weight:700;font-size:13px;transition:all .2s;font-family:var(–font);cursor:pointer;}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;border-radius:8px;border:none;font-weight:700;font-size:13px;transition:all .2s;font-family:var(--font);cursor:pointer;}
 .btn:hover{transform:translateY(-1px);}
-.btn-p{background:var(–coral);color:#fff;}
-.btn-p:hover{background:var(–coral2);}
-.btn-m{background:var(–mint);color:#fff;}
-.btn-g{background:var(–gold);color:#fff;}
-.btn-b{background:var(–blue);color:#fff;}
-.btn-o{background:transparent;border:1px solid var(–g200);color:var(–g600);}
-.btn-o:hover{border-color:var(–coral);color:var(–coral);}
-.btn-red{background:var(–red-bg);color:var(–red);border:1px solid #FEB2B2;}
+.btn-p{background:var(--coral);color:#fff;}
+.btn-p:hover{background:var(--coral2);}
+.btn-m{background:var(--mint);color:#fff;}
+.btn-g{background:var(--gold);color:#fff;}
+.btn-b{background:var(--blue);color:#fff;}
+.btn-o{background:transparent;border:1px solid var(--g200);color:var(--g600);}
+.btn-o:hover{border-color:var(--coral);color:var(--coral);}
+.btn-red{background:var(--red-bg);color:var(--red);border:1px solid #FEB2B2;}
 .btn-sm{padding:5px 11px;font-size:11px;}
 .btn-full{width:100%;justify-content:center;margin-top:3px;}
 
 /* ALERTS */
 .alert{border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;margin-bottom:13px;}
-.a-ok{background:var(–mint-bg);color:var(–mint);border:1px solid rgba(61,170,143,.2);display:none;}
-.a-err{background:var(–coral-bg);color:var(–coral);border:1px solid rgba(212,114,90,.2);display:none;}
-.a-info{background:var(–blue-bg);color:var(–blue);border:1px solid rgba(107,141,214,.2);}
+.a-ok{background:var(--mint-bg);color:var(--mint);border:1px solid rgba(61,170,143,.2);display:none;}
+.a-err{background:var(--coral-bg);color:var(--coral);border:1px solid rgba(212,114,90,.2);display:none;}
+.a-info{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(107,141,214,.2);}
 
 /* LIST */
-.li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(–g100);}
+.li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--g100);}
 .li:last-child{border-bottom:none;}
 .liav{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;flex-shrink:0;object-fit:cover;}
-.linm{font-weight:700;color:var(–navy);font-size:13px;}
-.lisb{color:var(–g400);font-size:11px;margin-top:1px;}
+.linm{font-weight:700;color:var(--navy);font-size:13px;}
+.lisb{color:var(--g400);font-size:11px;margin-top:1px;}
 
 /* PROGRESS */
-.prog{height:5px;background:var(–g100);border-radius:3px;margin-top:3px;}
+.prog{height:5px;background:var(--g100);border-radius:3px;margin-top:3px;}
 .prog-f{height:100%;border-radius:3px;}
 
 /* MODAL */
@@ -282,76 +281,74 @@ td{padding:10px 12px;color:var(–g800);text-align:right;vertical-align:middle;}
 .mbg.open{display:flex;}
 .mbox{background:#fff;border-radius:17px;padding:28px;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;animation:fadeUp .3s ease;box-shadow:0 20px 70px rgba(0,0,0,.22);}
 .mhd{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
-.mtitle{font-size:17px;color:var(–navy);font-weight:800;}
-.mclose{width:28px;height:28px;border-radius:50%;border:none;background:var(–g100);color:var(–g600);font-size:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
-.mclose:hover{background:var(–coral-bg);color:var(–coral);}
+.mtitle{font-size:17px;color:var(--navy);font-weight:800;}
+.mclose{width:28px;height:28px;border-radius:50%;border:none;background:var(--g100);color:var(--g600);font-size:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+.mclose:hover{background:var(--coral-bg);color:var(--coral);}
 
 /* DENTAL CHART */
-.dchart{background:var(–off);border-radius:12px;padding:16px;margin-bottom:13px;}
-.dtooth{width:32px;height:36px;border-radius:6px;border:1.5px solid var(–g200);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:9px;font-weight:700;color:var(–g600);flex-shrink:0;}
-.dtooth:hover{border-color:var(–coral);background:var(–coral-bg);}
-.dtooth.sel{border-color:var(–coral);background:var(–coral);color:#fff;}
-.dtooth.has-proc{border-color:var(–mint);background:var(–mint-bg);color:var(–mint);}
-.surf-btn{padding:4px 10px;border-radius:6px;border:1.5px solid var(–g200);background:transparent;font-size:11px;font-weight:700;color:var(–g600);cursor:pointer;transition:all .2s;}
-.surf-btn.sel{border-color:var(–coral);background:var(–coral);color:#fff;}
+.dchart{background:var(--off);border-radius:12px;padding:16px;margin-bottom:13px;}
+.dtooth{width:32px;height:36px;border-radius:6px;border:1.5px solid var(--g200);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:9px;font-weight:700;color:var(--g600);flex-shrink:0;}
+.dtooth:hover{border-color:var(--coral);background:var(--coral-bg);}
+.dtooth.sel{border-color:var(--coral);background:var(--coral);color:#fff;}
+.dtooth.has-proc{border-color:var(--mint);background:var(--mint-bg);color:var(--mint);}
+.surf-btn{padding:4px 10px;border-radius:6px;border:1.5px solid var(--g200);background:transparent;font-size:11px;font-weight:700;color:var(--g600);cursor:pointer;transition:all .2s;}
+.surf-btn.sel{border-color:var(--coral);background:var(--coral);color:#fff;}
 
 /* CASES */
-.case-card{background:#fff;border:1px solid var(–g200);border-radius:13px;padding:17px;margin-bottom:11px;transition:all .2s;}
-.case-card.pending{border-right:3px solid var(–gold);}
-.case-card.approved{border-right:3px solid var(–mint);}
-.case-card.rejected{border-right:3px solid var(–red);}
-.case-tooth{display:inline-flex;align-items:center;background:var(–navy);color:#fff;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;font-family:monospace;}
-.case-proc{display:inline-flex;background:var(–blue-bg);color:var(–blue);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;margin-right:4px;}
+.case-card{background:#fff;border:1px solid var(--g200);border-radius:13px;padding:17px;margin-bottom:11px;transition:all .2s;}
+.case-card.pending{border-right:3px solid var(--gold);}
+.case-card.approved{border-right:3px solid var(--mint);}
+.case-card.rejected{border-right:3px solid var(--red);}
+.case-tooth{display:inline-flex;align-items:center;background:var(--navy);color:#fff;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;font-family:monospace;}
+.case-proc{display:inline-flex;background:var(--blue-bg);color:var(--blue);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;margin-right:4px;}
 
 /* THREADS */
-.thread-item{background:#fff;border:1px solid var(–g200);border-radius:11px;padding:14px;cursor:pointer;transition:all .2s;margin-bottom:8px;}
-.thread-item:hover{box-shadow:var(–shadow);}
-.thread-item.unread{border-right:3px solid var(–coral);}
+.thread-item{background:#fff;border:1px solid var(--g200);border-radius:11px;padding:14px;cursor:pointer;transition:all .2s;margin-bottom:8px;}
+.thread-item:hover{box-shadow:var(--shadow);}
+.thread-item.unread{border-right:3px solid var(--coral);}
 .msg-bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.7;max-width:80%;margin-bottom:8px;}
-.msg-me{background:var(–coral);color:#fff;margin-right:auto;border-bottom-right-radius:3px;}
-.msg-them{background:var(–g100);color:var(–g800);margin-left:auto;border-bottom-left-radius:3px;}
+.msg-me{background:var(--coral);color:#fff;margin-right:auto;border-bottom-right-radius:3px;}
+.msg-them{background:var(--g100);color:var(--g800);margin-left:auto;border-bottom-left-radius:3px;}
 
 /* PROFILE */
-.profile-header{background:linear-gradient(135deg,var(–navy),var(–navy2));border-radius:16px;padding:28px;display:flex;align-items:center;gap:20px;margin-bottom:18px;color:#fff;}
-.profile-av{width:80px;height:80px;border-radius:50%;border:3px solid var(–coral);object-fit:cover;display:flex;align-items:center;justify-content:center;font-size:28px;background:rgba(255,255,255,.1);flex-shrink:0;}
+.profile-header{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:16px;padding:28px;display:flex;align-items:center;gap:20px;margin-bottom:18px;color:#fff;}
+.profile-av{width:80px;height:80px;border-radius:50%;border:3px solid var(--coral);object-fit:cover;display:flex;align-items:center;justify-content:center;font-size:28px;background:rgba(255,255,255,.1);flex-shrink:0;}
 .profile-name{font-size:22px;font-weight:900;margin-bottom:4px;}
 .profile-role{font-size:13px;opacity:.7;margin-bottom:8px;}
-.pstat-n{font-size:22px;font-weight:900;color:var(–coral);}
+.pstat-n{font-size:22px;font-weight:900;color:var(--coral);}
 .pstat-l{font-size:10px;opacity:.6;}
 
 /* IMG UPLOAD */
-.img-upload-area{border:2px dashed var(–g200);border-radius:10px;padding:18px;text-align:center;cursor:pointer;transition:border .2s;}
-.img-upload-area:hover{border-color:var(–coral);}
+.img-upload-area{border:2px dashed var(--g200);border-radius:10px;padding:18px;text-align:center;cursor:pointer;transition:border .2s;}
+.img-upload-area:hover{border-color:var(--coral);}
 .img-upload-area input{display:none;}
 .img-prev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px;}
-.img-prev{width:100%;height:88px;object-fit:cover;border-radius:7px;border:1px solid var(–g200);}
+.img-prev{width:100%;height:88px;object-fit:cover;border-radius:7px;border:1px solid var(--g200);}
 
 /* SPINNER INLINE */
 .spin-sm{width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:inline-block;vertical-align:middle;margin-left:6px;}
 
 @media(max-width:860px){
-.hero-inner{grid-template-columns:1fr;padding:56px 22px;}
-.hright{display:none;}
-.nav-links{display:none;}
-#top-nav{padding:0 18px;}
-.psec{padding:56px 22px;}
-.ngrid{grid-template-columns:1fr;}
-.dgrid{grid-template-columns:1fr 1fr;}
-.rinner{grid-template-columns:1fr;padding:56px 22px;}
-#fbg{padding:40px 22px 22px;}
-.fgrid{grid-template-columns:1fr 1fr;}
-.sg4,.sg3{grid-template-columns:1fr 1fr;}
-.sg5{grid-template-columns:1fr 1fr;}
-.sidebar{width:200px;}
-.dmain{margin-right:200px;padding:16px;}
+  .hero-inner{grid-template-columns:1fr;padding:56px 22px;}
+  .hright{display:none;}
+  .nav-links{display:none;}
+  #top-nav{padding:0 18px;}
+  .psec{padding:56px 22px;}
+  .ngrid{grid-template-columns:1fr;}
+  .dgrid{grid-template-columns:1fr 1fr;}
+  .rinner{grid-template-columns:1fr;padding:56px 22px;}
+  #fbg{padding:40px 22px 22px;}
+  .fgrid{grid-template-columns:1fr 1fr;}
+  .sg4,.sg3{grid-template-columns:1fr 1fr;}
+  .sg5{grid-template-columns:1fr 1fr;}
+  .sidebar{width:200px;}
+  .dmain{margin-right:200px;padding:16px;}
 }
 </style>
-
 </head>
 <body>
 
 <!-- شاشة التحميل -->
-
 <div id="loading-screen">
   <div class="loading-logo">🦷</div>
   <div class="loading-title">كلية طب الأسنان</div>
@@ -361,7 +358,6 @@ td{padding:10px 12px;color:var(–g800);text-align:right;vertical-align:middle;}
 </div>
 
 <!-- الموقع العام -->
-
 <div id="pg-pub">
 <nav id="top-nav">
   <div class="nav-logo">
@@ -510,7 +506,6 @@ td{padding:10px 12px;color:var(–g800);text-align:right;vertical-align:middle;}
 </div>
 
 <!-- تسجيل الدخول -->
-
 <div id="pg-login" style="min-height:100vh;background:var(--navy);display:none;align-items:center;justify-content:center;padding:20px;">
   <div class="lcard">
     <div class="llogo"><div class="llogo-icon">🦷</div><div><div class="ltitle">بوابة الموظفين</div><div class="lsub">كلية طب الأسنان</div></div></div>
@@ -529,7 +524,6 @@ td{padding:10px 12px;color:var(–g800);text-align:right;vertical-align:middle;}
 </div>
 
 <!-- لوحة التحكم -->
-
 <div id="pg-dash" style="display:none;">
   <div class="sidebar" id="sidebar">
     <div class="sb-logo">
@@ -544,7 +538,6 @@ td{padding:10px 12px;color:var(–g800);text-align:right;vertical-align:middle;}
 </div>
 
 <!-- مودال -->
-
 <div id="modal" class="mbg" onclick="if(event.target===this)closeModal()">
   <div class="mbox">
     <div class="mhd"><div class="mtitle" id="modal-title"></div><button class="mclose" onclick="closeModal()">✕</button></div>
@@ -1105,757 +1098,756 @@ function pgHistory(){
 
 function pgComplaint(){
   return H('تقديم شكوى')+'<div class="card" style="max-width:500px"><div id="complaint-ok" class="alert a-ok">✅ تم إرسال شكواك!</div><div class="field"><label>نوع الشكوى</label><select id="c-type"><option value="">اختر...</option><option>ألم في الأسنان</option><option>نزيف اللثة</option><option>حساسية</option><option>مشكلة تاج</option><option>أخرى</option></select></div><div class="field"><label>الوصف</label><textarea id="c-desc" rows="3" placeholder="صف أعراضك..."></textarea></div><div class="field"><label>القسم المفضّل</label><select id="c-dept"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div><button class="btn btn-p" onclick="subComplaint()">إرسال</button></div>';
-
 }
-function subComplaint(){var t=document.getElementById(‘c-type’);if(!t||!t.value){alert(‘يرجى اختيار نوع الشكوى’);return;}var ok=document.getElementById(‘complaint-ok’);if(ok)ok.style.display=‘block’;}
+function subComplaint(){var t=document.getElementById('c-type');if(!t||!t.value){alert('يرجى اختيار نوع الشكوى');return;}var ok=document.getElementById('complaint-ok');if(ok)ok.style.display='block';}
 
 // ═══════════════════════════════════════════════════
 // PROFILE PAGE
 // ═══════════════════════════════════════════════════
 async function pgProfile(uid) {
-var userData = CU;
-var cases = await DB.getCases(CU.role===‘student’?{student_id:uid}:CU.role===‘doctor’?{doctor_id:uid}:null);
-var evals = CU.role===‘student’ ? await DB.getEvaluations(uid) : [];
-var avgScore = evals.length ? Math.round(evals.reduce(function(s,e){return s+(e.clinical+e.handling+e.theoretical+e.professionalism)/4;},0)/evals.length) : 0;
+  var userData = CU;
+  var cases = await DB.getCases(CU.role==='student'?{student_id:uid}:CU.role==='doctor'?{doctor_id:uid}:null);
+  var evals = CU.role==='student' ? await DB.getEvaluations(uid) : [];
+  var avgScore = evals.length ? Math.round(evals.reduce(function(s,e){return s+(e.clinical+e.handling+e.theoretical+e.professionalism)/4;},0)/evals.length) : 0;
 
-var av = userData.photo
-? ‘<img class="profile-av" src="'+userData.photo+'" style="object-fit:cover"/>’
-: ‘<div class="profile-av" style="font-size:32px">’+getRC(CU.role).icon+’</div>’;
+  var av = userData.photo
+    ? '<img class="profile-av" src="'+userData.photo+'" style="object-fit:cover"/>'
+    : '<div class="profile-av" style="font-size:32px">'+getRC(CU.role).icon+'</div>';
 
-var h=H(‘الملف الشخصي’);
-h+=’<div class="profile-header">’+av;
-h+=’<div><div class="profile-name">’+userData.name+’</div>’;
-h+=’<div class="profile-role">’+getRC(CU.role).label+(userData.dept?’ — ‘+userData.dept:’’)+(userData.level?’ — ‘+userData.level:’’)+’</div>’;
-h+=’<div style="display:flex;gap:20px;margin-top:6px">’;
-h+=’<div class="pstat"><div class="pstat-n">’+cases.length+’</div><div class="pstat-l">حالة</div></div>’;
-if(CU.role===‘student’&&userData.gpa)h+=’<div class="pstat"><div class="pstat-n">’+userData.gpa+’</div><div class="pstat-l">المعدل</div></div>’;
-if(avgScore)h+=’<div class="pstat"><div class="pstat-n">’+avgScore+’%</div><div class="pstat-l">متوسط التقييم</div></div>’;
-h+=’</div></div></div>’;
-h+=’<div class="sg sg2"><div class="card"><div class="ch">حول</div>’;
-h+=’<p style="color:var(--g600);font-size:13px;line-height:1.8">’+(userData.bio||‘لا توجد نبذة بعد.’)+’</p>’;
-h+=’<div style="margin-top:14px"><button class="btn btn-o btn-sm" onclick="editProfile()">✏️ تعديل الملف</button></div></div>’;
-h+=’<div class="card"><div class="ch">آخر الحالات</div>’;
-if(cases.length){for(var j=0;j<Math.min(cases.length,4);j++){var c=cases[j];h+=LI(‘🦷’,‘var(–coral-bg)’,‘var(–coral)’,’<span class="case-tooth">’+(c.tooth||’’)+’</span> ‘+(c.procedure||’’),(c.patient_name||’’)+’ — ‘+(c.date||’’),BS(c.status||’’),false);}}
-else h+=’<p style="color:var(--g400)">لا توجد حالات بعد.</p>’;
-h+=’</div></div>’;
-return h;
+  var h=H('الملف الشخصي');
+  h+='<div class="profile-header">'+av;
+  h+='<div><div class="profile-name">'+userData.name+'</div>';
+  h+='<div class="profile-role">'+getRC(CU.role).label+(userData.dept?' — '+userData.dept:'')+(userData.level?' — '+userData.level:'')+'</div>';
+  h+='<div style="display:flex;gap:20px;margin-top:6px">';
+  h+='<div class="pstat"><div class="pstat-n">'+cases.length+'</div><div class="pstat-l">حالة</div></div>';
+  if(CU.role==='student'&&userData.gpa)h+='<div class="pstat"><div class="pstat-n">'+userData.gpa+'</div><div class="pstat-l">المعدل</div></div>';
+  if(avgScore)h+='<div class="pstat"><div class="pstat-n">'+avgScore+'%</div><div class="pstat-l">متوسط التقييم</div></div>';
+  h+='</div></div></div>';
+  h+='<div class="sg sg2"><div class="card"><div class="ch">حول</div>';
+  h+='<p style="color:var(--g600);font-size:13px;line-height:1.8">'+(userData.bio||'لا توجد نبذة بعد.')+'</p>';
+  h+='<div style="margin-top:14px"><button class="btn btn-o btn-sm" onclick="editProfile()">✏️ تعديل الملف</button></div></div>';
+  h+='<div class="card"><div class="ch">آخر الحالات</div>';
+  if(cases.length){for(var j=0;j<Math.min(cases.length,4);j++){var c=cases[j];h+=LI('🦷','var(--coral-bg)','var(--coral)','<span class="case-tooth">'+(c.tooth||'')+'</span> '+(c.procedure||''),(c.patient_name||'')+' — '+(c.date||''),BS(c.status||''),false);}}
+  else h+='<p style="color:var(--g400)">لا توجد حالات بعد.</p>';
+  h+='</div></div>';
+  return h;
 }
 
 function editProfile(){
-openModal(‘تعديل الملف الشخصي’,
-‘<div class="field"><label>صورة شخصية</label>’+
-‘<div class="img-upload-area" onclick="document.getElementById(\'ep-photo\').click()">’+
-‘<input type="file" id="ep-photo" accept="image/*" onchange="previewImg(\'ep-photo\',\'ep-prev\')"/>’+
-‘<img id="ep-prev" style="width:60px;height:60px;border-radius:50%;object-fit:cover;display:none;margin:0 auto"/>’+
-‘<p style="color:var(--g400);font-size:12px;margin-top:6px">📷 انقر لتغيير الصورة</p></div></div>’+
-‘<div class="field"><label>نبذة شخصية</label><textarea id="ep-bio" rows="3" placeholder="اكتب نبذة مختصرة...">’+(CU.bio||’’)+’</textarea></div>’+
-‘<button class="btn btn-p btn-full" onclick="saveProfile()">💾 حفظ التغييرات</button>’
-);
+  openModal('تعديل الملف الشخصي',
+    '<div class="field"><label>صورة شخصية</label>'+
+    '<div class="img-upload-area" onclick="document.getElementById(\'ep-photo\').click()">'+
+    '<input type="file" id="ep-photo" accept="image/*" onchange="previewImg(\'ep-photo\',\'ep-prev\')"/>'+
+    '<img id="ep-prev" style="width:60px;height:60px;border-radius:50%;object-fit:cover;display:none;margin:0 auto"/>'+
+    '<p style="color:var(--g400);font-size:12px;margin-top:6px">📷 انقر لتغيير الصورة</p></div></div>'+
+    '<div class="field"><label>نبذة شخصية</label><textarea id="ep-bio" rows="3" placeholder="اكتب نبذة مختصرة...">'+(CU.bio||'')+'</textarea></div>'+
+    '<button class="btn btn-p btn-full" onclick="saveProfile()">💾 حفظ التغييرات</button>'
+  );
 }
 
 async function saveProfile(){
-var bio = document.getElementById(‘ep-bio’) ? document.getElementById(‘ep-bio’).value : ‘’;
-var data = {bio: bio};
-getImgBase64(‘ep-photo’, async function(photo){
-if(photo) data.photo = photo;
-try {
-await DB.updateUser(CU.id, data);
-CU.bio = bio;
-if(photo) CU.photo = photo;
-setSession(CU);
-closeModal();
-renderDash();
-navTo(‘profile’);
-} catch(e) { alert(‘خطأ في الحفظ’); console.error(e); }
-});
+  var bio = document.getElementById('ep-bio') ? document.getElementById('ep-bio').value : '';
+  var data = {bio: bio};
+  getImgBase64('ep-photo', async function(photo){
+    if(photo) data.photo = photo;
+    try {
+      await DB.updateUser(CU.id, data);
+      CU.bio = bio;
+      if(photo) CU.photo = photo;
+      setSession(CU);
+      closeModal();
+      renderDash();
+      navTo('profile');
+    } catch(e) { alert('خطأ في الحفظ'); console.error(e); }
+  });
 }
 
 // ═══════════════════════════════════════════════════
 // STUDENT PAGES
 // ═══════════════════════════════════════════════════
 async function pgStuHome(){
-var pts = await DB.getPatients();
-var mine = pts.filter(function(p){return p.student_id===CU.id;});
-var cases = await DB.getCases({student_id:CU.id});
-var pending = cases.filter(function(c){return c.status===‘قيد المراجعة’;}).length;
+  var pts = await DB.getPatients();
+  var mine = pts.filter(function(p){return p.student_id===CU.id;});
+  var cases = await DB.getCases({student_id:CU.id});
+  var pending = cases.filter(function(c){return c.status==='قيد المراجعة';}).length;
 
-var h=H(‘مرحباً، ‘+CU.name.split(’ ‘)[0]+’ 👋’,(CU.level||’’)+’ - ‘+(CU.dept||’’));
-h+=’<div class="sg sg4">’+SC(‘🦷’,‘مرضاي’,mine.length,‘var(–mint)’)+SC(‘📁’,‘حالاتي’,cases.length,‘var(–coral)’)+SC(‘⏳’,‘قيد المراجعة’,pending,’#C9A84C’)+SC(‘⭐’,‘المعدل’,CU.gpa||0,’#6B8DD6’)+’</div>’;
-h+=’<div class="sg sg21"><div class="card"><div class="ch">أحدث الحالات</div>’;
-if(cases.length){for(var j=0;j<Math.min(cases.length,4);j++){var c=cases[j];h+=LI(’<span style="font-size:9px;font-family:monospace">’+(c.tooth||’’)+’</span>’,‘var(–coral-bg)’,‘var(–coral)’,(c.procedure||’’),(c.patient_name||’’)+’ — ‘+(c.date||’’),BS(c.status||’’),false);}}
-else h+=’<p style="color:var(--g400);font-size:13px">لا توجد حالات. <span style="color:var(--coral);cursor:pointer" onclick="navTo(\'newcase\')">ابدأ بإضافة حالة</span></p>’;
-h+=’</div><div class="card"><div class="ch">مرضاي</div>’;
-if(mine.length){for(var k=0;k<Math.min(mine.length,4);k++) h+=LI(INI(mine[k].name),‘var(–mint-bg)’,‘var(–mint)’,mine[k].name,(mine[k].complaint||’’),BS(mine[k].status||’’),false);}
-else h+=’<p style="color:var(--g400);font-size:13px">لم يتم تعيين مرضى لك بعد.</p>’;
-return h+’</div></div>’;
+  var h=H('مرحباً، '+CU.name.split(' ')[0]+' 👋',(CU.level||'')+' - '+(CU.dept||''));
+  h+='<div class="sg sg4">'+SC('🦷','مرضاي',mine.length,'var(--mint)')+SC('📁','حالاتي',cases.length,'var(--coral)')+SC('⏳','قيد المراجعة',pending,'#C9A84C')+SC('⭐','المعدل',CU.gpa||0,'#6B8DD6')+'</div>';
+  h+='<div class="sg sg21"><div class="card"><div class="ch">أحدث الحالات</div>';
+  if(cases.length){for(var j=0;j<Math.min(cases.length,4);j++){var c=cases[j];h+=LI('<span style="font-size:9px;font-family:monospace">'+(c.tooth||'')+'</span>','var(--coral-bg)','var(--coral)',(c.procedure||''),(c.patient_name||'')+' — '+(c.date||''),BS(c.status||''),false);}}
+  else h+='<p style="color:var(--g400);font-size:13px">لا توجد حالات. <span style="color:var(--coral);cursor:pointer" onclick="navTo(\'newcase\')">ابدأ بإضافة حالة</span></p>';
+  h+='</div><div class="card"><div class="ch">مرضاي</div>';
+  if(mine.length){for(var k=0;k<Math.min(mine.length,4);k++) h+=LI(INI(mine[k].name),'var(--mint-bg)','var(--mint)',mine[k].name,(mine[k].complaint||''),BS(mine[k].status||''),false);}
+  else h+='<p style="color:var(--g400);font-size:13px">لم يتم تعيين مرضى لك بعد.</p>';
+  return h+'</div></div>';
 }
 
 async function pgMyPatients(){
-var pts = await DB.getPatients();
-var mine = pts.filter(function(p){return p.student_id===CU.id;});
-return H(‘مرضاي’,mine.length+’ مريض’)+’<div class="card">’+TBL([{k:‘id’,l:‘الرقم’},{k:‘name’,l:‘الاسم’},{k:‘age’,l:‘العمر’},{k:‘complaint’,l:‘الشكوى’},{k:‘dept’,l:‘القسم’},{k:‘date’,l:‘التاريخ’},{k:‘status’,l:‘الحالة’,r:function(v){return BS(v);}}],mine)+’</div>’;
+  var pts = await DB.getPatients();
+  var mine = pts.filter(function(p){return p.student_id===CU.id;});
+  return H('مرضاي',mine.length+' مريض')+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'age',l:'العمر'},{k:'complaint',l:'الشكوى'},{k:'dept',l:'القسم'},{k:'date',l:'التاريخ'},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],mine)+'</div>';
 }
 
 async function pgMyCases(){
-var cases = await DB.getCases({student_id:CU.id});
-var h=H(‘حالاتي’,cases.length+’ حالة’,’<button class="btn btn-p" onclick="navTo(\'newcase\')">➕ حالة جديدة</button>’);
-if(!cases.length) return h+’<div class="card"><p style="color:var(--g400);padding:10px">لا توجد حالات. ابدأ بإضافة حالة جديدة.</p></div>’;
-h+=’<div style="display:flex;flex-direction:column;gap:10px">’;
-for(var j=0;j<cases.length;j++){
-var c=cases[j];
-var imgs = c.images ? JSON.parse(c.images) : [];
-h+=’<div class="case-card '+(c.status==='معتمد'?'approved':c.status==='مرفوض'?'rejected':'pending')+'">’;
-h+=’<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">’;
-h+=’<div style="display:flex;align-items:center;gap:7px"><span class="case-tooth">’+(c.tooth||’’)+’</span><span class="case-proc">’+(c.procedure||’’)+’</span></div>’;
-h+=BS(c.status||’’)+’</div>’;
-h+=’<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:12px;color:var(--g600);margin-bottom:8px">’;
-h+=’<div>المريض: <strong>’+(c.patient_name||’’)+’</strong></div>’;
-h+=’<div>المشرف: <strong>’+(c.doctor_name||’’)+’</strong></div>’;
-h+=’<div>التاريخ: <strong>’+(c.date||’’)+’</strong></div></div>’;
-if(c.notes) h+=’<div style="font-size:12px;color:var(--g600);background:var(--off);border-radius:7px;padding:7px;margin-bottom:7px">’+(c.notes||’’)+’</div>’;
-if(c.doctor_comment) h+=’<div style="font-size:12px;color:var(--mint);background:var(--mint-bg);border-radius:7px;padding:7px"><strong>تعليق الطبيب:</strong> ‘+c.doctor_comment+’</div>’;
-if(imgs.length){
-h+=’<div class="img-prev-grid" style="grid-template-columns:repeat(4,1fr);margin-top:8px">’;
-for(var k=0;k<imgs.length;k++) h+=’<img class="img-prev" src="'+imgs[k]+'" style="cursor:pointer" onclick="openModal(\'صورة الحالة\',\'<div style=text-align:center><img src=\\\''+imgs[k]+'\\\' style=\\\'max-width:100%\\\'></div>\')"/>’;
-h+=’</div>’;
-}
-h+=’</div>’;
-}
-return h+’</div>’;
+  var cases = await DB.getCases({student_id:CU.id});
+  var h=H('حالاتي',cases.length+' حالة','<button class="btn btn-p" onclick="navTo(\'newcase\')">➕ حالة جديدة</button>');
+  if(!cases.length) return h+'<div class="card"><p style="color:var(--g400);padding:10px">لا توجد حالات. ابدأ بإضافة حالة جديدة.</p></div>';
+  h+='<div style="display:flex;flex-direction:column;gap:10px">';
+  for(var j=0;j<cases.length;j++){
+    var c=cases[j];
+    var imgs = c.images ? JSON.parse(c.images) : [];
+    h+='<div class="case-card '+(c.status==='معتمد'?'approved':c.status==='مرفوض'?'rejected':'pending')+'">';
+    h+='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">';
+    h+='<div style="display:flex;align-items:center;gap:7px"><span class="case-tooth">'+(c.tooth||'')+'</span><span class="case-proc">'+(c.procedure||'')+'</span></div>';
+    h+=BS(c.status||'')+'</div>';
+    h+='<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:12px;color:var(--g600);margin-bottom:8px">';
+    h+='<div>المريض: <strong>'+(c.patient_name||'')+'</strong></div>';
+    h+='<div>المشرف: <strong>'+(c.doctor_name||'')+'</strong></div>';
+    h+='<div>التاريخ: <strong>'+(c.date||'')+'</strong></div></div>';
+    if(c.notes) h+='<div style="font-size:12px;color:var(--g600);background:var(--off);border-radius:7px;padding:7px;margin-bottom:7px">'+(c.notes||'')+'</div>';
+    if(c.doctor_comment) h+='<div style="font-size:12px;color:var(--mint);background:var(--mint-bg);border-radius:7px;padding:7px"><strong>تعليق الطبيب:</strong> '+c.doctor_comment+'</div>';
+    if(imgs.length){
+      h+='<div class="img-prev-grid" style="grid-template-columns:repeat(4,1fr);margin-top:8px">';
+      for(var k=0;k<imgs.length;k++) h+='<img class="img-prev" src="'+imgs[k]+'" style="cursor:pointer" onclick="openModal(\'صورة الحالة\',\'<div style=text-align:center><img src=\\\''+imgs[k]+'\\\' style=\\\'max-width:100%\\\'></div>\')"/>';
+      h+='</div>';
+    }
+    h+='</div>';
+  }
+  return h+'</div>';
 }
 
 // ═══════════════════════════════════════════════════
 // PALMER CHART
 // ═══════════════════════════════════════════════════
 var PALMER = {
-UR:[‘UR8’,‘UR7’,‘UR6’,‘UR5’,‘UR4’,‘UR3’,‘UR2’,‘UR1’],
-UL:[‘UL1’,‘UL2’,‘UL3’,‘UL4’,‘UL5’,‘UL6’,‘UL7’,‘UL8’],
-LR:[‘LR8’,‘LR7’,‘LR6’,‘LR5’,‘LR4’,‘LR3’,‘LR2’,‘LR1’],
-LL:[‘LL1’,‘LL2’,‘LL3’,‘LL4’,‘LL5’,‘LL6’,‘LL7’,‘LL8’]
+  UR:['UR8','UR7','UR6','UR5','UR4','UR3','UR2','UR1'],
+  UL:['UL1','UL2','UL3','UL4','UL5','UL6','UL7','UL8'],
+  LR:['LR8','LR7','LR6','LR5','LR4','LR3','LR2','LR1'],
+  LL:['LL1','LL2','LL3','LL4','LL5','LL6','LL7','LL8']
 };
-var TOOTH_TYPE = {‘1’:‘I’,‘2’:‘I’,‘3’:‘C’,‘4’:‘P’,‘5’:‘P’,‘6’:‘M’,‘7’:‘M’,‘8’:‘W’};
+var TOOTH_TYPE = {'1':'I','2':'I','3':'C','4':'P','5':'P','6':'M','7':'M','8':'W'};
 
 function buildChart(){
-var h=’<div class="dchart"><div style="font-size:11px;font-weight:700;color:var(--g600);margin-bottom:12px;text-align:center">مخطط الأسنان — Palmer (انقر لاختيار السن)</div>’;
-h+=’<div style="display:flex;flex-direction:column;gap:5px;align-items:center">’;
-// الصف العلوي
-h+=’<div style="display:flex;align-items:center;gap:0">’;
-h+=’<div style="display:flex;flex-direction:row-reverse;gap:2px">’;
-for(var i=0;i<PALMER.UR.length;i++){
-var t=PALMER.UR[i],num=t.replace(‘UR’,’’);
-h+=’<div class="dtooth'+(selectedTeeth.indexOf(t)>-1?' sel':'')+'" onclick="toggleT(\''+t+'\')" title="'+t+'"><div style="font-size:10px;font-weight:900">’+num+’</div><div style="font-size:8px;opacity:.7">’+TOOTH_TYPE[num]+’</div></div>’;
-}
-h+=’</div><div style="width:2px;background:var(--g200);height:40px;margin:0 4px"></div>’;
-h+=’<div style="display:flex;flex-direction:row-reverse;gap:2px">’;
-for(var j=0;j<PALMER.UL.length;j++){
-var t2=PALMER.UL[j],num2=t2.replace(‘UL’,’’);
-h+=’<div class="dtooth'+(selectedTeeth.indexOf(t2)>-1?' sel':'')+'" onclick="toggleT(\''+t2+'\')" title="'+t2+'"><div style="font-size:10px;font-weight:900">’+num2+’</div><div style="font-size:8px;opacity:.7">’+TOOTH_TYPE[num2]+’</div></div>’;
-}
-h+=’</div></div>’;
-h+=’<div style="width:100%;height:1px;background:var(--g200);margin:3px 0"></div>’;
-// الصف السفلي
-h+=’<div style="display:flex;align-items:center;gap:0">’;
-h+=’<div style="display:flex;flex-direction:row-reverse;gap:2px">’;
-for(var k=0;k<PALMER.LR.length;k++){
-var t3=PALMER.LR[k],num3=t3.replace(‘LR’,’’);
-h+=’<div class="dtooth'+(selectedTeeth.indexOf(t3)>-1?' sel':'')+'" onclick="toggleT(\''+t3+'\')" title="'+t3+'"><div style="font-size:8px;opacity:.7">’+TOOTH_TYPE[num3]+’</div><div style="font-size:10px;font-weight:900">’+num3+’</div></div>’;
-}
-h+=’</div><div style="width:2px;background:var(--g200);height:40px;margin:0 4px"></div>’;
-h+=’<div style="display:flex;flex-direction:row-reverse;gap:2px">’;
-for(var l=0;l<PALMER.LL.length;l++){
-var t4=PALMER.LL[l],num4=t4.replace(‘LL’,’’);
-h+=’<div class="dtooth'+(selectedTeeth.indexOf(t4)>-1?' sel':'')+'" onclick="toggleT(\''+t4+'\')" title="'+t4+'"><div style="font-size:8px;opacity:.7">’+TOOTH_TYPE[num4]+’</div><div style="font-size:10px;font-weight:900">’+num4+’</div></div>’;
-}
-h+=’</div></div>’;
-h+=’<div style="font-size:9px;color:var(--g400);margin-top:6px;text-align:center">UR=أعلى يمين | UL=أعلى يسار | LR=أسفل يمين | LL=أسفل يسار</div>’;
-h+=’</div></div>’;
-return h;
+  var h='<div class="dchart"><div style="font-size:11px;font-weight:700;color:var(--g600);margin-bottom:12px;text-align:center">مخطط الأسنان — Palmer (انقر لاختيار السن)</div>';
+  h+='<div style="display:flex;flex-direction:column;gap:5px;align-items:center">';
+  // الصف العلوي
+  h+='<div style="display:flex;align-items:center;gap:0">';
+  h+='<div style="display:flex;flex-direction:row-reverse;gap:2px">';
+  for(var i=0;i<PALMER.UR.length;i++){
+    var t=PALMER.UR[i],num=t.replace('UR','');
+    h+='<div class="dtooth'+(selectedTeeth.indexOf(t)>-1?' sel':'')+'" onclick="toggleT(\''+t+'\')" title="'+t+'"><div style="font-size:10px;font-weight:900">'+num+'</div><div style="font-size:8px;opacity:.7">'+TOOTH_TYPE[num]+'</div></div>';
+  }
+  h+='</div><div style="width:2px;background:var(--g200);height:40px;margin:0 4px"></div>';
+  h+='<div style="display:flex;flex-direction:row-reverse;gap:2px">';
+  for(var j=0;j<PALMER.UL.length;j++){
+    var t2=PALMER.UL[j],num2=t2.replace('UL','');
+    h+='<div class="dtooth'+(selectedTeeth.indexOf(t2)>-1?' sel':'')+'" onclick="toggleT(\''+t2+'\')" title="'+t2+'"><div style="font-size:10px;font-weight:900">'+num2+'</div><div style="font-size:8px;opacity:.7">'+TOOTH_TYPE[num2]+'</div></div>';
+  }
+  h+='</div></div>';
+  h+='<div style="width:100%;height:1px;background:var(--g200);margin:3px 0"></div>';
+  // الصف السفلي
+  h+='<div style="display:flex;align-items:center;gap:0">';
+  h+='<div style="display:flex;flex-direction:row-reverse;gap:2px">';
+  for(var k=0;k<PALMER.LR.length;k++){
+    var t3=PALMER.LR[k],num3=t3.replace('LR','');
+    h+='<div class="dtooth'+(selectedTeeth.indexOf(t3)>-1?' sel':'')+'" onclick="toggleT(\''+t3+'\')" title="'+t3+'"><div style="font-size:8px;opacity:.7">'+TOOTH_TYPE[num3]+'</div><div style="font-size:10px;font-weight:900">'+num3+'</div></div>';
+  }
+  h+='</div><div style="width:2px;background:var(--g200);height:40px;margin:0 4px"></div>';
+  h+='<div style="display:flex;flex-direction:row-reverse;gap:2px">';
+  for(var l=0;l<PALMER.LL.length;l++){
+    var t4=PALMER.LL[l],num4=t4.replace('LL','');
+    h+='<div class="dtooth'+(selectedTeeth.indexOf(t4)>-1?' sel':'')+'" onclick="toggleT(\''+t4+'\')" title="'+t4+'"><div style="font-size:8px;opacity:.7">'+TOOTH_TYPE[num4]+'</div><div style="font-size:10px;font-weight:900">'+num4+'</div></div>';
+  }
+  h+='</div></div>';
+  h+='<div style="font-size:9px;color:var(--g400);margin-top:6px;text-align:center">UR=أعلى يمين | UL=أعلى يسار | LR=أسفل يمين | LL=أسفل يسار</div>';
+  h+='</div></div>';
+  return h;
 }
 function toggleT(tooth){
-var idx=selectedTeeth.indexOf(tooth);
-if(idx>-1) selectedTeeth.splice(idx,1); else selectedTeeth.push(tooth);
-var ch=document.getElementById(‘palmer-chart’);
-if(ch) ch.innerHTML=buildChart();
-var sd=document.getElementById(‘sel-teeth’);
-if(sd) sd.innerHTML=selectedTeeth.length?selectedTeeth.map(function(t){return ‘<span class="case-tooth" style="margin:2px">’+t+’</span>’;}).join(’’):’ <span style="color:var(--g400);font-size:12px">لم يتم اختيار سن</span>’;
+  var idx=selectedTeeth.indexOf(tooth);
+  if(idx>-1) selectedTeeth.splice(idx,1); else selectedTeeth.push(tooth);
+  var ch=document.getElementById('palmer-chart');
+  if(ch) ch.innerHTML=buildChart();
+  var sd=document.getElementById('sel-teeth');
+  if(sd) sd.innerHTML=selectedTeeth.length?selectedTeeth.map(function(t){return '<span class="case-tooth" style="margin:2px">'+t+'</span>';}).join(''):' <span style="color:var(--g400);font-size:12px">لم يتم اختيار سن</span>';
 }
 function toggleSurf(s){
-var idx=selectedSurfs.indexOf(s);
-var btn=document.getElementById(‘surf-’+s);
-if(idx>-1){selectedSurfs.splice(idx,1);if(btn)btn.classList.remove(‘sel’);}
-else{selectedSurfs.push(s);if(btn)btn.classList.add(‘sel’);}
+  var idx=selectedSurfs.indexOf(s);
+  var btn=document.getElementById('surf-'+s);
+  if(idx>-1){selectedSurfs.splice(idx,1);if(btn)btn.classList.remove('sel');}
+  else{selectedSurfs.push(s);if(btn)btn.classList.add('sel');}
 }
 function updateSurfaces(){
-var proc=document.getElementById(‘nc-proc’); if(!proc) return;
-var v=proc.value;
-var ss=document.getElementById(‘surfaces-section’);
-var rs=document.getElementById(‘radio-section’);
-var ds=document.getElementById(‘denture-section’);
-if(ss) ss.style.display=v===‘Restoration’?‘block’:‘none’;
-if(rs) rs.style.display=v===‘Radiograph’?‘block’:‘none’;
-if(ds) ds.style.display=v===‘Denture’?‘block’:‘none’;
+  var proc=document.getElementById('nc-proc'); if(!proc) return;
+  var v=proc.value;
+  var ss=document.getElementById('surfaces-section');
+  var rs=document.getElementById('radio-section');
+  var ds=document.getElementById('denture-section');
+  if(ss) ss.style.display=v==='Restoration'?'block':'none';
+  if(rs) rs.style.display=v==='Radiograph'?'block':'none';
+  if(ds) ds.style.display=v==='Denture'?'block':'none';
 }
 
 var caseImgsLoaded = [];
 function previewCaseImgs(){
-var inp=document.getElementById(‘nc-imgs’);
-if(!inp||!inp.files) return;
-caseImgsLoaded=[];
-var prev=document.getElementById(‘nc-imgs-prev’);
-var files=inp.files, loaded=0;
-for(var i=0;i<Math.min(files.length,6);i++){
-(function(file){
-var r=new FileReader();
-r.onload=function(e){
-caseImgsLoaded.push(e.target.result);loaded++;
-if(loaded===Math.min(files.length,6)&&prev){
-prev.innerHTML=caseImgsLoaded.map(function(b){return ‘<img class="img-prev" src="'+b+'"/>’;}).join(’’);
-}
-};
-r.readAsDataURL(file);
-})(files[i]);
-}
+  var inp=document.getElementById('nc-imgs');
+  if(!inp||!inp.files) return;
+  caseImgsLoaded=[];
+  var prev=document.getElementById('nc-imgs-prev');
+  var files=inp.files, loaded=0;
+  for(var i=0;i<Math.min(files.length,6);i++){
+    (function(file){
+      var r=new FileReader();
+      r.onload=function(e){
+        caseImgsLoaded.push(e.target.result);loaded++;
+        if(loaded===Math.min(files.length,6)&&prev){
+          prev.innerHTML=caseImgsLoaded.map(function(b){return '<img class="img-prev" src="'+b+'"/>';}).join('');
+        }
+      };
+      r.readAsDataURL(file);
+    })(files[i]);
+  }
 }
 
 function pgNewCase(){
-selectedTeeth=[];selectedSurfs=[];caseImgsLoaded=[];
-var h=H(‘تقديم حالة جديدة’,‘أدخل تفاصيل الحالة السريرية’);
-h+=’<div class="card"><div id="case-ok" class="alert a-ok">✅ تم تقديم الحالة للمراجعة!</div>’;
-h+=’<div id="palmer-chart">’+buildChart()+’</div>’;
-h+=’<div class="field"><label>الأسنان المختارة</label><div id="sel-teeth" style="min-height:28px;padding:4px 0"><span style="color:var(--g400);font-size:12px">لم يتم اختيار سن</span></div></div>’;
-h+=’<div class="frow"><div class="field"><label>الإجراء</label><select id="nc-proc" onchange="updateSurfaces()"><option value="">اختر الإجراء…</option><option value="Restoration">Restoration — حشوة</option><option value="Extraction">Extraction — قلع</option><option value="RCT">RCT — علاج عصب</option><option value="Crown">Crown — تاج</option><option value="Bridge">Bridge — جسر</option><option value="Scaling">Scaling & Polishing — تنظيف</option><option value="Denture">Denture — طقم</option><option value="Implant">Implant — زراعة</option><option value="Ortho">Orthodontic — تقويم</option><option value="Whitening">Whitening — تبييض</option><option value="Radiograph">Radiograph — أشعة</option></select></div>’;
-h+=’<div class="field"><label>القسم</label><select id="nc-dept"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تعويضات الأسنان</option><option>تقويم الأسنان</option></select></div></div>’;
-h+=’<div id="surfaces-section" style="display:none"><div class="field"><label>السطوح (للحشوات)</label><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">’;
-[‘M’,‘O’,‘D’,‘B’,‘L’,‘I’,‘C’].forEach(function(s){ h+=’<button type="button" class="surf-btn" id="surf-'+s+'" onclick="toggleSurf(\''+s+'\')">’+s+’</button>’; });
-h+=’</div></div></div>’;
-h+=’<div id="radio-section" style="display:none"><div class="field"><label>نوع الأشعة</label><select id="nc-radio"><option>Bitewing (BW)</option><option>Periapical (PA)</option><option>OPG بانورامية</option><option>CBCT</option></select></div></div>’;
-h+=’<div id="denture-section" style="display:none"><div class="field"><label>نوع الطقم</label><select id="nc-denture"><option>طقم كامل (فكين)</option><option>طقم كامل علوي</option><option>طقم كامل سفلي</option><option>طقم جزئي كوبالت</option><option>طقم جزئي أكريليك</option></select></div></div>’;
-// المريض والطبيب سيتم تحميلهم
-h+=’<div class="frow"><div class="field"><label>المريض</label><select id="nc-patient"><option value="">جارٍ التحميل…</option></select></div>’;
-h+=’<div class="field"><label>الطبيب المشرف</label><select id="nc-doctor"><option value="">جارٍ التحميل…</option></select></div></div>’;
-h+=’<div class="field"><label>الملاحظات السريرية</label><textarea id="nc-notes" rows="3" placeholder="وصف الحالة والإجراء المقترح..."></textarea></div>’;
-h+=’<div class="field"><label>صور الحالة والأشعة</label><div class="img-upload-area" onclick="document.getElementById(\'nc-imgs\').click()"><input type="file" id="nc-imgs" accept="image/*" multiple onchange="previewCaseImgs()"/><p style="color:var(--g400);font-size:13px">📷 انقر لرفع صور الحالة</p><div class="img-prev-grid" id="nc-imgs-prev"></div></div></div>’;
-h+=’<button class="btn btn-p" onclick="doSubmitCase()">📤 إرسال للمراجعة</button></div>’;
+  selectedTeeth=[];selectedSurfs=[];caseImgsLoaded=[];
+  var h=H('تقديم حالة جديدة','أدخل تفاصيل الحالة السريرية');
+  h+='<div class="card"><div id="case-ok" class="alert a-ok">✅ تم تقديم الحالة للمراجعة!</div>';
+  h+='<div id="palmer-chart">'+buildChart()+'</div>';
+  h+='<div class="field"><label>الأسنان المختارة</label><div id="sel-teeth" style="min-height:28px;padding:4px 0"><span style="color:var(--g400);font-size:12px">لم يتم اختيار سن</span></div></div>';
+  h+='<div class="frow"><div class="field"><label>الإجراء</label><select id="nc-proc" onchange="updateSurfaces()"><option value="">اختر الإجراء...</option><option value="Restoration">Restoration — حشوة</option><option value="Extraction">Extraction — قلع</option><option value="RCT">RCT — علاج عصب</option><option value="Crown">Crown — تاج</option><option value="Bridge">Bridge — جسر</option><option value="Scaling">Scaling & Polishing — تنظيف</option><option value="Denture">Denture — طقم</option><option value="Implant">Implant — زراعة</option><option value="Ortho">Orthodontic — تقويم</option><option value="Whitening">Whitening — تبييض</option><option value="Radiograph">Radiograph — أشعة</option></select></div>';
+  h+='<div class="field"><label>القسم</label><select id="nc-dept"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تعويضات الأسنان</option><option>تقويم الأسنان</option></select></div></div>';
+  h+='<div id="surfaces-section" style="display:none"><div class="field"><label>السطوح (للحشوات)</label><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">';
+  ['M','O','D','B','L','I','C'].forEach(function(s){ h+='<button type="button" class="surf-btn" id="surf-'+s+'" onclick="toggleSurf(\''+s+'\')">'+s+'</button>'; });
+  h+='</div></div></div>';
+  h+='<div id="radio-section" style="display:none"><div class="field"><label>نوع الأشعة</label><select id="nc-radio"><option>Bitewing (BW)</option><option>Periapical (PA)</option><option>OPG بانورامية</option><option>CBCT</option></select></div></div>';
+  h+='<div id="denture-section" style="display:none"><div class="field"><label>نوع الطقم</label><select id="nc-denture"><option>طقم كامل (فكين)</option><option>طقم كامل علوي</option><option>طقم كامل سفلي</option><option>طقم جزئي كوبالت</option><option>طقم جزئي أكريليك</option></select></div></div>';
+  // المريض والطبيب سيتم تحميلهم
+  h+='<div class="frow"><div class="field"><label>المريض</label><select id="nc-patient"><option value="">جارٍ التحميل...</option></select></div>';
+  h+='<div class="field"><label>الطبيب المشرف</label><select id="nc-doctor"><option value="">جارٍ التحميل...</option></select></div></div>';
+  h+='<div class="field"><label>الملاحظات السريرية</label><textarea id="nc-notes" rows="3" placeholder="وصف الحالة والإجراء المقترح..."></textarea></div>';
+  h+='<div class="field"><label>صور الحالة والأشعة</label><div class="img-upload-area" onclick="document.getElementById(\'nc-imgs\').click()"><input type="file" id="nc-imgs" accept="image/*" multiple onchange="previewCaseImgs()"/><p style="color:var(--g400);font-size:13px">📷 انقر لرفع صور الحالة</p><div class="img-prev-grid" id="nc-imgs-prev"></div></div></div>';
+  h+='<button class="btn btn-p" onclick="doSubmitCase()">📤 إرسال للمراجعة</button></div>';
 
-// تحميل المرضى والأطباء بعد رسم الصفحة
-setTimeout(async function(){
-try {
-var pts = await DB.getPatients();
-var myPts = pts.filter(function(p){return p.student_id===CU.id;});
-var pSel=document.getElementById(‘nc-patient’);
-if(pSel){ pSel.innerHTML=’<option value="">اختر المريض…</option>’+myPts.map(function(p){return ‘<option value="'+p.id+'|'+esc(p.name)+'">’+p.name+’</option>’;}).join(’’); }
-var drs = await DB.getUsers(‘doctor’);
-var dSel=document.getElementById(‘nc-doctor’);
-if(dSel){ dSel.innerHTML=’<option value="">اختر الطبيب…</option>’+drs.map(function(d){return ‘<option value="'+d.id+'|'+esc(d.name)+'">’+d.name+’</option>’;}).join(’’); }
-} catch(e){ console.log(‘Load selects error’,e); }
-}, 100);
+  // تحميل المرضى والأطباء بعد رسم الصفحة
+  setTimeout(async function(){
+    try {
+      var pts = await DB.getPatients();
+      var myPts = pts.filter(function(p){return p.student_id===CU.id;});
+      var pSel=document.getElementById('nc-patient');
+      if(pSel){ pSel.innerHTML='<option value="">اختر المريض...</option>'+myPts.map(function(p){return '<option value="'+p.id+'|'+esc(p.name)+'">'+p.name+'</option>';}).join(''); }
+      var drs = await DB.getUsers('doctor');
+      var dSel=document.getElementById('nc-doctor');
+      if(dSel){ dSel.innerHTML='<option value="">اختر الطبيب...</option>'+drs.map(function(d){return '<option value="'+d.id+'|'+esc(d.name)+'">'+d.name+'</option>';}).join(''); }
+    } catch(e){ console.log('Load selects error',e); }
+  }, 100);
 
-return h;
+  return h;
 }
 
 async function doSubmitCase(){
-var proc=document.getElementById(‘nc-proc’); if(!proc||!proc.value){alert(‘يرجى اختيار الإجراء’);return;}
-if(!selectedTeeth.length){alert(‘يرجى اختيار سن من المخطط’);return;}
-var patSel=document.getElementById(‘nc-patient’); if(!patSel||!patSel.value){alert(‘يرجى اختيار المريض’);return;}
-var docSel=document.getElementById(‘nc-doctor’); if(!docSel||!docSel.value){alert(‘يرجى اختيار الطبيب’);return;}
+  var proc=document.getElementById('nc-proc'); if(!proc||!proc.value){alert('يرجى اختيار الإجراء');return;}
+  if(!selectedTeeth.length){alert('يرجى اختيار سن من المخطط');return;}
+  var patSel=document.getElementById('nc-patient'); if(!patSel||!patSel.value){alert('يرجى اختيار المريض');return;}
+  var docSel=document.getElementById('nc-doctor'); if(!docSel||!docSel.value){alert('يرجى اختيار الطبيب');return;}
 
-var btn=document.querySelector(’.btn-p[onclick=“doSubmitCase()”]’);
-if(btn){btn.disabled=true;btn.innerHTML=‘جارٍ الإرسال…<span class="spin-sm"></span>’;}
+  var btn=document.querySelector('.btn-p[onclick="doSubmitCase()"]');
+  if(btn){btn.disabled=true;btn.innerHTML='جارٍ الإرسال...<span class="spin-sm"></span>';}
 
-var patParts=patSel.value.split(’|’);
-var docParts=docSel.value.split(’|’);
-var procLabel=proc.value;
-if(proc.value===‘Restoration’&&selectedSurfs.length) procLabel=‘Restoration (’+selectedSurfs.join(’’)+’)’;
-if(proc.value===‘Radiograph’){var rt=document.getElementById(‘nc-radio’);if(rt)procLabel=’Radiograph - ’+rt.value;}
-if(proc.value===‘Denture’){var dt=document.getElementById(‘nc-denture’);if(dt)procLabel=’Denture - ’+dt.value;}
+  var patParts=patSel.value.split('|');
+  var docParts=docSel.value.split('|');
+  var procLabel=proc.value;
+  if(proc.value==='Restoration'&&selectedSurfs.length) procLabel='Restoration ('+selectedSurfs.join('')+')';
+  if(proc.value==='Radiograph'){var rt=document.getElementById('nc-radio');if(rt)procLabel='Radiograph - '+rt.value;}
+  if(proc.value==='Denture'){var dt=document.getElementById('nc-denture');if(dt)procLabel='Denture - '+dt.value;}
 
-try {
-for(var t=0;t<selectedTeeth.length;t++){
-await DB.addCase({
-id:‘C’+Date.now()+’_’+t,
-patient_id:patParts[0], patient_name:patParts[1]||’’,
-student_id:CU.id, student_name:CU.name,
-doctor_id:docParts[0], doctor_name:docParts[1]||’’,
-tooth:selectedTeeth[t], procedure:procLabel,
-surfaces:JSON.stringify(selectedSurfs),
-notes:document.getElementById(‘nc-notes’)?document.getElementById(‘nc-notes’).value:’’,
-status:‘قيد المراجعة’,
-date:new Date().toISOString().slice(0,10),
-images:JSON.stringify(caseImgsLoaded),
-doctor_comment:’’,
-dept:document.getElementById(‘nc-dept’)?document.getElementById(‘nc-dept’).value:’’
-});
-}
-var ok=document.getElementById(‘case-ok’);if(ok)ok.style.display=‘block’;
-selectedTeeth=[];selectedSurfs=[];caseImgsLoaded=[];
-} catch(e){alert(‘خطأ في الإرسال’);console.error(e);}
-if(btn){btn.disabled=false;btn.innerHTML=‘📤 إرسال للمراجعة’;}
+  try {
+    for(var t=0;t<selectedTeeth.length;t++){
+      await DB.addCase({
+        id:'C'+Date.now()+'_'+t,
+        patient_id:patParts[0], patient_name:patParts[1]||'',
+        student_id:CU.id, student_name:CU.name,
+        doctor_id:docParts[0], doctor_name:docParts[1]||'',
+        tooth:selectedTeeth[t], procedure:procLabel,
+        surfaces:JSON.stringify(selectedSurfs),
+        notes:document.getElementById('nc-notes')?document.getElementById('nc-notes').value:'',
+        status:'قيد المراجعة',
+        date:new Date().toISOString().slice(0,10),
+        images:JSON.stringify(caseImgsLoaded),
+        doctor_comment:'',
+        dept:document.getElementById('nc-dept')?document.getElementById('nc-dept').value:''
+      });
+    }
+    var ok=document.getElementById('case-ok');if(ok)ok.style.display='block';
+    selectedTeeth=[];selectedSurfs=[];caseImgsLoaded=[];
+  } catch(e){alert('خطأ في الإرسال');console.error(e);}
+  if(btn){btn.disabled=false;btn.innerHTML='📤 إرسال للمراجعة';}
 }
 
 function pgSchedule(){
-var days=[‘الأحد’,‘الاثنين’,‘الثلاثاء’,‘الأربعاء’,‘الخميس’];
-var shifts=[[{dept:‘جراحة الفم’,time:‘08:00-12:00’,room:‘عنبر 3أ’}],[{dept:‘أمراض اللثة’,time:‘13:00-17:00’,room:‘عنبر 1ب’}],[],[{dept:‘جراحة الفم’,time:‘08:00-12:00’,room:‘عنبر 3أ’}],[{dept:‘تعويضات’,time:‘10:00-14:00’,room:‘عنبر 2ج’}]];
-var h=H(‘جدول العنبر’)+’<div class="sg sg5">’;
-for(var i=0;i<days.length;i++){
-h+=’<div class="card" style="padding:13px"><div style="font-weight:800;color:var(--navy);font-size:12px;margin-bottom:9px">’+days[i]+’</div>’;
-if(shifts[i].length)h+=’<div style="background:var(--mint-bg);border-radius:7px;padding:9px"><div style="font-weight:700;color:var(--mint);font-size:11px">’+shifts[i][0].dept+’</div><div style="color:var(--g600);font-size:10px;margin-top:2px">’+shifts[i][0].time+’</div><div style="color:var(--g400);font-size:10px">’+shifts[i][0].room+’</div></div>’;
-else h+=’<p style="color:var(--g400);font-size:11px;text-align:center;padding:11px 0">لا يوجد عنبر</p>’;
-h+=’</div>’;
-}
-return h+’</div>’;
+  var days=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس'];
+  var shifts=[[{dept:'جراحة الفم',time:'08:00-12:00',room:'عنبر 3أ'}],[{dept:'أمراض اللثة',time:'13:00-17:00',room:'عنبر 1ب'}],[],[{dept:'جراحة الفم',time:'08:00-12:00',room:'عنبر 3أ'}],[{dept:'تعويضات',time:'10:00-14:00',room:'عنبر 2ج'}]];
+  var h=H('جدول العنبر')+'<div class="sg sg5">';
+  for(var i=0;i<days.length;i++){
+    h+='<div class="card" style="padding:13px"><div style="font-weight:800;color:var(--navy);font-size:12px;margin-bottom:9px">'+days[i]+'</div>';
+    if(shifts[i].length)h+='<div style="background:var(--mint-bg);border-radius:7px;padding:9px"><div style="font-weight:700;color:var(--mint);font-size:11px">'+shifts[i][0].dept+'</div><div style="color:var(--g600);font-size:10px;margin-top:2px">'+shifts[i][0].time+'</div><div style="color:var(--g400);font-size:10px">'+shifts[i][0].room+'</div></div>';
+    else h+='<p style="color:var(--g400);font-size:11px;text-align:center;padding:11px 0">لا يوجد عنبر</p>';
+    h+='</div>';
+  }
+  return h+'</div>';
 }
 
 async function pgEvals(){
-var ev = await DB.getEvaluations(CU.id);
-var h=H(‘تقييماتي’)+’<div class="sg sg2">’;
-if(!ev.length) return h+’<div class="card"><p style="color:var(--g400)">لا توجد تقييمات بعد.</p></div></div>’;
-for(var j=0;j<ev.length;j++){
-var e=ev[j],avg=Math.round((e.clinical+e.handling+e.theoretical+e.professionalism)/4);
-h+=’<div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:13px"><div><div class="ch" style="margin:0">’+(e.dept||’’)+’</div><div style="color:var(--g400);font-size:12px">’+(e.supervisor||’’)+’ - ‘+(e.period||’’)+’</div></div><div style="text-align:left"><div style="font-size:26px;color:var(--mint);font-weight:900">’+avg+’%</div><span class="badge" style="background:var(--mint-bg);color:var(--mint)">’+(e.grade||’’)+’</span></div></div>’;
-h+=’<div class="prog" style="margin-bottom:13px"><div class="prog-f" style="width:'+avg+'%;background:linear-gradient(to left,var(--mint),var(--coral))"></div></div>’;
-h+=PR(‘السريري’,e.clinical,100,‘var(–mint)’)+PR(‘التعامل’,e.handling,100,‘var(–coral)’)+PR(‘النظري’,e.theoretical,100,’#6B8DD6’)+PR(‘الاحترافية’,e.professionalism,100,’#C9A84C’);
-if(e.comment)h+=’<p style="color:var(--g600);font-size:12px;font-style:italic;margin-top:9px;border-top:1px solid var(--g100);padding-top:9px">’+(e.comment||’’)+’</p>’;
-h+=’</div>’;
-}
-return h+’</div>’;
+  var ev = await DB.getEvaluations(CU.id);
+  var h=H('تقييماتي')+'<div class="sg sg2">';
+  if(!ev.length) return h+'<div class="card"><p style="color:var(--g400)">لا توجد تقييمات بعد.</p></div></div>';
+  for(var j=0;j<ev.length;j++){
+    var e=ev[j],avg=Math.round((e.clinical+e.handling+e.theoretical+e.professionalism)/4);
+    h+='<div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:13px"><div><div class="ch" style="margin:0">'+(e.dept||'')+'</div><div style="color:var(--g400);font-size:12px">'+(e.supervisor||'')+' - '+(e.period||'')+'</div></div><div style="text-align:left"><div style="font-size:26px;color:var(--mint);font-weight:900">'+avg+'%</div><span class="badge" style="background:var(--mint-bg);color:var(--mint)">'+(e.grade||'')+'</span></div></div>';
+    h+='<div class="prog" style="margin-bottom:13px"><div class="prog-f" style="width:'+avg+'%;background:linear-gradient(to left,var(--mint),var(--coral))"></div></div>';
+    h+=PR('السريري',e.clinical,100,'var(--mint)')+PR('التعامل',e.handling,100,'var(--coral)')+PR('النظري',e.theoretical,100,'#6B8DD6')+PR('الاحترافية',e.professionalism,100,'#C9A84C');
+    if(e.comment)h+='<p style="color:var(--g600);font-size:12px;font-style:italic;margin-top:9px;border-top:1px solid var(--g100);padding-top:9px">'+(e.comment||'')+'</p>';
+    h+='</div>';
+  }
+  return h+'</div>';
 }
 
 // ═══════════════════════════════════════════════════
 // SECRETARY PAGES
 // ═══════════════════════════════════════════════════
 async function pgSecHome(){
-var pts=await DB.getPatients(), ap=await DB.getAppointments();
-var pending=pts.filter(function(p){return p.status===‘معلّق’;}).length;
-var online=pts.filter(function(p){return p.source===‘online’;}).length;
-var h=H(‘لوحة السكرتيرة’,‘الاستقبال وإدارة المرضى’,’<button class="btn btn-p" onclick="navTo(\'register\')">➕ تسجيل مريض</button>’);
-h+=’<div class="sg sg4">’+SC(‘👥’,‘المرضى’,pts.length,‘var(–coral)’)+SC(‘🟡’,‘بانتظار التعيين’,pending,’#C9A84C’)+SC(‘🌐’,‘إلكتروني’,online,’#6B8DD6’,‘جديد’)+SC(‘📅’,‘المواعيد’,ap.length,‘var(–mint)’)+’</div>’;
-h+=’<div class="sg sg21"><div class="card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px"><div class="ch" style="margin:0">أحدث المرضى</div>’+(online?’<span class="badge" style="background:var(--coral-bg);color:var(--coral)">’+online+’ إلكتروني</span>’:’’)+’</div>’;
-var rec=pts.slice(0,5);
-for(var k=0;k<rec.length;k++) h+=LI(INI(rec[k].name),‘var(–coral-bg)’,‘var(–coral)’,rec[k].name+(rec[k].source===‘online’?’ 🌐’:’’),(rec[k].dept||’’)+’ - ‘+(rec[k].date||’’),BS(rec[k].status||’’),false);
-h+=’</div><div class="card"><div class="ch">توزيع الأقسام</div>’;
-var dpts=[‘جراحة الفم والأسنان’,‘أمراض اللثة’,‘تعويضات الأسنان’,‘تقويم الأسنان’];
-var dcols=[‘var(–coral)’,‘var(–mint)’,’#6B8DD6’,’#C9A84C’];
-for(var d=0;d<dpts.length;d++){var cnt=0;for(var p=0;p<pts.length;p++)if(pts[p].dept===dpts[d])cnt++;h+=PR(dpts[d],cnt,Math.max(pts.length,1),dcols[d]);}
-return h+’</div></div>’;
+  var pts=await DB.getPatients(), ap=await DB.getAppointments();
+  var pending=pts.filter(function(p){return p.status==='معلّق';}).length;
+  var online=pts.filter(function(p){return p.source==='online';}).length;
+  var h=H('لوحة السكرتيرة','الاستقبال وإدارة المرضى','<button class="btn btn-p" onclick="navTo(\'register\')">➕ تسجيل مريض</button>');
+  h+='<div class="sg sg4">'+SC('👥','المرضى',pts.length,'var(--coral)')+SC('🟡','بانتظار التعيين',pending,'#C9A84C')+SC('🌐','إلكتروني',online,'#6B8DD6','جديد')+SC('📅','المواعيد',ap.length,'var(--mint)')+'</div>';
+  h+='<div class="sg sg21"><div class="card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px"><div class="ch" style="margin:0">أحدث المرضى</div>'+(online?'<span class="badge" style="background:var(--coral-bg);color:var(--coral)">'+online+' إلكتروني</span>':'')+'</div>';
+  var rec=pts.slice(0,5);
+  for(var k=0;k<rec.length;k++) h+=LI(INI(rec[k].name),'var(--coral-bg)','var(--coral)',rec[k].name+(rec[k].source==='online'?' 🌐':''),(rec[k].dept||'')+' - '+(rec[k].date||''),BS(rec[k].status||''),false);
+  h+='</div><div class="card"><div class="ch">توزيع الأقسام</div>';
+  var dpts=['جراحة الفم والأسنان','أمراض اللثة','تعويضات الأسنان','تقويم الأسنان'];
+  var dcols=['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  for(var d=0;d<dpts.length;d++){var cnt=0;for(var p=0;p<pts.length;p++)if(pts[p].dept===dpts[d])cnt++;h+=PR(dpts[d],cnt,Math.max(pts.length,1),dcols[d]);}
+  return h+'</div></div>';
 }
 
 function pgRegister(){
-return H(‘تسجيل مريض جديد’)+’<div class="card" style="max-width:580px"><div id="reg-ok" class="alert a-ok">✅ تم تسجيل المريض!</div>’+
-‘<div class="img-upload-area" onclick="document.getElementById(\'dr-photo\').click()">’+
-‘<input type="file" id="dr-photo" accept="image/*" onchange="previewImg(\'dr-photo\',\'dr-photo-p\')"/>’+
-‘<img id="dr-photo-p" style="width:60px;height:60px;border-radius:50%;object-fit:cover;display:none;border:2px solid var(--coral);margin:0 auto 7px"/>’+
-‘<p style="color:var(--g400);font-size:12px">📷 صورة المريض (اختياري)</p></div>’+
-‘<div class="frow"><div class="field"><label>الاسم الكامل</label><input id="dr-name" placeholder="اسم المريض"/></div><div class="field"><label>الجوال</label><input id="dr-phone" placeholder="05XXXXXXXX" style="direction:ltr;text-align:left"/></div></div>’+
-‘<div class="frow"><div class="field"><label>العمر</label><input id="dr-age" type="number"/></div><div class="field"><label>الجنس</label><select id="dr-gender"><option>ذكر</option><option>أنثى</option></select></div></div>’+
-‘<div class="frow"><div class="field"><label>رقم الهوية</label><input id="dr-nid"/></div><div class="field"><label>البريد</label><input id="dr-email" type="email" style="direction:ltr;text-align:left"/></div></div>’+
-‘<div class="field"><label>الشكوى</label><select id="dr-complaint"><option value="">اختر…</option><option>ألم في الأسنان</option><option>نزيف اللثة</option><option>حساسية</option><option>مشكلة تاج</option><option>تقويم</option><option>فقدان أسنان</option><option>أطقم</option><option>فحص دوري</option><option>أخرى</option></select></div>’+
-‘<div class="field"><label>القسم</label><select id="dr-dept"><option value="">اختر…</option><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div>’+
-‘<div class="field"><label>الطقم</label><select id="dr-denture"><option value="لا">لا</option><option>طقم كامل (فكين)</option><option>طقم كامل علوي</option><option>طقم كامل سفلي</option><option>طقم جزئي</option></select></div>’+
-‘<div class="field"><label>ملاحظات</label><textarea id="dr-notes" rows="2"></textarea></div>’+
-‘<div style="display:flex;gap:9px"><button class="btn btn-p" onclick="dashReg()">✅ تسجيل</button><button class="btn btn-o" onclick="clearReg()">مسح</button></div></div>’;
+  return H('تسجيل مريض جديد')+'<div class="card" style="max-width:580px"><div id="reg-ok" class="alert a-ok">✅ تم تسجيل المريض!</div>'+
+  '<div class="img-upload-area" onclick="document.getElementById(\'dr-photo\').click()">'+
+  '<input type="file" id="dr-photo" accept="image/*" onchange="previewImg(\'dr-photo\',\'dr-photo-p\')"/>'+
+  '<img id="dr-photo-p" style="width:60px;height:60px;border-radius:50%;object-fit:cover;display:none;border:2px solid var(--coral);margin:0 auto 7px"/>'+
+  '<p style="color:var(--g400);font-size:12px">📷 صورة المريض (اختياري)</p></div>'+
+  '<div class="frow"><div class="field"><label>الاسم الكامل</label><input id="dr-name" placeholder="اسم المريض"/></div><div class="field"><label>الجوال</label><input id="dr-phone" placeholder="05XXXXXXXX" style="direction:ltr;text-align:left"/></div></div>'+
+  '<div class="frow"><div class="field"><label>العمر</label><input id="dr-age" type="number"/></div><div class="field"><label>الجنس</label><select id="dr-gender"><option>ذكر</option><option>أنثى</option></select></div></div>'+
+  '<div class="frow"><div class="field"><label>رقم الهوية</label><input id="dr-nid"/></div><div class="field"><label>البريد</label><input id="dr-email" type="email" style="direction:ltr;text-align:left"/></div></div>'+
+  '<div class="field"><label>الشكوى</label><select id="dr-complaint"><option value="">اختر...</option><option>ألم في الأسنان</option><option>نزيف اللثة</option><option>حساسية</option><option>مشكلة تاج</option><option>تقويم</option><option>فقدان أسنان</option><option>أطقم</option><option>فحص دوري</option><option>أخرى</option></select></div>'+
+  '<div class="field"><label>القسم</label><select id="dr-dept"><option value="">اختر...</option><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div>'+
+  '<div class="field"><label>الطقم</label><select id="dr-denture"><option value="لا">لا</option><option>طقم كامل (فكين)</option><option>طقم كامل علوي</option><option>طقم كامل سفلي</option><option>طقم جزئي</option></select></div>'+
+  '<div class="field"><label>ملاحظات</label><textarea id="dr-notes" rows="2"></textarea></div>'+
+  '<div style="display:flex;gap:9px"><button class="btn btn-p" onclick="dashReg()">✅ تسجيل</button><button class="btn btn-o" onclick="clearReg()">مسح</button></div></div>';
 }
 
 async function dashReg(){
-var name=(document.getElementById(‘dr-name’)?document.getElementById(‘dr-name’).value.trim():’’);
-var phone=(document.getElementById(‘dr-phone’)?document.getElementById(‘dr-phone’).value.trim():’’);
-var complaint=document.getElementById(‘dr-complaint’)?document.getElementById(‘dr-complaint’).value:’’;
-if(!name||!phone){alert(‘الاسم والجوال مطلوبان’);return;}
-var btn=document.querySelector(’.btn-p[onclick=“dashReg()”]’);
-if(btn){btn.disabled=true;btn.innerHTML=‘جارٍ الحفظ…<span class="spin-sm"></span>’;}
-getImgBase64(‘dr-photo’,async function(photo){
-try {
-await DB.addPatient({
-id:‘P’+Date.now(),name:name,
-age:document.getElementById(‘dr-age’)?document.getElementById(‘dr-age’).value:’’,
-phone:phone,email:document.getElementById(‘dr-email’)?document.getElementById(‘dr-email’).value:’’,
-nid:document.getElementById(‘dr-nid’)?document.getElementById(‘dr-nid’).value:’’,
-complaint:complaint,dept:document.getElementById(‘dr-dept’)?document.getElementById(‘dr-dept’).value||‘معلّق’:‘معلّق’,
-status:‘مجدول’,doctor:‘غير محدد’,
-date:new Date().toISOString().slice(0,10),
-notes:document.getElementById(‘dr-notes’)?document.getElementById(‘dr-notes’).value:’’,
-source:‘walk-in’,photo:photo,
-denture:document.getElementById(‘dr-denture’)?document.getElementById(‘dr-denture’).value:‘لا’
-});
-var ok=document.getElementById(‘reg-ok’);if(ok)ok.style.display=‘block’;
-} catch(e){alert(‘خطأ في التسجيل’);console.error(e);}
-if(btn){btn.disabled=false;btn.innerHTML=‘✅ تسجيل’;}
-});
+  var name=(document.getElementById('dr-name')?document.getElementById('dr-name').value.trim():'');
+  var phone=(document.getElementById('dr-phone')?document.getElementById('dr-phone').value.trim():'');
+  var complaint=document.getElementById('dr-complaint')?document.getElementById('dr-complaint').value:'';
+  if(!name||!phone){alert('الاسم والجوال مطلوبان');return;}
+  var btn=document.querySelector('.btn-p[onclick="dashReg()"]');
+  if(btn){btn.disabled=true;btn.innerHTML='جارٍ الحفظ...<span class="spin-sm"></span>';}
+  getImgBase64('dr-photo',async function(photo){
+    try {
+      await DB.addPatient({
+        id:'P'+Date.now(),name:name,
+        age:document.getElementById('dr-age')?document.getElementById('dr-age').value:'',
+        phone:phone,email:document.getElementById('dr-email')?document.getElementById('dr-email').value:'',
+        nid:document.getElementById('dr-nid')?document.getElementById('dr-nid').value:'',
+        complaint:complaint,dept:document.getElementById('dr-dept')?document.getElementById('dr-dept').value||'معلّق':'معلّق',
+        status:'مجدول',doctor:'غير محدد',
+        date:new Date().toISOString().slice(0,10),
+        notes:document.getElementById('dr-notes')?document.getElementById('dr-notes').value:'',
+        source:'walk-in',photo:photo,
+        denture:document.getElementById('dr-denture')?document.getElementById('dr-denture').value:'لا'
+      });
+      var ok=document.getElementById('reg-ok');if(ok)ok.style.display='block';
+    } catch(e){alert('خطأ في التسجيل');console.error(e);}
+    if(btn){btn.disabled=false;btn.innerHTML='✅ تسجيل';}
+  });
 }
-function clearReg(){[‘dr-name’,‘dr-phone’,‘dr-age’,‘dr-email’,‘dr-notes’,‘dr-nid’].forEach(function(id){var e=document.getElementById(id);if(e)e.value=’’;});[‘dr-gender’,‘dr-complaint’,‘dr-dept’,‘dr-denture’].forEach(function(id){var e=document.getElementById(id);if(e)e.value=’’;});}
+function clearReg(){['dr-name','dr-phone','dr-age','dr-email','dr-notes','dr-nid'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});['dr-gender','dr-complaint','dr-dept','dr-denture'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});}
 
 async function pgAllPatients(){
-var pts=await DB.getPatients();
-var btn=CU.role===‘secretary’?’<button class="btn btn-p" onclick="navTo(\'register\')">➕ تسجيل جديد</button>’:’’;
-return H(‘جميع المرضى’,pts.length+’ مريض’,btn)+’<div class="card">’+TBL([{k:‘id’,l:‘الرقم’},{k:‘name’,l:‘الاسم’},{k:‘age’,l:‘العمر’},{k:‘phone’,l:‘الجوال’},{k:‘complaint’,l:‘الشكوى’},{k:‘dept’,l:‘القسم’},{k:‘denture’,l:‘الطقم’},{k:‘source’,l:‘المصدر’,r:function(v){return v===‘online’?‘🌐 إلكتروني’:‘🚶 حضوري’;}},{k:‘status’,l:‘الحالة’,r:function(v){return BS(v);}}],pts)+’</div>’;
+  var pts=await DB.getPatients();
+  var btn=CU.role==='secretary'?'<button class="btn btn-p" onclick="navTo(\'register\')">➕ تسجيل جديد</button>':'';
+  return H('جميع المرضى',pts.length+' مريض',btn)+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'age',l:'العمر'},{k:'phone',l:'الجوال'},{k:'complaint',l:'الشكوى'},{k:'dept',l:'القسم'},{k:'denture',l:'الطقم'},{k:'source',l:'المصدر',r:function(v){return v==='online'?'🌐 إلكتروني':'🚶 حضوري';}},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],pts)+'</div>';
 }
 
 async function pgAssign(){
-var pts=await DB.getPatients(), sts=await DB.getUsers(‘student’);
-var pending=pts.filter(function(p){return p.status===‘معلّق’||!p.student_id;});
-var h=H(‘تعيين الحالات’,‘تعيين المرضى للطلاب’);
-h+=’<div id="assign-ok" class="alert a-ok">✅ تم التعيين!</div>’;
-if(!pending.length) return h+’<div class="card"><p style="color:var(--g400)">لا يوجد مرضى بانتظار التعيين.</p></div>’;
-h+=’<div style="display:flex;flex-direction:column;gap:10px">’;
-for(var i=0;i<pending.length;i++){
-var p=pending[i];
-var sOpts=’<option value="">اختر الطالب…</option>’;
-for(var j=0;j<sts.length;j++){if(sts[j].status===‘نشط’)sOpts+=’<option value="'+sts[j].id+'|'+esc(sts[j].name)+'">’+sts[j].name+’</option>’;}
-h+=’<div class="card" style="border-right:3px solid var(--gold)">’;
-h+=’<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">’;
-h+=’<div style="width:44px;height:44px;border-radius:50%;background:var(--coral-bg);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--coral)">’+INI(p.name)+’</div>’;
-h+=’<div><div style="font-weight:700;color:var(--navy)">’+(p.name||’’)+’</div><div style="font-size:12px;color:var(--g400)">’+(p.complaint||’’)+’ — ‘+(p.dept||’’)+’</div></div></div>’;
-h+=’<div style="display:flex;gap:10px;align-items:flex-end">’;
-h+=’<div style="flex:1"><div style="font-size:10px;font-weight:700;color:var(--g600);margin-bottom:3px">الطالب المعيّن</div>’;
-h+=’<select id="asgn-'+p.id+'" style="width:100%;padding:7px 11px;border-radius:8px;border:1px solid var(--g200);font-family:var(--font);font-size:13px;outline:none">’+sOpts+’</select></div>’;
-h+=’<button class="btn btn-p btn-sm" onclick="doAssign(\''+p.id+'\')">تعيين</button></div></div>’;
-}
-return h+’</div>’;
+  var pts=await DB.getPatients(), sts=await DB.getUsers('student');
+  var pending=pts.filter(function(p){return p.status==='معلّق'||!p.student_id;});
+  var h=H('تعيين الحالات','تعيين المرضى للطلاب');
+  h+='<div id="assign-ok" class="alert a-ok">✅ تم التعيين!</div>';
+  if(!pending.length) return h+'<div class="card"><p style="color:var(--g400)">لا يوجد مرضى بانتظار التعيين.</p></div>';
+  h+='<div style="display:flex;flex-direction:column;gap:10px">';
+  for(var i=0;i<pending.length;i++){
+    var p=pending[i];
+    var sOpts='<option value="">اختر الطالب...</option>';
+    for(var j=0;j<sts.length;j++){if(sts[j].status==='نشط')sOpts+='<option value="'+sts[j].id+'|'+esc(sts[j].name)+'">'+sts[j].name+'</option>';}
+    h+='<div class="card" style="border-right:3px solid var(--gold)">';
+    h+='<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">';
+    h+='<div style="width:44px;height:44px;border-radius:50%;background:var(--coral-bg);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--coral)">'+INI(p.name)+'</div>';
+    h+='<div><div style="font-weight:700;color:var(--navy)">'+(p.name||'')+'</div><div style="font-size:12px;color:var(--g400)">'+(p.complaint||'')+' — '+(p.dept||'')+'</div></div></div>';
+    h+='<div style="display:flex;gap:10px;align-items:flex-end">';
+    h+='<div style="flex:1"><div style="font-size:10px;font-weight:700;color:var(--g600);margin-bottom:3px">الطالب المعيّن</div>';
+    h+='<select id="asgn-'+p.id+'" style="width:100%;padding:7px 11px;border-radius:8px;border:1px solid var(--g200);font-family:var(--font);font-size:13px;outline:none">'+sOpts+'</select></div>';
+    h+='<button class="btn btn-p btn-sm" onclick="doAssign(\''+p.id+'\')">تعيين</button></div></div>';
+  }
+  return h+'</div>';
 }
 
 async function doAssign(patId){
-var sel=document.getElementById(‘asgn-’+patId);
-if(!sel||!sel.value){alert(‘يرجى اختيار طالب’);return;}
-var parts=sel.value.split(’|’);
-try {
-await DB.updatePatient(patId,{student_id:parts[0],student_name:parts[1]||’’,status:‘مجدول’});
-var ok=document.getElementById(‘assign-ok’);if(ok)ok.style.display=‘block’;
-setTimeout(function(){navTo(‘assign’);},1000);
-} catch(e){alert(‘خطأ في التعيين’);console.error(e);}
+  var sel=document.getElementById('asgn-'+patId);
+  if(!sel||!sel.value){alert('يرجى اختيار طالب');return;}
+  var parts=sel.value.split('|');
+  try {
+    await DB.updatePatient(patId,{student_id:parts[0],student_name:parts[1]||'',status:'مجدول'});
+    var ok=document.getElementById('assign-ok');if(ok)ok.style.display='block';
+    setTimeout(function(){navTo('assign');},1000);
+  } catch(e){alert('خطأ في التعيين');console.error(e);}
 }
 
 // ═══════════════════════════════════════════════════
 // DOCTOR PAGES
 // ═══════════════════════════════════════════════════
 async function pgDocHome(){
-var pts=await DB.getPatients(), sts=await DB.getUsers(‘student’);
-var cases=await DB.getCases({doctor_id:CU.id});
-var pending=cases.filter(function(c){return c.status===‘قيد المراجعة’;});
-var h=H(‘د. ‘+CU.name,(CU.dept||’’)+’ - مشرف’);
-h+=’<div class="sg sg4">’+SC(‘🦷’,‘المرضى’,pts.length,’#C9A84C’)+SC(‘🎓’,‘الطلاب’,sts.length,‘var(–mint)’)+SC(‘📁’,‘حالاتي’,cases.length,‘var(–coral)’)+SC(‘⏳’,‘بانتظار المراجعة’,pending.length,’#6B8DD6’,pending.length?‘تحتاج اهتمامك’:’’)+’</div>’;
-if(pending.length)h+=’<div class="alert a-info" style="display:block;margin-bottom:14px;cursor:pointer" onclick="navTo(\'reviewcases\')">’+pending.length+’ حالة تنتظر مراجعتك — انقر للمراجعة ←</div>’;
-h+=’<div class="sg sg21"><div class="card"><div class="ch">حالات بانتظار المراجعة</div>’;
-if(pending.length){for(var j=0;j<Math.min(pending.length,4);j++){var c=pending[j];h+=LI(’<span style="font-family:monospace;font-size:10px">’+(c.tooth||’’)+’</span>’,‘var(–gold-bg)’,‘var(–gold)’,(c.procedure||’’),(c.student_name||’’)+’ — ‘+(c.patient_name||’’),BS(c.status||’’),false);}}
-else h+=’<p style="color:var(--g400);font-size:13px">لا توجد حالات بانتظار المراجعة. 🎉</p>’;
-h+=’</div><div class="card"><div class="ch">أداء الطلاب</div>’;
-for(var k=0;k<Math.min(sts.length,4);k++){var s=sts[k];h+=’<div style="display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--g100)"><div style="width:7px;height:7px;border-radius:50%;background:'+GC(s.gpa||0)+'"></div><div style="flex:1"><div style="font-weight:700;font-size:12px;color:var(--navy)">’+(s.name||’’)+’</div><div style="font-size:11px;color:var(--g400)">’+(s.level||’’)+’</div></div><span style="font-weight:900;color:var(--mint);font-size:12px">’+(s.gpa||0)+’</span></div>’;}
-return h+’</div></div>’;
+  var pts=await DB.getPatients(), sts=await DB.getUsers('student');
+  var cases=await DB.getCases({doctor_id:CU.id});
+  var pending=cases.filter(function(c){return c.status==='قيد المراجعة';});
+  var h=H('د. '+CU.name,(CU.dept||'')+' - مشرف');
+  h+='<div class="sg sg4">'+SC('🦷','المرضى',pts.length,'#C9A84C')+SC('🎓','الطلاب',sts.length,'var(--mint)')+SC('📁','حالاتي',cases.length,'var(--coral)')+SC('⏳','بانتظار المراجعة',pending.length,'#6B8DD6',pending.length?'تحتاج اهتمامك':'')+'</div>';
+  if(pending.length)h+='<div class="alert a-info" style="display:block;margin-bottom:14px;cursor:pointer" onclick="navTo(\'reviewcases\')">'+pending.length+' حالة تنتظر مراجعتك — انقر للمراجعة ←</div>';
+  h+='<div class="sg sg21"><div class="card"><div class="ch">حالات بانتظار المراجعة</div>';
+  if(pending.length){for(var j=0;j<Math.min(pending.length,4);j++){var c=pending[j];h+=LI('<span style="font-family:monospace;font-size:10px">'+(c.tooth||'')+'</span>','var(--gold-bg)','var(--gold)',(c.procedure||''),(c.student_name||'')+' — '+(c.patient_name||''),BS(c.status||''),false);}}
+  else h+='<p style="color:var(--g400);font-size:13px">لا توجد حالات بانتظار المراجعة. 🎉</p>';
+  h+='</div><div class="card"><div class="ch">أداء الطلاب</div>';
+  for(var k=0;k<Math.min(sts.length,4);k++){var s=sts[k];h+='<div style="display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--g100)"><div style="width:7px;height:7px;border-radius:50%;background:'+GC(s.gpa||0)+'"></div><div style="flex:1"><div style="font-weight:700;font-size:12px;color:var(--navy)">'+(s.name||'')+'</div><div style="font-size:11px;color:var(--g400)">'+(s.level||'')+'</div></div><span style="font-weight:900;color:var(--mint);font-size:12px">'+(s.gpa||0)+'</span></div>';}
+  return h+'</div></div>';
 }
 
 async function pgReviewCases(){
-var cases=await DB.getCases({doctor_id:CU.id});
-var pending=cases.filter(function(c){return c.status===‘قيد المراجعة’;});
-var h=H(‘مراجعة الحالات’,pending.length+’ حالة بانتظار المراجعة’);
-if(pending.length)h+=’<div class="alert a-info" style="display:block;margin-bottom:14px">’+pending.length+’ حالة تنتظر موافقتك</div>’;
-h+=’<div style="display:flex;flex-direction:column;gap:10px">’;
-if(!cases.length){return h+’<div class="card"><p style="color:var(--g400)">لا توجد حالات.</p></div></div>’;}
-for(var j=0;j<cases.length;j++){
-var c=cases[j];
-var imgs=[];try{imgs=JSON.parse(c.images||’[]’);}catch(e){}
-h+=’<div class="case-card '+(c.status==='معتمد'?'approved':c.status==='مرفوض'?'rejected':'pending')+'">’;
-h+=’<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">’;
-h+=’<div style="display:flex;align-items:center;gap:7px"><span class="case-tooth">’+(c.tooth||’’)+’</span><span class="case-proc">’+(c.procedure||’’)+’</span></div>’;
-h+=BS(c.status||’’)+’</div>’;
-h+=’<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:12px;color:var(--g600);margin-bottom:8px">’;
-h+=’<div>المريض: <strong>’+(c.patient_name||’’)+’</strong></div>’;
-h+=’<div>الطالب: <strong>’+(c.student_name||’’)+’</strong></div>’;
-h+=’<div>التاريخ: <strong>’+(c.date||’’)+’</strong></div></div>’;
-if(c.notes)h+=’<div style="font-size:12px;color:var(--g600);background:var(--off);border-radius:7px;padding:7px;margin-bottom:7px">’+(c.notes||’’)+’</div>’;
-if(imgs.length){
-h+=’<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">’;
-for(var k=0;k<imgs.length;k++) h+=’<img src="'+imgs[k]+'" style="width:80px;height:70px;object-fit:cover;border-radius:7px;border:1px solid var(--g200);cursor:pointer" onclick="openModal(\'صورة الحالة\',\'<div style=text-align:center><img src=\\\''+imgs[k]+'\\\' style=\\\'max-width:100%;border-radius:8px\\\'></div>\')"/>’;
-h+=’</div>’;
-}
-if(c.status===‘قيد المراجعة’){
-h+=’<div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap">’;
-h+=’<div style="flex:1"><div style="font-size:10px;font-weight:700;color:var(--g600);margin-bottom:3px">تعليقك</div>’;
-h+=’<input id="cmt-'+c.id+'" placeholder="اكتب ملاحظاتك..." style="width:100%;padding:7px 11px;border-radius:8px;border:1px solid var(--g200);font-family:var(--font);font-size:13px;outline:none"/></div>’;
-h+=’<button class="btn btn-m btn-sm" onclick="reviewCase(\''+c.id+'\',\'معتمد\')">اعتماد ✓</button>’;
-h+=’<button class="btn btn-red btn-sm" onclick="reviewCase(\''+c.id+'\',\'مرفوض\')">رفض ✗</button></div>’;
-}else if(c.doctor_comment){
-h+=’<div style="font-size:12px;color:'+(c.status==='معتمد'?'var(--mint)':'var(--red)')+';background:'+(c.status==='معتمد'?'var(--mint-bg)':'var(--red-bg)')+';border-radius:7px;padding:7px"><strong>تعليقك:</strong> ‘+(c.doctor_comment||’’)+’</div>’;
-}
-h+=’</div>’;
-}
-return h+’</div>’;
+  var cases=await DB.getCases({doctor_id:CU.id});
+  var pending=cases.filter(function(c){return c.status==='قيد المراجعة';});
+  var h=H('مراجعة الحالات',pending.length+' حالة بانتظار المراجعة');
+  if(pending.length)h+='<div class="alert a-info" style="display:block;margin-bottom:14px">'+pending.length+' حالة تنتظر موافقتك</div>';
+  h+='<div style="display:flex;flex-direction:column;gap:10px">';
+  if(!cases.length){return h+'<div class="card"><p style="color:var(--g400)">لا توجد حالات.</p></div></div>';}
+  for(var j=0;j<cases.length;j++){
+    var c=cases[j];
+    var imgs=[];try{imgs=JSON.parse(c.images||'[]');}catch(e){}
+    h+='<div class="case-card '+(c.status==='معتمد'?'approved':c.status==='مرفوض'?'rejected':'pending')+'">';
+    h+='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">';
+    h+='<div style="display:flex;align-items:center;gap:7px"><span class="case-tooth">'+(c.tooth||'')+'</span><span class="case-proc">'+(c.procedure||'')+'</span></div>';
+    h+=BS(c.status||'')+'</div>';
+    h+='<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:12px;color:var(--g600);margin-bottom:8px">';
+    h+='<div>المريض: <strong>'+(c.patient_name||'')+'</strong></div>';
+    h+='<div>الطالب: <strong>'+(c.student_name||'')+'</strong></div>';
+    h+='<div>التاريخ: <strong>'+(c.date||'')+'</strong></div></div>';
+    if(c.notes)h+='<div style="font-size:12px;color:var(--g600);background:var(--off);border-radius:7px;padding:7px;margin-bottom:7px">'+(c.notes||'')+'</div>';
+    if(imgs.length){
+      h+='<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">';
+      for(var k=0;k<imgs.length;k++) h+='<img src="'+imgs[k]+'" style="width:80px;height:70px;object-fit:cover;border-radius:7px;border:1px solid var(--g200);cursor:pointer" onclick="openModal(\'صورة الحالة\',\'<div style=text-align:center><img src=\\\''+imgs[k]+'\\\' style=\\\'max-width:100%;border-radius:8px\\\'></div>\')"/>';
+      h+='</div>';
+    }
+    if(c.status==='قيد المراجعة'){
+      h+='<div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap">';
+      h+='<div style="flex:1"><div style="font-size:10px;font-weight:700;color:var(--g600);margin-bottom:3px">تعليقك</div>';
+      h+='<input id="cmt-'+c.id+'" placeholder="اكتب ملاحظاتك..." style="width:100%;padding:7px 11px;border-radius:8px;border:1px solid var(--g200);font-family:var(--font);font-size:13px;outline:none"/></div>';
+      h+='<button class="btn btn-m btn-sm" onclick="reviewCase(\''+c.id+'\',\'معتمد\')">اعتماد ✓</button>';
+      h+='<button class="btn btn-red btn-sm" onclick="reviewCase(\''+c.id+'\',\'مرفوض\')">رفض ✗</button></div>';
+    }else if(c.doctor_comment){
+      h+='<div style="font-size:12px;color:'+(c.status==='معتمد'?'var(--mint)':'var(--red)')+';background:'+(c.status==='معتمد'?'var(--mint-bg)':'var(--red-bg)')+';border-radius:7px;padding:7px"><strong>تعليقك:</strong> '+(c.doctor_comment||'')+'</div>';
+    }
+    h+='</div>';
+  }
+  return h+'</div>';
 }
 
 async function reviewCase(caseId,status){
-var comment=document.getElementById(‘cmt-’+caseId);
-try {
-await DB.updateCase(caseId,{status:status,doctor_comment:comment?comment.value:’’});
-navTo(‘reviewcases’);
-} catch(e){alert(‘خطأ في الحفظ’);console.error(e);}
+  var comment=document.getElementById('cmt-'+caseId);
+  try {
+    await DB.updateCase(caseId,{status:status,doctor_comment:comment?comment.value:''});
+    navTo('reviewcases');
+  } catch(e){alert('خطأ في الحفظ');console.error(e);}
 }
 
 async function pgEvaluate(){
-var sts=await DB.getUsers(‘student’);
-return H(‘تقييم الطلاب’)+’<div class="card" style="max-width:540px"><div id="eval-ok" class="alert a-ok">✅ تم إرسال التقييم!</div><div class="field"><label>الطالب</label><select id="ev-s"><option value="">اختر…</option>’+sts.map(function(s){return ‘<option value="'+s.id+'">’+s.name+’</option>’;}).join(’’)+’</select></div><div class="field"><label>الفترة</label><select id="ev-p"><option>الربع الأول 2025</option><option>الربع الثاني 2025</option><option>الربع الثالث 2025</option><option>الربع الرابع 2025</option></select></div><div class="frow"><div class="field"><label>السريري (0-100)</label><input id="ev-c" type="number" min="0" max="100" placeholder="85"/></div><div class="field"><label>التعامل (0-100)</label><input id="ev-h" type="number" min="0" max="100" placeholder="90"/></div></div><div class="frow"><div class="field"><label>النظري (0-100)</label><input id="ev-t" type="number" min="0" max="100" placeholder="80"/></div><div class="field"><label>الاحترافية (0-100)</label><input id="ev-pp" type="number" min="0" max="100" placeholder="95"/></div></div><div class="field"><label>التعليق</label><textarea id="ev-comment" rows="3"></textarea></div><button class="btn btn-g" onclick="subEval()">⭐ إرسال التقييم</button></div>’;
+  var sts=await DB.getUsers('student');
+  return H('تقييم الطلاب')+'<div class="card" style="max-width:540px"><div id="eval-ok" class="alert a-ok">✅ تم إرسال التقييم!</div><div class="field"><label>الطالب</label><select id="ev-s"><option value="">اختر...</option>'+sts.map(function(s){return '<option value="'+s.id+'">'+s.name+'</option>';}).join('')+'</select></div><div class="field"><label>الفترة</label><select id="ev-p"><option>الربع الأول 2025</option><option>الربع الثاني 2025</option><option>الربع الثالث 2025</option><option>الربع الرابع 2025</option></select></div><div class="frow"><div class="field"><label>السريري (0-100)</label><input id="ev-c" type="number" min="0" max="100" placeholder="85"/></div><div class="field"><label>التعامل (0-100)</label><input id="ev-h" type="number" min="0" max="100" placeholder="90"/></div></div><div class="frow"><div class="field"><label>النظري (0-100)</label><input id="ev-t" type="number" min="0" max="100" placeholder="80"/></div><div class="field"><label>الاحترافية (0-100)</label><input id="ev-pp" type="number" min="0" max="100" placeholder="95"/></div></div><div class="field"><label>التعليق</label><textarea id="ev-comment" rows="3"></textarea></div><button class="btn btn-g" onclick="subEval()">⭐ إرسال التقييم</button></div>';
 }
 
 async function subEval(){
-var sid=document.getElementById(‘ev-s’); if(!sid||!sid.value){alert(‘يرجى اختيار طالب’);return;}
-var c=parseInt(document.getElementById(‘ev-c’)?document.getElementById(‘ev-c’).value:0)||0;
-var hv=parseInt(document.getElementById(‘ev-h’)?document.getElementById(‘ev-h’).value:0)||0;
-var t=parseInt(document.getElementById(‘ev-t’)?document.getElementById(‘ev-t’).value:0)||0;
-var pp=parseInt(document.getElementById(‘ev-pp’)?document.getElementById(‘ev-pp’).value:0)||0;
-var avg=Math.round((c+hv+t+pp)/4);
-var grade=avg>=90?‘A’:avg>=80?‘B+’:avg>=70?‘B’:avg>=60?‘C’:‘F’;
-try {
-await DB.addEvaluation({id:‘E’+Date.now(),student_id:sid.value,supervisor:CU.name,dept:CU.dept||’’,period:document.getElementById(‘ev-p’)?document.getElementById(‘ev-p’).value:’’,clinical:c,handling:hv,theoretical:t,professionalism:pp,grade:grade,comment:document.getElementById(‘ev-comment’)?document.getElementById(‘ev-comment’).value:’’});
-var ok=document.getElementById(‘eval-ok’);if(ok)ok.style.display=‘block’;
-} catch(e){alert(‘خطأ في الإرسال’);console.error(e);}
+  var sid=document.getElementById('ev-s'); if(!sid||!sid.value){alert('يرجى اختيار طالب');return;}
+  var c=parseInt(document.getElementById('ev-c')?document.getElementById('ev-c').value:0)||0;
+  var hv=parseInt(document.getElementById('ev-h')?document.getElementById('ev-h').value:0)||0;
+  var t=parseInt(document.getElementById('ev-t')?document.getElementById('ev-t').value:0)||0;
+  var pp=parseInt(document.getElementById('ev-pp')?document.getElementById('ev-pp').value:0)||0;
+  var avg=Math.round((c+hv+t+pp)/4);
+  var grade=avg>=90?'A':avg>=80?'B+':avg>=70?'B':avg>=60?'C':'F';
+  try {
+    await DB.addEvaluation({id:'E'+Date.now(),student_id:sid.value,supervisor:CU.name,dept:CU.dept||'',period:document.getElementById('ev-p')?document.getElementById('ev-p').value:'',clinical:c,handling:hv,theoretical:t,professionalism:pp,grade:grade,comment:document.getElementById('ev-comment')?document.getElementById('ev-comment').value:''});
+    var ok=document.getElementById('eval-ok');if(ok)ok.style.display='block';
+  } catch(e){alert('خطأ في الإرسال');console.error(e);}
 }
 
 async function pgStudents(){
-var sts=await DB.getUsers(‘student’);
-return H(‘سجلات الطلاب’,sts.length+’ طالب’,’<button class="btn btn-m" onclick="openAddUserModal(\'student\')">➕ إضافة طالب</button>’)+’<div class="card">’+TBL([{k:‘id’,l:‘الرقم’},{k:‘name’,l:‘الاسم’},{k:‘level’,l:‘المستوى’},{k:‘dept’,l:‘القسم’},{k:‘gpa’,l:‘المعدل’,r:function(v){return ‘<span style="font-weight:900;color:'+GC(v||0)+'">’+v+’</span>’;}},{k:‘status’,l:‘الحالة’,r:function(v){return BS(v);}}],sts)+’</div>’;
+  var sts=await DB.getUsers('student');
+  return H('سجلات الطلاب',sts.length+' طالب','<button class="btn btn-m" onclick="openAddUserModal(\'student\')">➕ إضافة طالب</button>')+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'level',l:'المستوى'},{k:'dept',l:'القسم'},{k:'gpa',l:'المعدل',r:function(v){return '<span style="font-weight:900;color:'+GC(v||0)+'">'+v+'</span>';}},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],sts)+'</div>';
 }
 
 async function pgDoctors(){
-var drs=await DB.getUsers(‘doctor’);
-return H(‘سجلات الأطباء’,drs.length+’ طبيب’,’<button class="btn btn-g" onclick="openAddUserModal(\'doctor\')">➕ إضافة طبيب</button>’)+’<div class="card">’+TBL([{k:‘id’,l:‘الرقم’},{k:‘name’,l:‘الاسم’},{k:‘dept’,l:‘القسم’},{k:‘status’,l:‘الحالة’,r:function(v){return BS(v);}}],drs)+’</div>’;
+  var drs=await DB.getUsers('doctor');
+  return H('سجلات الأطباء',drs.length+' طبيب','<button class="btn btn-g" onclick="openAddUserModal(\'doctor\')">➕ إضافة طبيب</button>')+'<div class="card">'+TBL([{k:'id',l:'الرقم'},{k:'name',l:'الاسم'},{k:'dept',l:'القسم'},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],drs)+'</div>';
 }
 
 // ═══════════════════════════════════════════════════
 // ADMIN PAGES
 // ═══════════════════════════════════════════════════
 async function pgAdminHome(){
-var pts=await DB.getPatients(), sts=await DB.getUsers(‘student’), drs=await DB.getUsers(‘doctor’);
-var cases=await DB.getCases(null);
-var online=pts.filter(function(p){return p.source===‘online’;}).length;
-var pending=pts.filter(function(p){return p.status===‘معلّق’;}).length;
-var pendingCases=cases.filter(function(c){return c.status===‘قيد المراجعة’;}).length;
-var h=H(‘لوحة الإدارة’,‘نظرة عامة شاملة’);
-h+=’<div class="sg sg4">’+SC(‘🦷’,‘المرضى’,pts.length,‘var(–coral)’,online+’ إلكتروني’)+SC(‘🎓’,‘الطلاب’,sts.length,‘var(–mint)’)+SC(‘🩺’,‘الأطباء’,drs.length,’#C9A84C’)+SC(‘📁’,‘حالات للمراجعة’,pendingCases,’#6B8DD6’)+’</div>’;
-if(pending)h+=’<div class="alert a-info" style="display:block;margin-bottom:13px;cursor:pointer" onclick="navTo(\'allpatients\')">’+pending+’ مريض بانتظار التعيين للطلاب</div>’;
-h+=’<div class="sg" style="grid-template-columns:1fr 1fr 1fr;gap:13px;margin-bottom:13px">’;
-h+=’<div class="card"><div class="ch">حالات المرضى</div>’;
-var stsList=[‘نشط’,‘مجدول’,‘معلّق’,‘مكتمل’],stsCols=[‘var(–mint)’,‘var(–coral)’,’#C9A84C’,‘var(–g400)’];
-for(var s=0;s<stsList.length;s++){var cnt=0;for(var p=0;p<pts.length;p++)if(pts[p].status===stsList[s])cnt++;h+=PR(stsList[s],cnt,Math.max(pts.length,1),stsCols[s]);}
-h+=’</div>’;
-var dpts=[‘جراحة الفم’,‘أمراض اللثة’,‘تعويضات’,‘تقويم’],dptsF=[‘جراحة الفم والأسنان’,‘أمراض اللثة’,‘تعويضات الأسنان’,‘تقويم الأسنان’],dcols=[‘var(–coral)’,‘var(–mint)’,’#6B8DD6’,’#C9A84C’];
-h+=’<div class="card"><div class="ch">الأقسام</div>’;
-for(var d=0;d<dpts.length;d++){var dcnt=0;for(var dp=0;dp<pts.length;dp++)if(pts[dp].dept===dptsF[d])dcnt++;h+=PR(dpts[d],dcnt,Math.max(pts.length,1),dcols[d]);}
-h+=’</div>’;
-var acts=[{l:‘الطلاب’,i:‘🎓’,c:‘var(–mint)’,t:‘students’},{l:‘الأطباء’,i:‘🩺’,c:’#C9A84C’,t:‘doctors’},{l:‘الحالات’,i:‘📁’,c:‘var(–coral)’,t:‘allcases’},{l:‘نشر خبر’,i:‘📰’,c:’#6B8DD6’,t:‘news’}];
-h+=’<div class="card"><div class="ch">إجراءات سريعة</div>’;
-for(var a=0;a<acts.length;a++){var ac=acts[a];h+=’<button onclick="navTo(\''+ac.t+'\')" style="width:100%;display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;border:1px solid var(--g200);background:var(--off);cursor:pointer;margin-bottom:6px;font-family:var(--font)"><div style="width:24px;height:24px;border-radius:6px;background:'+ac.c+'18;display:flex;align-items:center;justify-content:center;font-size:12px">’+ac.i+’</div><span style="font-weight:700;font-size:12px;color:var(--navy)">’+ac.l+’</span><span style="margin-right:auto;font-size:11px;color:var(--g400)">←</span></button>’;}
-h+=’</div></div>’;
-h+=’<div class="sg sg21"><div class="card"><div class="ch">أحدث المرضى</div>’;
-for(var r=0;r<Math.min(pts.length,5);r++) h+=LI(INI(pts[r].name),‘var(–coral-bg)’,‘var(–coral)’,pts[r].name+(pts[r].source===‘online’?’ 🌐’:’’),(pts[r].dept||’’)+’ - ‘+(pts[r].date||’’),BS(pts[r].status||’’),false);
-h+=’</div><div class="card"><div class="ch">نشاط النظام</div>’;
-var sysActs=[{l:‘إلكتروني’,v:online,i:‘🌐’},{l:‘بانتظار التعيين’,v:pending,i:‘⏳’},{l:‘حالات للمراجعة’,v:pendingCases,i:‘📁’},{l:‘إجمالي الحالات’,v:cases.length,i:‘📊’}];
-for(var sa=0;sa<sysActs.length;sa++) h+=’<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--g100)"><span>’+sysActs[sa].i+’</span><span style="flex:1;font-size:12px;color:var(--g600)">’+sysActs[sa].l+’</span><span style="font-weight:900;color:var(--navy);font-size:13px">’+sysActs[sa].v+’</span></div>’;
-return h+’</div></div>’;
+  var pts=await DB.getPatients(), sts=await DB.getUsers('student'), drs=await DB.getUsers('doctor');
+  var cases=await DB.getCases(null);
+  var online=pts.filter(function(p){return p.source==='online';}).length;
+  var pending=pts.filter(function(p){return p.status==='معلّق';}).length;
+  var pendingCases=cases.filter(function(c){return c.status==='قيد المراجعة';}).length;
+  var h=H('لوحة الإدارة','نظرة عامة شاملة');
+  h+='<div class="sg sg4">'+SC('🦷','المرضى',pts.length,'var(--coral)',online+' إلكتروني')+SC('🎓','الطلاب',sts.length,'var(--mint)')+SC('🩺','الأطباء',drs.length,'#C9A84C')+SC('📁','حالات للمراجعة',pendingCases,'#6B8DD6')+'</div>';
+  if(pending)h+='<div class="alert a-info" style="display:block;margin-bottom:13px;cursor:pointer" onclick="navTo(\'allpatients\')">'+pending+' مريض بانتظار التعيين للطلاب</div>';
+  h+='<div class="sg" style="grid-template-columns:1fr 1fr 1fr;gap:13px;margin-bottom:13px">';
+  h+='<div class="card"><div class="ch">حالات المرضى</div>';
+  var stsList=['نشط','مجدول','معلّق','مكتمل'],stsCols=['var(--mint)','var(--coral)','#C9A84C','var(--g400)'];
+  for(var s=0;s<stsList.length;s++){var cnt=0;for(var p=0;p<pts.length;p++)if(pts[p].status===stsList[s])cnt++;h+=PR(stsList[s],cnt,Math.max(pts.length,1),stsCols[s]);}
+  h+='</div>';
+  var dpts=['جراحة الفم','أمراض اللثة','تعويضات','تقويم'],dptsF=['جراحة الفم والأسنان','أمراض اللثة','تعويضات الأسنان','تقويم الأسنان'],dcols=['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  h+='<div class="card"><div class="ch">الأقسام</div>';
+  for(var d=0;d<dpts.length;d++){var dcnt=0;for(var dp=0;dp<pts.length;dp++)if(pts[dp].dept===dptsF[d])dcnt++;h+=PR(dpts[d],dcnt,Math.max(pts.length,1),dcols[d]);}
+  h+='</div>';
+  var acts=[{l:'الطلاب',i:'🎓',c:'var(--mint)',t:'students'},{l:'الأطباء',i:'🩺',c:'#C9A84C',t:'doctors'},{l:'الحالات',i:'📁',c:'var(--coral)',t:'allcases'},{l:'نشر خبر',i:'📰',c:'#6B8DD6',t:'news'}];
+  h+='<div class="card"><div class="ch">إجراءات سريعة</div>';
+  for(var a=0;a<acts.length;a++){var ac=acts[a];h+='<button onclick="navTo(\''+ac.t+'\')" style="width:100%;display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;border:1px solid var(--g200);background:var(--off);cursor:pointer;margin-bottom:6px;font-family:var(--font)"><div style="width:24px;height:24px;border-radius:6px;background:'+ac.c+'18;display:flex;align-items:center;justify-content:center;font-size:12px">'+ac.i+'</div><span style="font-weight:700;font-size:12px;color:var(--navy)">'+ac.l+'</span><span style="margin-right:auto;font-size:11px;color:var(--g400)">←</span></button>';}
+  h+='</div></div>';
+  h+='<div class="sg sg21"><div class="card"><div class="ch">أحدث المرضى</div>';
+  for(var r=0;r<Math.min(pts.length,5);r++) h+=LI(INI(pts[r].name),'var(--coral-bg)','var(--coral)',pts[r].name+(pts[r].source==='online'?' 🌐':''),(pts[r].dept||'')+' - '+(pts[r].date||''),BS(pts[r].status||''),false);
+  h+='</div><div class="card"><div class="ch">نشاط النظام</div>';
+  var sysActs=[{l:'إلكتروني',v:online,i:'🌐'},{l:'بانتظار التعيين',v:pending,i:'⏳'},{l:'حالات للمراجعة',v:pendingCases,i:'📁'},{l:'إجمالي الحالات',v:cases.length,i:'📊'}];
+  for(var sa=0;sa<sysActs.length;sa++) h+='<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--g100)"><span>'+sysActs[sa].i+'</span><span style="flex:1;font-size:12px;color:var(--g600)">'+sysActs[sa].l+'</span><span style="font-weight:900;color:var(--navy);font-size:13px">'+sysActs[sa].v+'</span></div>';
+  return h+'</div></div>';
 }
 
 async function pgAllCases(){
-var cases=await DB.getCases(null);
-return H(‘جميع الحالات’,cases.length+’ حالة’)+’<div class="card">’+TBL([{k:‘tooth’,l:‘السن’,r:function(v){return ‘<span class="case-tooth">’+(v||’’)+’</span>’;}},{k:‘procedure’,l:‘الإجراء’},{k:‘patient_name’,l:‘المريض’},{k:‘student_name’,l:‘الطالب’},{k:‘doctor_name’,l:‘الطبيب’},{k:‘dept’,l:‘القسم’},{k:‘date’,l:‘التاريخ’},{k:‘status’,l:‘الحالة’,r:function(v){return BS(v);}}],cases)+’</div>’;
+  var cases=await DB.getCases(null);
+  return H('جميع الحالات',cases.length+' حالة')+'<div class="card">'+TBL([{k:'tooth',l:'السن',r:function(v){return '<span class="case-tooth">'+(v||'')+'</span>';}},{k:'procedure',l:'الإجراء'},{k:'patient_name',l:'المريض'},{k:'student_name',l:'الطالب'},{k:'doctor_name',l:'الطبيب'},{k:'dept',l:'القسم'},{k:'date',l:'التاريخ'},{k:'status',l:'الحالة',r:function(v){return BS(v);}}],cases)+'</div>';
 }
 
 async function pgNews(){
-var news=await DB.getNews();
-var h=H(‘إدارة الأخبار’,’’,’<button class="btn btn-p" onclick="openAddNewsModal()">📰 نشر خبر</button>’);
-h+=’<div class="card">’;
-if(!news.length)h+=’<p style="color:var(--g400)">لا توجد أخبار بعد.</p>’;
-for(var i=0;i<news.length;i++){var n=news[i];h+=’<div style="display:flex;align-items:flex-start;gap:13px;padding:13px 0;border-bottom:1px solid var(--g100)"><div style="flex:1"><span class="ncat cat-'+n.category+'">’+n.category+’</span>’+(n.featured?’<span class="badge" style="background:var(--gold-bg);color:var(--gold);margin-right:5px;font-size:9px">مميز</span>’:’’)+’<div style="font-weight:700;color:var(--navy);font-size:13px;margin:4px 0 2px">’+(n.title||’’)+’</div><div style="color:var(--g400);font-size:11px">’+(n.date||’’)+’</div></div><button class="btn btn-o btn-sm" onclick="doDeleteNews(\''+n.id+'\')">🗑 حذف</button></div>’;}
-return h+’</div>’;
+  var news=await DB.getNews();
+  var h=H('إدارة الأخبار','','<button class="btn btn-p" onclick="openAddNewsModal()">📰 نشر خبر</button>');
+  h+='<div class="card">';
+  if(!news.length)h+='<p style="color:var(--g400)">لا توجد أخبار بعد.</p>';
+  for(var i=0;i<news.length;i++){var n=news[i];h+='<div style="display:flex;align-items:flex-start;gap:13px;padding:13px 0;border-bottom:1px solid var(--g100)"><div style="flex:1"><span class="ncat cat-'+n.category+'">'+n.category+'</span>'+(n.featured?'<span class="badge" style="background:var(--gold-bg);color:var(--gold);margin-right:5px;font-size:9px">مميز</span>':'')+'<div style="font-weight:700;color:var(--navy);font-size:13px;margin:4px 0 2px">'+(n.title||'')+'</div><div style="color:var(--g400);font-size:11px">'+(n.date||'')+'</div></div><button class="btn btn-o btn-sm" onclick="doDeleteNews(\''+n.id+'\')">🗑 حذف</button></div>';}
+  return h+'</div>';
 }
 
 function pgSchedules(){
-var dpts=[‘جراحة الفم والأسنان’,‘أمراض اللثة’,‘تعويضات الأسنان’,‘تقويم الأسنان’];
-var dcols=[‘var(–coral)’,‘var(–mint)’,’#6B8DD6’,’#C9A84C’];
-var h=H(‘جداول العنابر’)+’<div class="sg sg2">’;
-for(var i=0;i<dpts.length;i++){
-h+=’<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:11px"><div class="ch" style="margin:0">’+dpts[i]+’</div><span class="badge" style="background:'+dcols[i]+'18;color:'+dcols[i]+'">عنبر ‘+(i+1)+’</span></div>’;
-var shifts=[{day:‘الأحد/الثلاثاء’,time:‘08:00-12:00’,room:‘مبنى أ’},{day:‘الاثنين/الأربعاء’,time:‘13:00-17:00’,room:‘مبنى ب’}];
-for(var j=0;j<shifts.length;j++) h+=’<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--g100)"><div style="width:5px;height:5px;border-radius:50%;background:'+dcols[i]+';flex-shrink:0"></div><div><div style="font-size:12px;font-weight:700;color:var(--navy)">’+shifts[j].day+’</div><div style="font-size:11px;color:var(--g400)">’+shifts[j].time+’ - ‘+shifts[j].room+’</div></div></div>’;
-h+=’</div>’;
-}
-return h+’</div>’;
+  var dpts=['جراحة الفم والأسنان','أمراض اللثة','تعويضات الأسنان','تقويم الأسنان'];
+  var dcols=['var(--coral)','var(--mint)','#6B8DD6','#C9A84C'];
+  var h=H('جداول العنابر')+'<div class="sg sg2">';
+  for(var i=0;i<dpts.length;i++){
+    h+='<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:11px"><div class="ch" style="margin:0">'+dpts[i]+'</div><span class="badge" style="background:'+dcols[i]+'18;color:'+dcols[i]+'">عنبر '+(i+1)+'</span></div>';
+    var shifts=[{day:'الأحد/الثلاثاء',time:'08:00-12:00',room:'مبنى أ'},{day:'الاثنين/الأربعاء',time:'13:00-17:00',room:'مبنى ب'}];
+    for(var j=0;j<shifts.length;j++) h+='<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--g100)"><div style="width:5px;height:5px;border-radius:50%;background:'+dcols[i]+';flex-shrink:0"></div><div><div style="font-size:12px;font-weight:700;color:var(--navy)">'+shifts[j].day+'</div><div style="font-size:11px;color:var(--g400)">'+shifts[j].time+' - '+shifts[j].room+'</div></div></div>';
+    h+='</div>';
+  }
+  return h+'</div>';
 }
 
 function pgBroadcast(){
-return H(‘إشعار جماعي’)+’<div class="card" style="max-width:520px"><div id="broad-ok" class="alert a-ok">✅ تم الإرسال!</div><div class="field"><label>المستلمون</label><select id="br-to"><option>الجميع</option><option>الطلاب</option><option>الأطباء</option><option>المرضى</option></select></div><div class="field"><label>الموضوع</label><input id="br-sub" placeholder="موضوع الإشعار..."/></div><div class="field"><label>الرسالة</label><textarea id="br-msg" rows="4"></textarea></div><button class="btn btn-p" onclick="subBroadcast()">📢 إرسال</button></div>’;
+  return H('إشعار جماعي')+'<div class="card" style="max-width:520px"><div id="broad-ok" class="alert a-ok">✅ تم الإرسال!</div><div class="field"><label>المستلمون</label><select id="br-to"><option>الجميع</option><option>الطلاب</option><option>الأطباء</option><option>المرضى</option></select></div><div class="field"><label>الموضوع</label><input id="br-sub" placeholder="موضوع الإشعار..."/></div><div class="field"><label>الرسالة</label><textarea id="br-msg" rows="4"></textarea></div><button class="btn btn-p" onclick="subBroadcast()">📢 إرسال</button></div>';
 }
 
 async function subBroadcast(){
-var sub=document.getElementById(‘br-sub’); if(!sub||!sub.value.trim()){alert(‘يرجى إدخال الموضوع’);return;}
-try {
-await DB.addMessage({id:‘M’+Date.now(),subject:sub.value,from_id:‘ADMIN’,from_name:‘الإدارة’,from_role:‘admin’,to_id:‘ALL’,to_name:‘الجميع’,to_role:‘all’,thread:JSON.stringify([{from:‘الإدارة’,body:document.getElementById(‘br-msg’)?document.getElementById(‘br-msg’).value:’’,time:new Date().toISOString().slice(0,16).replace(‘T’,’ ’)}]),unread:true,date:new Date().toISOString().slice(0,10)});
-var ok=document.getElementById(‘broad-ok’);if(ok)ok.style.display=‘block’;
-} catch(e){alert(‘خطأ في الإرسال’);console.error(e);}
+  var sub=document.getElementById('br-sub'); if(!sub||!sub.value.trim()){alert('يرجى إدخال الموضوع');return;}
+  try {
+    await DB.addMessage({id:'M'+Date.now(),subject:sub.value,from_id:'ADMIN',from_name:'الإدارة',from_role:'admin',to_id:'ALL',to_name:'الجميع',to_role:'all',thread:JSON.stringify([{from:'الإدارة',body:document.getElementById('br-msg')?document.getElementById('br-msg').value:'',time:new Date().toISOString().slice(0,16).replace('T',' ')}]),unread:true,date:new Date().toISOString().slice(0,10)});
+    var ok=document.getElementById('broad-ok');if(ok)ok.style.display='block';
+  } catch(e){alert('خطأ في الإرسال');console.error(e);}
 }
 
 function pgSettings(){
-return H(‘الإعدادات’)+’<div class="sg sg2"><div class="card"><div class="ch">بيانات الكلية</div><div class="field"><label>اسم الكلية</label><input value="كلية طب الأسنان"/></div><div class="field"><label>الجامعة</label><input value="اسم الجامعة"/></div><div class="field"><label>العام الدراسي</label><select><option>2024/2025</option><option>2025/2026</option></select></div><div class="field"><label>الهاتف</label><input value="+966 11 000 0000" style="direction:ltr;text-align:left"/></div><button class="btn btn-p btn-sm" onclick="alert(\'تم الحفظ!\')">💾 حفظ</button></div><div class="card"><div class="ch">معلومات قاعدة البيانات</div><div style="background:var(--mint-bg);border-radius:9px;padding:13px;margin-bottom:12px"><p style="color:var(--mint);font-weight:700;font-size:13px">✅ متصل بـ Supabase</p><p style="color:var(--g600);font-size:12px;margin-top:4px;direction:ltr;text-align:left">’+SUPA_URL+’</p></div><div style="font-size:12px;color:var(--g600);line-height:1.8"><p>• البيانات محفوظة في السحابة</p><p>• يمكن الوصول من أي جهاز</p><p>• التحديثات فورية لجميع المستخدمين</p></div></div></div>’;
+  return H('الإعدادات')+'<div class="sg sg2"><div class="card"><div class="ch">بيانات الكلية</div><div class="field"><label>اسم الكلية</label><input value="كلية طب الأسنان"/></div><div class="field"><label>الجامعة</label><input value="اسم الجامعة"/></div><div class="field"><label>العام الدراسي</label><select><option>2024/2025</option><option>2025/2026</option></select></div><div class="field"><label>الهاتف</label><input value="+966 11 000 0000" style="direction:ltr;text-align:left"/></div><button class="btn btn-p btn-sm" onclick="alert(\'تم الحفظ!\')">💾 حفظ</button></div><div class="card"><div class="ch">معلومات قاعدة البيانات</div><div style="background:var(--mint-bg);border-radius:9px;padding:13px;margin-bottom:12px"><p style="color:var(--mint);font-weight:700;font-size:13px">✅ متصل بـ Supabase</p><p style="color:var(--g600);font-size:12px;margin-top:4px;direction:ltr;text-align:left">'+SUPA_URL+'</p></div><div style="font-size:12px;color:var(--g600);line-height:1.8"><p>• البيانات محفوظة في السحابة</p><p>• يمكن الوصول من أي جهاز</p><p>• التحديثات فورية لجميع المستخدمين</p></div></div></div>';
 }
 
 // ═══════════════════════════════════════════════════
 // INBOX
 // ═══════════════════════════════════════════════════
 async function pgInbox(){
-var msgs=await DB.getMessages(CU.id);
-var h=H(‘الرسائل’,‘محادثاتك مع الفريق’,’<button class="btn btn-p" onclick="openNewMsgModal()">✏️ رسالة جديدة</button>’);
-h+=’<div style="display:flex;flex-direction:column;gap:8px">’;
-if(!msgs.length)h+=’<div class="card"><p style="color:var(--g400);text-align:center;padding:20px">لا توجد رسائل.</p></div>’;
-for(var i=0;i<msgs.length;i++){
-var m=msgs[i];
-var isUnread=m.unread&&m.from_id!==CU.id;
-var thread=[];try{thread=JSON.parse(m.thread||’[]’);}catch(e){}
-var lastMsg=thread[thread.length-1]||{};
-h+=’<div class="thread-item'+(isUnread?' unread':'')+'" onclick="openThread(\''+m.id+'\')">’;
-h+=’<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">’;
-h+=’<div style="font-weight:700;color:var(--navy);font-size:13px">’+(m.subject||’’)+(isUnread?’<span style="width:7px;height:7px;border-radius:50%;background:var(--coral);display:inline-block;margin-right:5px;vertical-align:middle"></span>’:’’)+’</div>’;
-h+=’<span style="font-size:10px;color:var(--g400)">’+(m.date||’’)+’</span></div>’;
-h+=’<div style="color:var(--g400);font-size:11px">’+(m.from_name||’’)+’ → ‘+(m.to_name||’’)+’</div>’;
-if(lastMsg.body)h+=’<div style="color:var(--g600);font-size:12px;margin-top:3px">’+lastMsg.body.substring(0,60)+(lastMsg.body.length>60?’…’:’’)+’</div>’;
-h+=’</div>’;
-}
-return h+’</div>’;
+  var msgs=await DB.getMessages(CU.id);
+  var h=H('الرسائل','محادثاتك مع الفريق','<button class="btn btn-p" onclick="openNewMsgModal()">✏️ رسالة جديدة</button>');
+  h+='<div style="display:flex;flex-direction:column;gap:8px">';
+  if(!msgs.length)h+='<div class="card"><p style="color:var(--g400);text-align:center;padding:20px">لا توجد رسائل.</p></div>';
+  for(var i=0;i<msgs.length;i++){
+    var m=msgs[i];
+    var isUnread=m.unread&&m.from_id!==CU.id;
+    var thread=[];try{thread=JSON.parse(m.thread||'[]');}catch(e){}
+    var lastMsg=thread[thread.length-1]||{};
+    h+='<div class="thread-item'+(isUnread?' unread':'')+'" onclick="openThread(\''+m.id+'\')">';
+    h+='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">';
+    h+='<div style="font-weight:700;color:var(--navy);font-size:13px">'+(m.subject||'')+(isUnread?'<span style="width:7px;height:7px;border-radius:50%;background:var(--coral);display:inline-block;margin-right:5px;vertical-align:middle"></span>':'')+'</div>';
+    h+='<span style="font-size:10px;color:var(--g400)">'+(m.date||'')+'</span></div>';
+    h+='<div style="color:var(--g400);font-size:11px">'+(m.from_name||'')+' → '+(m.to_name||'')+'</div>';
+    if(lastMsg.body)h+='<div style="color:var(--g600);font-size:12px;margin-top:3px">'+lastMsg.body.substring(0,60)+(lastMsg.body.length>60?'...':'')+'</div>';
+    h+='</div>';
+  }
+  return h+'</div>';
 }
 
 async function openThread(msgId){
-var msgs=await DB.getMessages(CU.id);
-var msg=null; for(var i=0;i<msgs.length;i++) if(msgs[i].id===msgId){msg=msgs[i];break;}
-if(!msg) return;
-await DB.updateMessage(msgId,{unread:false});
-var thread=[]; try{thread=JSON.parse(msg.thread||’[]’);}catch(e){}
-var h=’<div style="max-height:300px;overflow-y:auto;padding:4px;margin-bottom:14px">’;
-for(var j=0;j<thread.length;j++){
-var t=thread[j];
-var isMe=t.from===CU.name;
-h+=’<div style="display:flex;flex-direction:column;align-items:'+(isMe?'flex-start':'flex-end')+';margin-bottom:8px">’;
-h+=’<div style="font-size:10px;font-weight:700;color:var(--g400);margin-bottom:3px">’+t.from+’</div>’;
-h+=’<div class="msg-bubble '+(isMe?'msg-me':'msg-them')+'">’+t.body+’</div>’;
-h+=’<div style="font-size:10px;color:var(--g400);margin-top:2px">’+t.time+’</div></div>’;
-}
-h+=’</div>’;
-h+=’<div class="field"><label>ردّك</label><textarea id="reply-body" rows="3" placeholder="اكتب ردك هنا..."></textarea></div>’;
-h+=’<button class="btn btn-p btn-full" onclick="sendReply(\''+msgId+'\')">إرسال الرد</button>’;
-openModal((msg.subject||‘المحادثة’),h);
+  var msgs=await DB.getMessages(CU.id);
+  var msg=null; for(var i=0;i<msgs.length;i++) if(msgs[i].id===msgId){msg=msgs[i];break;}
+  if(!msg) return;
+  await DB.updateMessage(msgId,{unread:false});
+  var thread=[]; try{thread=JSON.parse(msg.thread||'[]');}catch(e){}
+  var h='<div style="max-height:300px;overflow-y:auto;padding:4px;margin-bottom:14px">';
+  for(var j=0;j<thread.length;j++){
+    var t=thread[j];
+    var isMe=t.from===CU.name;
+    h+='<div style="display:flex;flex-direction:column;align-items:'+(isMe?'flex-start':'flex-end')+';margin-bottom:8px">';
+    h+='<div style="font-size:10px;font-weight:700;color:var(--g400);margin-bottom:3px">'+t.from+'</div>';
+    h+='<div class="msg-bubble '+(isMe?'msg-me':'msg-them')+'">'+t.body+'</div>';
+    h+='<div style="font-size:10px;color:var(--g400);margin-top:2px">'+t.time+'</div></div>';
+  }
+  h+='</div>';
+  h+='<div class="field"><label>ردّك</label><textarea id="reply-body" rows="3" placeholder="اكتب ردك هنا..."></textarea></div>';
+  h+='<button class="btn btn-p btn-full" onclick="sendReply(\''+msgId+'\')">إرسال الرد</button>';
+  openModal((msg.subject||'المحادثة'),h);
 }
 
 async function sendReply(msgId){
-var body=document.getElementById(‘reply-body’); if(!body||!body.value.trim()){alert(‘يرجى كتابة رد’);return;}
-try {
-var msgs=await DB.getMessages(CU.id);
-var msg=null; for(var i=0;i<msgs.length;i++) if(msgs[i].id===msgId){msg=msgs[i];break;}
-if(!msg) return;
-var thread=[]; try{thread=JSON.parse(msg.thread||’[]’);}catch(e){}
-thread.push({from:CU.name,body:body.value.trim(),time:new Date().toISOString().slice(0,16).replace(‘T’,’ ’)});
-await DB.updateMessage(msgId,{thread:JSON.stringify(thread),unread:true});
-closeModal();navTo(‘inbox’);
-} catch(e){alert(‘خطأ في الإرسال’);console.error(e);}
+  var body=document.getElementById('reply-body'); if(!body||!body.value.trim()){alert('يرجى كتابة رد');return;}
+  try {
+    var msgs=await DB.getMessages(CU.id);
+    var msg=null; for(var i=0;i<msgs.length;i++) if(msgs[i].id===msgId){msg=msgs[i];break;}
+    if(!msg) return;
+    var thread=[]; try{thread=JSON.parse(msg.thread||'[]');}catch(e){}
+    thread.push({from:CU.name,body:body.value.trim(),time:new Date().toISOString().slice(0,16).replace('T',' ')});
+    await DB.updateMessage(msgId,{thread:JSON.stringify(thread),unread:true});
+    closeModal();navTo('inbox');
+  } catch(e){alert('خطأ في الإرسال');console.error(e);}
 }
 
 async function openNewMsgModal(){
-var sts=await DB.getUsers(‘student’), drs=await DB.getUsers(‘doctor’);
-var opts=’<option value="">اختر المستلم…</option>’;
-if(CU.role===‘admin’) opts=’<option value="ALL|الجميع|all">إرسال للجميع</option>’+opts;
-if([‘doctor’,‘admin’,‘secretary’].indexOf(CU.role)>-1){
-for(var i=0;i<sts.length;i++) opts+=’<option value="'+sts[i].id+'|'+esc(sts[i].name)+'|student">’+sts[i].name+’ (طالب)</option>’;
-}
-if([‘student’,‘admin’,‘secretary’].indexOf(CU.role)>-1){
-for(var j=0;j<drs.length;j++) opts+=’<option value="'+drs[j].id+'|'+esc(drs[j].name)+'|doctor">’+drs[j].name+’ (طبيب)</option>’;
-}
-openModal(‘رسالة جديدة’,
-‘<div class="field"><label>المستلم</label><select id="nm-to">’+opts+’</select></div>’+
-‘<div class="field"><label>الموضوع</label><input id="nm-subj" placeholder="موضوع الرسالة..."/></div>’+
-‘<div class="field"><label>الرسالة</label><textarea id="nm-body" rows="4" placeholder="اكتب رسالتك..."></textarea></div>’+
-‘<button class="btn btn-p btn-full" onclick="sendNewMsg()">إرسال</button>’
-);
+  var sts=await DB.getUsers('student'), drs=await DB.getUsers('doctor');
+  var opts='<option value="">اختر المستلم...</option>';
+  if(CU.role==='admin') opts='<option value="ALL|الجميع|all">إرسال للجميع</option>'+opts;
+  if(['doctor','admin','secretary'].indexOf(CU.role)>-1){
+    for(var i=0;i<sts.length;i++) opts+='<option value="'+sts[i].id+'|'+esc(sts[i].name)+'|student">'+sts[i].name+' (طالب)</option>';
+  }
+  if(['student','admin','secretary'].indexOf(CU.role)>-1){
+    for(var j=0;j<drs.length;j++) opts+='<option value="'+drs[j].id+'|'+esc(drs[j].name)+'|doctor">'+drs[j].name+' (طبيب)</option>';
+  }
+  openModal('رسالة جديدة',
+    '<div class="field"><label>المستلم</label><select id="nm-to">'+opts+'</select></div>'+
+    '<div class="field"><label>الموضوع</label><input id="nm-subj" placeholder="موضوع الرسالة..."/></div>'+
+    '<div class="field"><label>الرسالة</label><textarea id="nm-body" rows="4" placeholder="اكتب رسالتك..."></textarea></div>'+
+    '<button class="btn btn-p btn-full" onclick="sendNewMsg()">إرسال</button>'
+  );
 }
 
 async function sendNewMsg(){
-var toSel=document.getElementById(‘nm-to’),subj=document.getElementById(‘nm-subj’),body=document.getElementById(‘nm-body’);
-if(!toSel||!toSel.value){alert(‘يرجى اختيار مستلم’);return;}
-if(!subj||!subj.value.trim()){alert(‘يرجى إدخال الموضوع’);return;}
-if(!body||!body.value.trim()){alert(‘يرجى كتابة الرسالة’);return;}
-var parts=toSel.value.split(’|’);
-try {
-await DB.addMessage({
-id:‘M’+Date.now(),subject:subj.value.trim(),
-from_id:CU.id,from_name:CU.name,from_role:CU.role,
-to_id:parts[0],to_name:parts[1]||’’,to_role:parts[2]||’’,
-thread:JSON.stringify([{from:CU.name,body:body.value.trim(),time:new Date().toISOString().slice(0,16).replace(‘T’,’ ’)}]),
-unread:true,date:new Date().toISOString().slice(0,10)
-});
-closeModal();navTo(‘inbox’);
-} catch(e){alert(‘خطأ في الإرسال’);console.error(e);}
+  var toSel=document.getElementById('nm-to'),subj=document.getElementById('nm-subj'),body=document.getElementById('nm-body');
+  if(!toSel||!toSel.value){alert('يرجى اختيار مستلم');return;}
+  if(!subj||!subj.value.trim()){alert('يرجى إدخال الموضوع');return;}
+  if(!body||!body.value.trim()){alert('يرجى كتابة الرسالة');return;}
+  var parts=toSel.value.split('|');
+  try {
+    await DB.addMessage({
+      id:'M'+Date.now(),subject:subj.value.trim(),
+      from_id:CU.id,from_name:CU.name,from_role:CU.role,
+      to_id:parts[0],to_name:parts[1]||'',to_role:parts[2]||'',
+      thread:JSON.stringify([{from:CU.name,body:body.value.trim(),time:new Date().toISOString().slice(0,16).replace('T',' ')}]),
+      unread:true,date:new Date().toISOString().slice(0,10)
+    });
+    closeModal();navTo('inbox');
+  } catch(e){alert('خطأ في الإرسال');console.error(e);}
 }
 
 // ═══════════════════════════════════════════════════
 // MODAL & FORMS
 // ═══════════════════════════════════════════════════
 function openModal(title,body){
-document.getElementById(‘modal-title’).textContent=title;
-document.getElementById(‘modal-body’).innerHTML=body||’’;
-document.getElementById(‘modal’).classList.add(‘open’);
+  document.getElementById('modal-title').textContent=title;
+  document.getElementById('modal-body').innerHTML=body||'';
+  document.getElementById('modal').classList.add('open');
 }
-function closeModal(){ document.getElementById(‘modal’).classList.remove(‘open’); }
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
 
 function openAddNewsModal(){
-openModal(‘نشر خبر جديد’,
-‘<div class="field"><label>العنوان</label><input id="mn-t" placeholder="عنوان الخبر..."/></div>’+
-‘<div class="field"><label>التصنيف</label><select id="mn-c"><option>إعلان</option><option>فعالية</option><option>بحث</option></select></div>’+
-‘<div class="field"><label>المحتوى</label><textarea id="mn-b" rows="4"></textarea></div>’+
-‘<div class="field" style="display:flex;align-items:center;gap:7px"><input type="checkbox" id="mn-f" style="width:auto"/><label style="text-transform:none;font-size:13px;color:var(--g600)">تمييز كخبر رئيسي</label></div>’+
-‘<button class="btn btn-p btn-full" onclick="doAddNews()">نشر</button>’
-);
+  openModal('نشر خبر جديد',
+    '<div class="field"><label>العنوان</label><input id="mn-t" placeholder="عنوان الخبر..."/></div>'+
+    '<div class="field"><label>التصنيف</label><select id="mn-c"><option>إعلان</option><option>فعالية</option><option>بحث</option></select></div>'+
+    '<div class="field"><label>المحتوى</label><textarea id="mn-b" rows="4"></textarea></div>'+
+    '<div class="field" style="display:flex;align-items:center;gap:7px"><input type="checkbox" id="mn-f" style="width:auto"/><label style="text-transform:none;font-size:13px;color:var(--g600)">تمييز كخبر رئيسي</label></div>'+
+    '<button class="btn btn-p btn-full" onclick="doAddNews()">نشر</button>'
+  );
 }
 
 async function doAddNews(){
-var tEl=document.getElementById(‘mn-t’); if(!tEl||!tEl.value.trim()){alert(‘العنوان مطلوب’);return;}
-var feat=document.getElementById(‘mn-f’)?document.getElementById(‘mn-f’).checked:false;
-try {
-await DB.addNews({id:‘N’+Date.now(),title:tEl.value.trim(),category:document.getElementById(‘mn-c’)?document.getElementById(‘mn-c’).value:‘إعلان’,date:new Date().toISOString().slice(0,10),body:document.getElementById(‘mn-b’)?document.getElementById(‘mn-b’).value:’’,featured:feat});
-closeModal();navTo(‘news’);
-} catch(e){alert(‘خطأ في النشر’);console.error(e);}
+  var tEl=document.getElementById('mn-t'); if(!tEl||!tEl.value.trim()){alert('العنوان مطلوب');return;}
+  var feat=document.getElementById('mn-f')?document.getElementById('mn-f').checked:false;
+  try {
+    await DB.addNews({id:'N'+Date.now(),title:tEl.value.trim(),category:document.getElementById('mn-c')?document.getElementById('mn-c').value:'إعلان',date:new Date().toISOString().slice(0,10),body:document.getElementById('mn-b')?document.getElementById('mn-b').value:'',featured:feat});
+    closeModal();navTo('news');
+  } catch(e){alert('خطأ في النشر');console.error(e);}
 }
 
 async function doDeleteNews(id){
-if(!confirm(‘حذف الخبر؟’)) return;
-try { await DB.deleteNews(id); navTo(‘news’); } catch(e){alert(‘خطأ في الحذف’);}
+  if(!confirm('حذف الخبر؟')) return;
+  try { await DB.deleteNews(id); navTo('news'); } catch(e){alert('خطأ في الحذف');}
 }
 
 function openAddUserModal(role){
-var isStudent=role===‘student’;
-openModal(‘إضافة ‘+(isStudent?‘طالب’:‘طبيب’)+’ جديد’,
-‘<div class="field"><label>الاسم الكامل</label><input id="au-n" placeholder="'+(isStudent?'اسم الطالب':'د. الاسم')+'"/></div>’+
-‘<div class="field"><label>القسم</label><select id="au-d"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div>’+
-(isStudent?’<div class="field"><label>المستوى</label><select id="au-l"><option>السنة الثالثة</option><option>السنة الرابعة</option><option>السنة الخامسة</option></select></div>’:’’)+
-‘<div class="frow"><div class="field"><label>البريد الإلكتروني</label><input id="au-e" type="email" style="direction:ltr;text-align:left"/></div><div class="field"><label>كلمة المرور</label><input id="au-p" type="password" value="1234" style="direction:ltr;text-align:left"/></div></div>’+
-‘<button class="btn '+(isStudent?'btn-m':'btn-g')+' btn-full" onclick="doAddUser(\''+role+'\')">➕ إضافة</button>’
-);
+  var isStudent=role==='student';
+  openModal('إضافة '+(isStudent?'طالب':'طبيب')+' جديد',
+    '<div class="field"><label>الاسم الكامل</label><input id="au-n" placeholder="'+(isStudent?'اسم الطالب':'د. الاسم')+'"/></div>'+
+    '<div class="field"><label>القسم</label><select id="au-d"><option>جراحة الفم والأسنان</option><option>أمراض اللثة</option><option>تقويم الأسنان</option><option>تعويضات الأسنان</option></select></div>'+
+    (isStudent?'<div class="field"><label>المستوى</label><select id="au-l"><option>السنة الثالثة</option><option>السنة الرابعة</option><option>السنة الخامسة</option></select></div>':'')+
+    '<div class="frow"><div class="field"><label>البريد الإلكتروني</label><input id="au-e" type="email" style="direction:ltr;text-align:left"/></div><div class="field"><label>كلمة المرور</label><input id="au-p" type="password" value="1234" style="direction:ltr;text-align:left"/></div></div>'+
+    '<button class="btn '+(isStudent?'btn-m':'btn-g')+' btn-full" onclick="doAddUser(\''+role+'\')">➕ إضافة</button>'
+  );
 }
 
 async function doAddUser(role){
-var nEl=document.getElementById(‘au-n’); if(!nEl||!nEl.value.trim()){alert(‘الاسم مطلوب’);return;}
-var eEl=document.getElementById(‘au-e’); if(!eEl||!eEl.value.trim()){alert(‘البريد الإلكتروني مطلوب’);return;}
-try {
-await DB.addUser({name:nEl.value.trim(),email:eEl.value.trim(),password:document.getElementById(‘au-p’)?document.getElementById(‘au-p’).value:‘1234’,role:role,dept:document.getElementById(‘au-d’)?document.getElementById(‘au-d’).value:’’,level:document.getElementById(‘au-l’)?document.getElementById(‘au-l’).value:’’,gpa:0,bio:’’,photo:’’,status:‘نشط’});
-closeModal();navTo(role===‘student’?‘students’:‘doctors’);
-} catch(e){alert(‘خطأ — قد يكون البريد الإلكتروني مستخدماً’);console.error(e);}
+  var nEl=document.getElementById('au-n'); if(!nEl||!nEl.value.trim()){alert('الاسم مطلوب');return;}
+  var eEl=document.getElementById('au-e'); if(!eEl||!eEl.value.trim()){alert('البريد الإلكتروني مطلوب');return;}
+  try {
+    await DB.addUser({name:nEl.value.trim(),email:eEl.value.trim(),password:document.getElementById('au-p')?document.getElementById('au-p').value:'1234',role:role,dept:document.getElementById('au-d')?document.getElementById('au-d').value:'',level:document.getElementById('au-l')?document.getElementById('au-l').value:'',gpa:0,bio:'',photo:'',status:'نشط'});
+    closeModal();navTo(role==='student'?'students':'doctors');
+  } catch(e){alert('خطأ — قد يكون البريد الإلكتروني مستخدماً');console.error(e);}
 }
 
 // ═══════════════════════════════════════════════════
 // IMAGE HELPERS
 // ═══════════════════════════════════════════════════
 function previewImg(inputId,previewId){
-var inp=document.getElementById(inputId),prev=document.getElementById(previewId);
-if(!inp||!prev||!inp.files[0]) return;
-var r=new FileReader();
-r.onload=function(e){prev.src=e.target.result;prev.style.display=‘block’;};
-r.readAsDataURL(inp.files[0]);
+  var inp=document.getElementById(inputId),prev=document.getElementById(previewId);
+  if(!inp||!prev||!inp.files[0]) return;
+  var r=new FileReader();
+  r.onload=function(e){prev.src=e.target.result;prev.style.display='block';};
+  r.readAsDataURL(inp.files[0]);
 }
 function getImgBase64(inputId,cb){
-var inp=document.getElementById(inputId);
-if(!inp||!inp.files||!inp.files[0]){cb(’’);return;}
-var r=new FileReader();
-r.onload=function(e){cb(e.target.result);};
-r.readAsDataURL(inp.files[0]);
+  var inp=document.getElementById(inputId);
+  if(!inp||!inp.files||!inp.files[0]){cb('');return;}
+  var r=new FileReader();
+  r.onload=function(e){cb(e.target.result);};
+  r.readAsDataURL(inp.files[0]);
 }
 
 // ═══════════════════════════════════════════════════
@@ -1877,6 +1869,5 @@ window.openNewMsgModal=openNewMsgModal;window.sendNewMsg=sendNewMsg;
 window.editProfile=editProfile;window.saveProfile=saveProfile;
 window.doAssign=doAssign;window.previewImg=previewImg;
 </script>
-
 </body>
 </html>
